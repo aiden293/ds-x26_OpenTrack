@@ -166,3 +166,14 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
 .text-button{display:block;margin-top:8px;background:none;border:0;color:inherit;font:inherit;text-decoration:underline;cursor:pointer;padding:0}
 .loading-note{text-align:center;color:var(--muted);padding:24px 0}
 .watch .note{color:#5c4500}
+/* ---- heartbeat wordmark (design/logo/heartbeat.html) ---- */
+.wm{display:inline-block;font-weight:800;line-height:1;white-space:nowrap;letter-spacing:0;color:#fff;padding-top:.2em}
+.wm-tx{letter-spacing:-0.03em}
+.wm-pu{color:#E0B93A}
+.wm-st{display:inline-block;position:relative;width:0.14em;height:1ex;margin:0 0.055em;vertical-align:baseline;background:currentColor}
+.wm-vv{display:inline-block;width:var(--g,0.56em);text-align:center}
+.wm-dot{position:absolute;left:50%;bottom:calc(100% + 0.075em);width:0.18em;height:0.18em;margin-left:-0.09em;border-radius:50%;background:#E0B93A}
+.wm-ecg{position:absolute;left:50%;bottom:calc(100% - 0.035em);width:calc(var(--g,0.56em) + 0.25em);height:0.4em;overflow:visible}
+.logo{font-size:22px}
+@media(max-width:780px){.logo{font-size:20px}}
+nav a.logo,nav a.logo:hover{display:inline-block;margin-left:0;opacity:1;text-decoration:none}

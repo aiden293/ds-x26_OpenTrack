@@ -6,6 +6,7 @@ import { TypePicker } from "@/components/type-picker";
 import { ResultCard } from "@/components/result-card";
 import { SimilarCases } from "@/components/similar-cases";
 import { InfoPage } from "@/components/info-page";
+import { Logo } from "@/components/logo";
 import type { CasesPage, EstimateRequest, Insights, Meta, Prediction } from "@/types";
 
 const MIN_LOADING_MS = 1300;
@@ -91,7 +92,7 @@ export default function Home() {
   const s = meta?.stats;
   return <>
     <div id="prog" ref={prog} />
-    <nav><div className="w"><span className="logo">civic<b>pulse</b></span><span>
+    <nav><div className="w"><a className="logo" href="/" aria-label="CivicPulse home"><Logo /></a><span>
       <button className={tab === "est" ? "tab on" : "tab"} onClick={() => switchTab("est")}>Estimate</button>
       <button className={tab === "info" ? "tab on" : "tab"} onClick={() => switchTab("info")}>How it works<span className="lg"> &amp; limits</span></button>
     </span></div></nav>

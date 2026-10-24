@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CivicPulse logo: heartbeat</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap" rel="stylesheet">
+<style>
+/* Colors match frontend/src/app/globals.css: navy #0f2a52, gold #E0B93A. */
+body{margin:0;background:#dde3ec;display:flex;justify-content:center;padding:40px}
+.board{width:960px;height:600px;display:flex;flex-direction:column;box-shadow:0 2px 12px rgba(0,0,0,.12)}
+
+/* Wordmark. The two i's are drawn as stems so the dots and the ECG line can be placed exactly.
+   --g = space between the two i stems (the "v" width). Dot centers sit 0.165em above the stem top. */
+.wm{font-family:'Inter',system-ui,sans-serif;font-weight:800;line-height:1;white-space:nowrap;letter-spacing:0}
+.tx{letter-spacing:-0.03em}
+.pu{color:#E0B93A}
+.st{display:inline-block;position:relative;width:0.14em;height:1ex;margin:0 0.055em;vertical-align:baseline;background:currentColor}
+.vv{display:inline-block;width:var(--g,0.56em);text-align:center}
+.dot{position:absolute;left:50%;bottom:calc(100% + 0.075em);width:0.18em;height:0.18em;margin-left:-0.09em;border-radius:50%;background:#E0B93A}
+.ecg{position:absolute;left:50%;bottom:calc(100% - 0.035em);width:calc(var(--g,0.56em) + 0.25em);height:0.4em;overflow:visible}
+.cap{font-family:'Inter',system-ui,sans-serif;font-weight:500;font-size:13px;color:#566176}
+</style>
+</head>
+<body>
+<div class="board">
+<div style="height: 380px; background: #0f2a52; display: flex; align-items: center; justify-content: center">
+<div class="wm" style="font-size: 120px; color: #ffffff"><span class="tx">c</span><span class="st"><svg class="ecg" viewBox="0 0 81 40" aria-hidden="true"><polyline points="0,20 27,20 33,20 38,5 45,35 51,12 55,20 81,20" fill="none" stroke="#E0B93A" stroke-width="3.6" stroke-linejoin="round" stroke-linecap="round"></polyline></svg><span class="dot"></span></span><span class="vv">v</span><span class="st"><span class="dot"></span></span><span class="tx">c</span><span class="tx pu">pulse</span></div>
+</div>
+<div style="flex: 1; background: #f4f6fa; display: flex; align-items: center; gap: 40px; padding: 0 56px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div class="wm" style="font-size: 56px; color: #0f2a52"><span class="tx">c</span><span class="st"><svg class="ecg" viewBox="0 0 81 40" aria-hidden="true"><polyline points="0,20 27,20 33,20 38,5 45,35 51,12 55,20 81,20" fill="none" stroke="#E0B93A" stroke-width="4.4" stroke-linejoin="round" stroke-linecap="round"></polyline></svg><span class="dot"></span></span><span class="vv">v</span><span class="st"><span class="dot"></span></span><span class="tx">c</span><span class="tx pu">pulse</span></div>
+<div class="cap">Light background</div>
+</div>
+<div style="margin-left: auto; display: flex; align-items: flex-end; gap: 28px">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 10px">
+<div style="width: 120px; height: 120px; border-radius: 28px; background: #0f2a52; display: flex; align-items: center; justify-content: center">
+<div class="wm" style="font-size: 96px; color: #ffffff; --g: 0.3em; padding-top: 14px"><span class="st"><svg class="ecg" viewBox="0 0 55 40" aria-hidden="true"><polyline points="0,20 14,20 20,5 27,35 33,12 37,20 55,20" fill="none" stroke="#E0B93A" stroke-width="4.4" stroke-linejoin="round" stroke-linecap="round"></polyline></svg><span class="dot"></span></span><span class="vv"></span><span class="st"><span class="dot"></span></span></div>
+</div>
+<div class="cap">App icon</div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 10px">
+<div style="width: 40px; height: 40px; border-radius: 10px; background: #0f2a52; display: flex; align-items: center; justify-content: center">
+<div class="wm" style="font-size: 32px; color: #ffffff; --g: 0.3em; padding-top: 5px"><span class="st"><svg class="ecg" viewBox="0 0 55 40" aria-hidden="true"><polyline points="0,20 14,20 20,5 27,35 33,12 37,20 55,20" fill="none" stroke="#E0B93A" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"></polyline></svg><span class="dot"></span></span><span class="vv"></span><span class="st"><span class="dot"></span></span></div>
+</div>
+<div class="cap">Favicon</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
