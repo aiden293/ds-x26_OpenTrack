@@ -1,0 +1,22 @@
+features used: ['type', 'source', 'hour_bucket', 'month', 'weekday', 'is_holiday', 'target_days', 'backlog_type', 'backlog_90d_type', 'roll_p50_type', 'roll_p80_type', 'roll_n_type']
+test n=196,534; overall median residual=-0.031, mean=2.99
+                                neighborhood     n  median_residual  median_lo  median_hi  mean_residual  share_longer_than_predicted  pct_open_2025  demo_n  demo_median_residual  demo_median_lo  demo_median_hi
+                               Jamaica Plain 11466            -0.01      -0.02      -0.01           4.31                         0.47          24.45    1952                 -0.03           -0.04           -0.01
+Fenway / Kenmore / Audubon Circle / Longwood  3479            -0.02      -0.02      -0.01           4.24                         0.47          32.38     427                 -0.18           -0.29           -0.08
+                                     Roxbury 19759            -0.02      -0.02      -0.02           2.01                         0.42          18.05    2579                 -0.06           -0.07           -0.04
+                          Unknown / Citywide  8882            -0.02      -0.02      -0.02           3.46                         0.45          30.02     716                 -0.19           -0.28           -0.09
+                                Mission Hill  3538            -0.02      -0.03      -0.01           2.49                         0.45          23.89     489                 -0.10           -0.15           -0.04
+                            Greater Mattapan  7718            -0.03      -0.03      -0.02           3.63                         0.42          21.52    1396                 -0.07           -0.09           -0.04
+                                 East Boston 12009            -0.03      -0.03      -0.02           1.41                         0.41          28.60    1878                 -0.02           -0.03           -0.02
+                                 Beacon Hill  7164            -0.03      -0.03      -0.02           2.86                         0.41          16.69     610                 -0.05           -0.09           -0.03
+                                West Roxbury  6006            -0.03      -0.03      -0.02           6.10                         0.44          20.87    1387                 -0.06           -0.08           -0.05
+                          Allston / Brighton 18308            -0.03      -0.03      -0.03           1.85                         0.42          24.75    2575                 -0.10           -0.11           -0.08
+                                    Back Bay 11335            -0.03      -0.03      -0.03           3.13                         0.39          24.02    1193                 -0.12           -0.17           -0.09
+               Downtown / Financial District 10505            -0.03      -0.04      -0.03           3.86                         0.40          32.06     987                 -0.13           -0.18           -0.10
+                                   South End 16948            -0.03      -0.03      -0.03           3.51                         0.34          23.18    1278                 -0.14           -0.17           -0.11
+                                  Roslindale  6644            -0.03      -0.04      -0.03           4.73                         0.42          27.08    1461                 -0.06           -0.09           -0.04
+                                  Dorchester 25339            -0.03      -0.04      -0.03           2.51                         0.40          23.30    4212                 -0.29           -0.41           -0.20
+                                   Hyde Park  7367            -0.04      -0.04      -0.03           1.41                         0.40          17.38    2016                 -0.03           -0.04           -0.03
+                                 Charlestown  4697            -0.04      -0.05      -0.04           5.47                         0.41          36.03     847                 -0.12           -0.14           -0.09
+      South Boston / South Boston Waterfront 15358            -0.10      -0.11      -0.09           2.69                         0.32          35.24    1607                 -0.20           -0.25           -0.16
+                               Chestnut Hill    12            -0.62      -1.95      -0.02         -12.56                         0.17           0.00       2                 -0.02           -0.03           -0.01
