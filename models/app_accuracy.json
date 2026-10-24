@@ -1,0 +1,1078 @@
+{
+ "_overall": {
+  "model": 0.8306399910448065,
+  "hist": 0.8453957076129321,
+  "n": 196534
+ },
+ "Abandoned Bicycle": {
+  "model": 0.742,
+  "hist": 0.754,
+  "n": 570,
+  "pct_unclosed": 0.3302,
+  "pct_unclosed_2025": 0.3571
+ },
+ "Abandoned Building": {
+  "model": 0.97,
+  "hist": 0.94,
+  "n": 67,
+  "pct_unclosed": 0.1182,
+  "pct_unclosed_2025": 0.2255
+ },
+ "Abandoned Vehicles": {
+  "model": 0.976,
+  "hist": 0.988,
+  "n": 4403,
+  "pct_unclosed": 0.0157,
+  "pct_unclosed_2025": 0.038
+ },
+ "Animal Generic Request": {
+  "model": 0.605,
+  "hist": 0.454,
+  "n": 1257,
+  "pct_unclosed": 0.0984,
+  "pct_unclosed_2025": 0.0615
+ },
+ "Animal Noise Disturbances": {
+  "model": 0.737,
+  "hist": 0.737,
+  "n": 19,
+  "pct_unclosed": 0.442,
+  "pct_unclosed_2025": 0.1923
+ },
+ "Automotive Noise Disturbance": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 2,
+  "pct_unclosed": 0.8472,
+  "pct_unclosed_2025": 0.7879
+ },
+ "BWSC General Request": {
+  "model": 0.745,
+  "hist": 0.827,
+  "n": 294,
+  "pct_unclosed": 0.262,
+  "pct_unclosed_2025": 0.1658
+ },
+ "BWSC Pothole": {
+  "model": 0.622,
+  "hist": 0.622,
+  "n": 90,
+  "pct_unclosed": 0.3057,
+  "pct_unclosed_2025": 0.0755
+ },
+ "Bed Bugs": {
+  "model": 0.65,
+  "hist": 0.9,
+  "n": 20,
+  "pct_unclosed": 0.1044,
+  "pct_unclosed_2025": 0.3448
+ },
+ "Bicycle Issues": {
+  "model": 0.84,
+  "hist": 0.84,
+  "n": 25,
+  "pct_unclosed": 0.599,
+  "pct_unclosed_2025": 0.3704
+ },
+ "Billing Complaint": {
+  "model": 1.0,
+  "hist": 0.5,
+  "n": 2,
+  "pct_unclosed": 0.6452,
+  "pct_unclosed_2025": 0.7778
+ },
+ "Bridge Maintenance": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 4,
+  "pct_unclosed": 0.1714,
+  "pct_unclosed_2025": 0.25
+ },
+ "Building Inspection Request": {
+  "model": 0.818,
+  "hist": 0.836,
+  "n": 506,
+  "pct_unclosed": 0.0291,
+  "pct_unclosed_2025": 0.0734
+ },
+ "CE Collection": {
+  "model": 0.857,
+  "hist": 0.904,
+  "n": 18443,
+  "pct_unclosed": 0.0045,
+  "pct_unclosed_2025": 0.005
+ },
+ "Carbon Monoxide": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 2,
+  "pct_unclosed": 0.1364,
+  "pct_unclosed_2025": 0.3333
+ },
+ "Catchbasin": {
+  "model": 0.777,
+  "hist": 0.774,
+  "n": 358,
+  "pct_unclosed": 0.4788,
+  "pct_unclosed_2025": 0.4754
+ },
+ "Cemetery Maintenance Request": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 23,
+  "pct_unclosed": 0.0,
+  "pct_unclosed_2025": 0.0303
+ },
+ "Chronic Dampness/Mold": {
+  "model": 0.795,
+  "hist": 0.88,
+  "n": 83,
+  "pct_unclosed": 0.2058,
+  "pct_unclosed_2025": 0.4171
+ },
+ "City/State Snow Issues": {
+  "model": 1.0,
+  "hist": 0.667,
+  "n": 3,
+  "pct_unclosed": 0.2464,
+  "pct_unclosed_2025": 0.1875
+ },
+ "Construction Debris": {
+  "model": 0.783,
+  "hist": 0.8,
+  "n": 175,
+  "pct_unclosed": 0.0145,
+  "pct_unclosed_2025": 0.0215
+ },
+ "Contractor Complaints": {
+  "model": 0.911,
+  "hist": 0.916,
+  "n": 1102,
+  "pct_unclosed": 0.144,
+  "pct_unclosed_2025": 0.198
+ },
+ "Contractors Complaint": {
+  "model": 0.729,
+  "hist": 0.762,
+  "n": 505,
+  "pct_unclosed": 0.0319,
+  "pct_unclosed_2025": 0.1303
+ },
+ "Cross Metering - Sub-Metering": {
+  "model": 0.808,
+  "hist": 0.981,
+  "n": 52,
+  "pct_unclosed": 0.155,
+  "pct_unclosed_2025": 0.4419
+ },
+ "Dumpster & Loading Noise Disturbances": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 1,
+  "pct_unclosed": 0.4198,
+  "pct_unclosed_2025": 0.6667
+ },
+ "Egress": {
+  "model": 0.897,
+  "hist": 0.931,
+  "n": 58,
+  "pct_unclosed": 0.1244,
+  "pct_unclosed_2025": 0.2959
+ },
+ "Electrical": {
+  "model": 0.904,
+  "hist": 0.917,
+  "n": 324,
+  "pct_unclosed": 0.0032,
+  "pct_unclosed_2025": 0.0098
+ },
+ "Empty Litter Basket": {
+  "model": 0.823,
+  "hist": 0.808,
+  "n": 2189,
+  "pct_unclosed": 0.0382,
+  "pct_unclosed_2025": 0.0487
+ },
+ "Encampments": {
+  "model": 0.371,
+  "hist": 0.0,
+  "n": 515,
+  "pct_unclosed": 0.6557,
+  "pct_unclosed_2025": 0.6058
+ },
+ "Equipment Repair": {
+  "model": 0.778,
+  "hist": 0.782,
+  "n": 2450,
+  "pct_unclosed": 0.1167,
+  "pct_unclosed_2025": 0.1499
+ },
+ "Exceeding Terms of Permit": {
+  "model": 0.88,
+  "hist": 0.904,
+  "n": 83,
+  "pct_unclosed": 0.0205,
+  "pct_unclosed_2025": 0.0686
+ },
+ "Fire Hydrant": {
+  "model": 0.685,
+  "hist": 0.759,
+  "n": 270,
+  "pct_unclosed": 0.1546,
+  "pct_unclosed_2025": 0.0703
+ },
+ "Fire in Food Establishment": {
+  "model": 0.65,
+  "hist": 0.65,
+  "n": 20,
+  "pct_unclosed": 0.0083,
+  "pct_unclosed_2025": 0.0
+ },
+ "Food Alert - Confirmed": {
+  "model": 0.655,
+  "hist": 0.672,
+  "n": 174,
+  "pct_unclosed": 0.0013,
+  "pct_unclosed_2025": 0.0
+ },
+ "Food Alert - Unconfirmed": {
+  "model": 0.6,
+  "hist": 0.73,
+  "n": 115,
+  "pct_unclosed": 0.0,
+  "pct_unclosed_2025": 0.0
+ },
+ "General Comments For An Employee": {
+  "model": 0.778,
+  "hist": 0.871,
+  "n": 194,
+  "pct_unclosed": 0.174,
+  "pct_unclosed_2025": 0.0437
+ },
+ "General Comments For a Program or Policy": {
+  "model": 0.86,
+  "hist": 0.946,
+  "n": 848,
+  "pct_unclosed": 0.2194,
+  "pct_unclosed_2025": 0.1372
+ },
+ "General Lighting Request": {
+  "model": 0.847,
+  "hist": 0.818,
+  "n": 137,
+  "pct_unclosed": 0.0379,
+  "pct_unclosed_2025": 0.2624
+ },
+ "General Traffic Engineering Request": {
+  "model": 0.944,
+  "hist": 0.979,
+  "n": 144,
+  "pct_unclosed": 0.1496,
+  "pct_unclosed_2025": 0.0734
+ },
+ "Graffiti Removal": {
+  "model": 0.988,
+  "hist": 0.993,
+  "n": 2671,
+  "pct_unclosed": 0.0097,
+  "pct_unclosed_2025": 0.0266
+ },
+ "Ground Maintenance": {
+  "model": 0.88,
+  "hist": 0.901,
+  "n": 2674,
+  "pct_unclosed": 0.125,
+  "pct_unclosed_2025": 0.1429
+ },
+ "Heat - Excessive  Insufficient": {
+  "model": 0.745,
+  "hist": 0.784,
+  "n": 648,
+  "pct_unclosed": 0.2059,
+  "pct_unclosed_2025": 0.1919
+ },
+ "Illegal Auto Body Shop": {
+  "model": 0.796,
+  "hist": 0.796,
+  "n": 147,
+  "pct_unclosed": 0.0378,
+  "pct_unclosed_2025": 0.0819
+ },
+ "Illegal Dumping": {
+  "model": 0.848,
+  "hist": 0.797,
+  "n": 3453,
+  "pct_unclosed": 0.0045,
+  "pct_unclosed_2025": 0.0036
+ },
+ "Illegal Occupancy": {
+  "model": 1.0,
+  "hist": 0.937,
+  "n": 63,
+  "pct_unclosed": 0.228,
+  "pct_unclosed_2025": 0.3879
+ },
+ "Illegal Posting of Signs": {
+  "model": 0.846,
+  "hist": 0.816,
+  "n": 136,
+  "pct_unclosed": 0.0554,
+  "pct_unclosed_2025": 0.0719
+ },
+ "Illegal Rooming House": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 30,
+  "pct_unclosed": 0.1261,
+  "pct_unclosed_2025": 0.3273
+ },
+ "Illegal Use": {
+  "model": 1.0,
+  "hist": 0.0,
+  "n": 1,
+  "pct_unclosed": 0.0,
+  "pct_unclosed_2025": 0.0
+ },
+ "Illegal Vending": {
+  "model": 0.902,
+  "hist": 0.73,
+  "n": 163,
+  "pct_unclosed": 0.0277,
+  "pct_unclosed_2025": 0.023
+ },
+ "Improper Storage of Trash (Barrels)": {
+  "model": 0.828,
+  "hist": 0.805,
+  "n": 19924,
+  "pct_unclosed": 0.0032,
+  "pct_unclosed_2025": 0.0037
+ },
+ "Install New Lighting": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 7,
+  "pct_unclosed": 0.2778,
+  "pct_unclosed_2025": 0.5
+ },
+ "Item Price Missing": {
+  "model": 0.429,
+  "hist": 0.143,
+  "n": 7,
+  "pct_unclosed": 0.0,
+  "pct_unclosed_2025": 0.0
+ },
+ "Knockdown Replacement": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 9,
+  "pct_unclosed": 0.0609,
+  "pct_unclosed_2025": 0.25
+ },
+ "Lead": {
+  "model": 0.667,
+  "hist": 1.0,
+  "n": 3,
+  "pct_unclosed": 0.1667,
+  "pct_unclosed_2025": 0.0909
+ },
+ "Litter Basket Maintenance": {
+  "model": 0.833,
+  "hist": 0.833,
+  "n": 54,
+  "pct_unclosed": 0.0157,
+  "pct_unclosed_2025": 0.0
+ },
+ "Loud Parties/Music/People": {
+  "model": 0.553,
+  "hist": 0.474,
+  "n": 38,
+  "pct_unclosed": 0.8684,
+  "pct_unclosed_2025": 0.8785
+ },
+ "Maintenance - Homeowner": {
+  "model": 0.97,
+  "hist": 0.925,
+  "n": 67,
+  "pct_unclosed": 0.1159,
+  "pct_unclosed_2025": 0.2778
+ },
+ "Maintenance Complaint - Residential": {
+  "model": 0.798,
+  "hist": 0.824,
+  "n": 262,
+  "pct_unclosed": 0.2845,
+  "pct_unclosed_2025": 0.3794
+ },
+ "Major System Failure": {
+  "model": 0.668,
+  "hist": 0.663,
+  "n": 208,
+  "pct_unclosed": 0.0306,
+  "pct_unclosed_2025": 0.0342
+ },
+ "Mechanical": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 12,
+  "pct_unclosed": 0.0179,
+  "pct_unclosed_2025": 0.0714
+ },
+ "Mice Infestation - Residential": {
+  "model": 0.819,
+  "hist": 0.823,
+  "n": 215,
+  "pct_unclosed": 0.1992,
+  "pct_unclosed_2025": 0.3587
+ },
+ "Misc. Snow Complaint": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 7,
+  "pct_unclosed": 0.8865,
+  "pct_unclosed_2025": 0.6364
+ },
+ "Missed Trash/Recycling/Yard Waste/Bulk Item": {
+  "model": 0.779,
+  "hist": 0.856,
+  "n": 9601,
+  "pct_unclosed": 0.0001,
+  "pct_unclosed_2025": 0.0002
+ },
+ "Missing Sign": {
+  "model": 0.4,
+  "hist": 0.427,
+  "n": 255,
+  "pct_unclosed": 0.0708,
+  "pct_unclosed_2025": 0.2634
+ },
+ "Mosquitoes (West Nile)": {
+  "model": 0.625,
+  "hist": 1.0,
+  "n": 8,
+  "pct_unclosed": 0.1333,
+  "pct_unclosed_2025": 0.3077
+ },
+ "Municipal Parking Lot Complaints": {
+  "model": 0.739,
+  "hist": 1.0,
+  "n": 23,
+  "pct_unclosed": 0.0909,
+  "pct_unclosed_2025": 0.1212
+ },
+ "Needle Pickup": {
+  "model": 0.765,
+  "hist": 0.789,
+  "n": 11613,
+  "pct_unclosed": 0.0007,
+  "pct_unclosed_2025": 0.0002
+ },
+ "New Sign  Crosswalk or Pavement Marking": {
+  "model": 0.985,
+  "hist": 0.984,
+  "n": 809,
+  "pct_unclosed": 0.1212,
+  "pct_unclosed_2025": 0.1012
+ },
+ "New Tree Requests": {
+  "model": 0.885,
+  "hist": 0.988,
+  "n": 967,
+  "pct_unclosed": 0.1042,
+  "pct_unclosed_2025": 0.429
+ },
+ "No Price on Gas/Wrong Price": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 1,
+  "pct_unclosed": 0.0,
+  "pct_unclosed_2025": 0.0
+ },
+ "No Utilities - Food Establishment - Electricity": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 1,
+  "pct_unclosed": 0.0769,
+  "pct_unclosed_2025": 0.0
+ },
+ "No Utilities - Food Establishment - Flood": {
+  "model": 0.8,
+  "hist": 0.8,
+  "n": 5,
+  "pct_unclosed": 0.0,
+  "pct_unclosed_2025": 0.0
+ },
+ "No Utilities - Food Establishment - Sewer": {
+  "model": 0.8,
+  "hist": 1.0,
+  "n": 5,
+  "pct_unclosed": 0.0667,
+  "pct_unclosed_2025": 0.0
+ },
+ "No Utilities - Food Establishment - Water": {
+  "model": 0.75,
+  "hist": 0.75,
+  "n": 4,
+  "pct_unclosed": 0.0,
+  "pct_unclosed_2025": 0.0
+ },
+ "No Utilities Residential - Electricity": {
+  "model": 0.591,
+  "hist": 0.636,
+  "n": 22,
+  "pct_unclosed": 0.2534,
+  "pct_unclosed_2025": 0.2195
+ },
+ "No Utilities Residential - Gas": {
+  "model": 0.889,
+  "hist": 0.889,
+  "n": 9,
+  "pct_unclosed": 0.1594,
+  "pct_unclosed_2025": 0.1429
+ },
+ "No Utilities Residential - Water": {
+  "model": 0.725,
+  "hist": 0.765,
+  "n": 51,
+  "pct_unclosed": 0.1642,
+  "pct_unclosed_2025": 0.2386
+ },
+ "No-Tow Complaint Confirmation": {
+  "model": 0.8,
+  "hist": 0.778,
+  "n": 45,
+  "pct_unclosed": 0.0824,
+  "pct_unclosed_2025": 0.098
+ },
+ "Notification": {
+  "model": 0.5,
+  "hist": 0.5,
+  "n": 2,
+  "pct_unclosed": 0.9244,
+  "pct_unclosed_2025": 0.9091
+ },
+ "Occupying W/Out A Valid CO/CI": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 3,
+  "pct_unclosed": 0.1923,
+  "pct_unclosed_2025": 0.3333
+ },
+ "Oil Truck - No Receipt": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 1,
+  "pct_unclosed": 0.0,
+  "pct_unclosed_2025": 0.0
+ },
+ "Overcrowding": {
+  "model": 0.5,
+  "hist": 1.0,
+  "n": 8,
+  "pct_unclosed": 0.1932,
+  "pct_unclosed_2025": 0.3158
+ },
+ "Overflowing or Un-kept Dumpster": {
+  "model": 0.746,
+  "hist": 0.729,
+  "n": 118,
+  "pct_unclosed": 0.0103,
+  "pct_unclosed_2025": 0.024
+ },
+ "PWD Graffiti": {
+  "model": 0.813,
+  "hist": 0.786,
+  "n": 802,
+  "pct_unclosed": 0.1302,
+  "pct_unclosed_2025": 0.1715
+ },
+ "Park Improvement Requests": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 239,
+  "pct_unclosed": 0.0292,
+  "pct_unclosed_2025": 0.0346
+ },
+ "Parking Enforcement": {
+  "model": 0.941,
+  "hist": 0.965,
+  "n": 13966,
+  "pct_unclosed": 0.2211,
+  "pct_unclosed_2025": 0.7524
+ },
+ "Parking Meter Repairs": {
+  "model": 0.125,
+  "hist": 0.0,
+  "n": 8,
+  "pct_unclosed": 0.8871,
+  "pct_unclosed_2025": 0.8125
+ },
+ "Parking on Front/Back Yards (Illegal Parking)": {
+  "model": 0.833,
+  "hist": 0.902,
+  "n": 102,
+  "pct_unclosed": 0.0641,
+  "pct_unclosed_2025": 0.1308
+ },
+ "Parks General Request": {
+  "model": 0.911,
+  "hist": 0.854,
+  "n": 123,
+  "pct_unclosed": 0.1459,
+  "pct_unclosed_2025": 0.1484
+ },
+ "Parks Lighting/Electrical Issues": {
+  "model": 0.857,
+  "hist": 0.901,
+  "n": 314,
+  "pct_unclosed": 0.1973,
+  "pct_unclosed_2025": 0.2663
+ },
+ "Pavement Marking Inspection": {
+  "model": 0.107,
+  "hist": 0.536,
+  "n": 56,
+  "pct_unclosed": 0.0832,
+  "pct_unclosed_2025": 0.2353
+ },
+ "Pest Infestation - Residential": {
+  "model": 0.837,
+  "hist": 0.894,
+  "n": 1468,
+  "pct_unclosed": 0.07,
+  "pct_unclosed_2025": 0.1068
+ },
+ "Pick up Dead Animal": {
+  "model": 0.795,
+  "hist": 0.794,
+  "n": 7951,
+  "pct_unclosed": 0.0506,
+  "pct_unclosed_2025": 0.0521
+ },
+ "Pigeon Infestation": {
+  "model": 0.733,
+  "hist": 0.733,
+  "n": 15,
+  "pct_unclosed": 0.1549,
+  "pct_unclosed_2025": 0.24
+ },
+ "Planting": {
+  "model": 0.833,
+  "hist": 0.833,
+  "n": 12,
+  "pct_unclosed": 0.0192,
+  "pct_unclosed_2025": 0.0667
+ },
+ "Plumbing": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 47,
+  "pct_unclosed": 0.0155,
+  "pct_unclosed_2025": 0.0
+ },
+ "Pole Compliance": {
+  "model": 0.933,
+  "hist": 0.933,
+  "n": 15,
+  "pct_unclosed": 0.0638,
+  "pct_unclosed_2025": 0.3103
+ },
+ "Poor Conditions of Property": {
+  "model": 0.832,
+  "hist": 0.803,
+  "n": 8896,
+  "pct_unclosed": 0.0056,
+  "pct_unclosed_2025": 0.0075
+ },
+ "Poor Ventilation": {
+  "model": 0.778,
+  "hist": 1.0,
+  "n": 9,
+  "pct_unclosed": 0.0943,
+  "pct_unclosed_2025": 0.0476
+ },
+ "Product Short Measure": {
+  "model": 0.5,
+  "hist": 0.5,
+  "n": 2,
+  "pct_unclosed": 0.0,
+  "pct_unclosed_2025": 0.0
+ },
+ "Protection of Adjoining Property": {
+  "model": 0.88,
+  "hist": 0.989,
+  "n": 175,
+  "pct_unclosed": 0.1178,
+  "pct_unclosed_2025": 0.2412
+ },
+ "Public Works General Request": {
+  "model": 0.809,
+  "hist": 0.827,
+  "n": 670,
+  "pct_unclosed": 0.1357,
+  "pct_unclosed_2025": 0.1576
+ },
+ "Rat Bite": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 3,
+  "pct_unclosed": 0.0,
+  "pct_unclosed_2025": 0.0
+ },
+ "Recycling Cart Return": {
+  "model": 0.939,
+  "hist": 0.933,
+  "n": 4424,
+  "pct_unclosed": 0.0,
+  "pct_unclosed_2025": 0.0
+ },
+ "Rental Unit Delivery Conditions": {
+  "model": 0.4,
+  "hist": 1.0,
+  "n": 5,
+  "pct_unclosed": 0.14,
+  "pct_unclosed_2025": 0.25
+ },
+ "Request for Litter Basket Installation": {
+  "model": 0.875,
+  "hist": 0.909,
+  "n": 88,
+  "pct_unclosed": 0.0159,
+  "pct_unclosed_2025": 0.0105
+ },
+ "Request for Pothole Repair": {
+  "model": 0.863,
+  "hist": 0.867,
+  "n": 6793,
+  "pct_unclosed": 0.3201,
+  "pct_unclosed_2025": 0.3524
+ },
+ "Request for Recycling Cart": {
+  "model": 0.871,
+  "hist": 0.876,
+  "n": 3973,
+  "pct_unclosed": 0.0,
+  "pct_unclosed_2025": 0.0
+ },
+ "Request for Snow Plowing": {
+  "model": 0.924,
+  "hist": 0.92,
+  "n": 649,
+  "pct_unclosed": 0.0269,
+  "pct_unclosed_2025": 0.0251
+ },
+ "Request for Snow Plowing (Emergency Responder)": {
+  "model": 0.805,
+  "hist": 0.829,
+  "n": 41,
+  "pct_unclosed": 0.0353,
+  "pct_unclosed_2025": 0.0192
+ },
+ "Requests for Directional or Roadway Changes": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 2,
+  "pct_unclosed": 0.2105,
+  "pct_unclosed_2025": 0.0
+ },
+ "Requests for Street Cleaning": {
+  "model": 0.832,
+  "hist": 0.85,
+  "n": 19433,
+  "pct_unclosed": 0.0545,
+  "pct_unclosed_2025": 0.0498
+ },
+ "Requests for Traffic Signal Studies or Reviews": {
+  "model": 0.852,
+  "hist": 0.884,
+  "n": 603,
+  "pct_unclosed": 0.1738,
+  "pct_unclosed_2025": 0.1242
+ },
+ "Roadway Flooding": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 1,
+  "pct_unclosed": 0.9858,
+  "pct_unclosed_2025": 0.9909
+ },
+ "Roadway Repair": {
+  "model": 0.941,
+  "hist": 0.893,
+  "n": 270,
+  "pct_unclosed": 0.6849,
+  "pct_unclosed_2025": 0.6319
+ },
+ "Rodent Activity": {
+  "model": 0.838,
+  "hist": 0.848,
+  "n": 4967,
+  "pct_unclosed": 0.0104,
+  "pct_unclosed_2025": 0.0111
+ },
+ "Scanning Overcharge": {
+  "model": 0.538,
+  "hist": 0.538,
+  "n": 13,
+  "pct_unclosed": 0.0,
+  "pct_unclosed_2025": 0.0
+ },
+ "Sewage/Septic Back-Up": {
+  "model": 0.769,
+  "hist": 0.769,
+  "n": 13,
+  "pct_unclosed": 0.3011,
+  "pct_unclosed_2025": 0.2857
+ },
+ "Short Measure - Gas": {
+  "model": 0.667,
+  "hist": 1.0,
+  "n": 3,
+  "pct_unclosed": 0.0,
+  "pct_unclosed_2025": 0.0
+ },
+ "Short Term Rental": {
+  "model": 0.524,
+  "hist": 0.622,
+  "n": 164,
+  "pct_unclosed": 0.1367,
+  "pct_unclosed_2025": 0.1209
+ },
+ "Sidewalk Cover / Manhole": {
+  "model": 0.806,
+  "hist": 0.871,
+  "n": 232,
+  "pct_unclosed": 0.2877,
+  "pct_unclosed_2025": 0.1446
+ },
+ "Sidewalk Repair": {
+  "model": 0.0,
+  "hist": 1.0,
+  "n": 2,
+  "pct_unclosed": 0.5507,
+  "pct_unclosed_2025": 0.9474
+ },
+ "Sidewalk Repair (Make Safe)": {
+  "model": 0.878,
+  "hist": 0.939,
+  "n": 2010,
+  "pct_unclosed": 0.4935,
+  "pct_unclosed_2025": 0.6663
+ },
+ "Sign Repair": {
+  "model": 0.359,
+  "hist": 0.372,
+  "n": 4487,
+  "pct_unclosed": 0.1304,
+  "pct_unclosed_2025": 0.2632
+ },
+ "Space Savers": {
+  "model": 0.843,
+  "hist": 0.855,
+  "n": 166,
+  "pct_unclosed": 0.0896,
+  "pct_unclosed_2025": 0.2061
+ },
+ "Squalid Living Conditions": {
+  "model": 0.655,
+  "hist": 1.0,
+  "n": 29,
+  "pct_unclosed": 0.251,
+  "pct_unclosed_2025": 0.3239
+ },
+ "Sticker Request": {
+  "model": 0.834,
+  "hist": 0.86,
+  "n": 2400,
+  "pct_unclosed": 0.0,
+  "pct_unclosed_2025": 0.0
+ },
+ "Street Light Knock Downs": {
+  "model": 0.59,
+  "hist": 0.569,
+  "n": 239,
+  "pct_unclosed": 0.0551,
+  "pct_unclosed_2025": 0.0719
+ },
+ "Street Light Outages": {
+  "model": 0.921,
+  "hist": 0.916,
+  "n": 1848,
+  "pct_unclosed": 0.1196,
+  "pct_unclosed_2025": 0.348
+ },
+ "StreetLight Pole WO": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 2,
+  "pct_unclosed": 0.8462,
+  "pct_unclosed_2025": 0.0
+ },
+ "Student Move-in Issues": {
+  "model": 0.944,
+  "hist": 0.882,
+  "n": 161,
+  "pct_unclosed": 0.0772,
+  "pct_unclosed_2025": 0.133
+ },
+ "Traffic Signal Inspection": {
+  "model": 0.816,
+  "hist": 0.795,
+  "n": 3554,
+  "pct_unclosed": 0.1304,
+  "pct_unclosed_2025": 0.1269
+ },
+ "Traffic Signal Repair": {
+  "model": 0.763,
+  "hist": 0.844,
+  "n": 359,
+  "pct_unclosed": 0.1543,
+  "pct_unclosed_2025": 0.1438
+ },
+ "Transportation General Request": {
+  "model": 0.901,
+  "hist": 1.0,
+  "n": 393,
+  "pct_unclosed": 0.383,
+  "pct_unclosed_2025": 0.2031
+ },
+ "Trash on Vacant Lot": {
+  "model": 0.827,
+  "hist": 0.731,
+  "n": 52,
+  "pct_unclosed": 0.0203,
+  "pct_unclosed_2025": 0.0364
+ },
+ "Tree Emergencies": {
+  "model": 0.897,
+  "hist": 0.885,
+  "n": 653,
+  "pct_unclosed": 0.0161,
+  "pct_unclosed_2025": 0.01
+ },
+ "Tree Maintenance Requests": {
+  "model": 0.97,
+  "hist": 0.971,
+  "n": 3720,
+  "pct_unclosed": 0.0479,
+  "pct_unclosed_2025": 0.1625
+ },
+ "Tree in Park": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 22,
+  "pct_unclosed": 0.1087,
+  "pct_unclosed_2025": 0.3404
+ },
+ "Undefined Noise Disturbance": {
+  "model": 0.667,
+  "hist": 0.667,
+  "n": 6,
+  "pct_unclosed": 0.5912,
+  "pct_unclosed_2025": 0.6061
+ },
+ "Unit Pricing Wrong/Missing": {
+  "model": 0.8,
+  "hist": 1.0,
+  "n": 5,
+  "pct_unclosed": 0.0,
+  "pct_unclosed_2025": 0.0
+ },
+ "Unsafe Dangerous Conditions": {
+  "model": 0.896,
+  "hist": 0.844,
+  "n": 231,
+  "pct_unclosed": 0.0887,
+  "pct_unclosed_2025": 0.1478
+ },
+ "Unsanitary Conditions - Employees": {
+  "model": 0.64,
+  "hist": 0.68,
+  "n": 25,
+  "pct_unclosed": 0.01,
+  "pct_unclosed_2025": 0.0
+ },
+ "Unsanitary Conditions - Establishment": {
+  "model": 0.69,
+  "hist": 0.741,
+  "n": 494,
+  "pct_unclosed": 0.0099,
+  "pct_unclosed_2025": 0.0036
+ },
+ "Unsanitary Conditions - Food": {
+  "model": 0.744,
+  "hist": 0.744,
+  "n": 195,
+  "pct_unclosed": 0.0014,
+  "pct_unclosed_2025": 0.0
+ },
+ "Unsatisfactory Living Conditions": {
+  "model": 0.669,
+  "hist": 0.737,
+  "n": 1189,
+  "pct_unclosed": 0.2264,
+  "pct_unclosed_2025": 0.3719
+ },
+ "Unsatisfactory Utilities - Electrical  Plumbing": {
+  "model": 0.574,
+  "hist": 0.734,
+  "n": 94,
+  "pct_unclosed": 0.1582,
+  "pct_unclosed_2025": 0.0435
+ },
+ "Unshoveled Sidewalk": {
+  "model": 0.809,
+  "hist": 0.912,
+  "n": 6330,
+  "pct_unclosed": 0.0124,
+  "pct_unclosed_2025": 0.0144
+ },
+ "Upgrade Existing Lighting": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 5,
+  "pct_unclosed": 0.1235,
+  "pct_unclosed_2025": 0.3636
+ },
+ "Utility Call-In": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 1,
+  "pct_unclosed": 0.0909,
+  "pct_unclosed_2025": 0.2
+ },
+ "Utility Casting Repair": {
+  "model": 0.942,
+  "hist": 0.977,
+  "n": 86,
+  "pct_unclosed": 0.3735,
+  "pct_unclosed_2025": 0.5417
+ },
+ "Work Hours-Loud Noise Complaints": {
+  "model": 0.971,
+  "hist": 0.993,
+  "n": 139,
+  "pct_unclosed": 0.0445,
+  "pct_unclosed_2025": 0.0745
+ },
+ "Work w/out Permit": {
+  "model": 0.833,
+  "hist": 0.775,
+  "n": 627,
+  "pct_unclosed": 0.0045,
+  "pct_unclosed_2025": 0.0242
+ },
+ "Working Beyond Hours": {
+  "model": 0.694,
+  "hist": 0.684,
+  "n": 566,
+  "pct_unclosed": 0.0099,
+  "pct_unclosed_2025": 0.056
+ },
+ "Zoning": {
+  "model": 1.0,
+  "hist": 1.0,
+  "n": 20,
+  "pct_unclosed": 0.1333,
+  "pct_unclosed_2025": 0.375
+ }
+}

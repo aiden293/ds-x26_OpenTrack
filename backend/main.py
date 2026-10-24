@@ -6,6 +6,8 @@ import logging
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from typing import Literal
+
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
@@ -24,6 +26,12 @@ class Request(BaseModel):
     type: str = Field(min_length=1, max_length=200)
     neighborhood: str = Field(min_length=1, max_length=100)
     open_date: datetime
+
+
+class CasesRequest(Request):
+    scope: Literal["nb", "all"] = "nb"
+    sort: Literal["rel", "recent", "old", "short", "long"] = "rel"
+    page: int = Field(default=1, ge=1, le=100000)
 
 
 def validate_request(request: Request):
@@ -65,6 +73,40 @@ def estimate(request: Request):
     except Exception:
         logger.exception("Prediction failed")
         raise HTTPException(503, "The prediction service is unavailable. Please try again shortly.")
+
+
+@app.get("/api/meta")
+def get_meta():
+    from src.app_insights import meta
+    return meta()
+
+
+@app.post("/api/insights")
+def get_insights(request: Request):
+    date = validate_request(request)
+    if not CASES.is_file():
+        raise HTTPException(503, "Historical case records have not been connected yet.")
+    try:
+        from src.app_insights import insights
+        return insights(request.type, request.neighborhood, date)
+    except Exception:
+        logger.exception("Insights lookup failed")
+        raise HTTPException(503, "Extra details are temporarily unavailable.")
+
+
+@app.post("/api/cases")
+def get_cases(request: CasesRequest):
+    date = validate_request(request)
+    if not CASES.is_file():
+        return {"available": False, "total": 0, "page": 1, "pages": 1, "cases": [],
+                "message": "Historical case records have not been connected yet."}
+    try:
+        from src.app_insights import cases_page
+        return {"available": True, **cases_page(request.type, request.neighborhood, date,
+                                                request.scope, request.sort, request.page)}
+    except Exception:
+        logger.exception("Case list lookup failed")
+        raise HTTPException(503, "Historical cases are temporarily unavailable.")
 
 
 @app.post("/api/similar")
