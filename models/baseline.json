@@ -1,0 +1,1034 @@
+{
+ "type": {
+  "Abandoned Bicycle": {
+   "p50": 2.5547514699074076,
+   "p80": 8.888026701388888,
+   "n": 2661.0
+  },
+  "Abandoned Building": {
+   "p50": 3.7381818287037034,
+   "p80": 293.7269571087964,
+   "n": 235.0
+  },
+  "Abandoned Vehicles": {
+   "p50": 30.605536192129627,
+   "p80": 79.14344054398148,
+   "n": 15796.0
+  },
+  "Animal Generic Request": {
+   "p50": 0.5171143518518518,
+   "p80": 1.8122262638888893,
+   "n": 9329.0
+  },
+  "Animal Noise Disturbances": {
+   "p50": 0.814001388888889,
+   "p80": 2.9682349374999997,
+   "n": 187.0
+  },
+  "BWSC General Request": {
+   "p50": 4.003350763888889,
+   "p80": 11.168401370370372,
+   "n": 797.0
+  },
+  "BWSC Pothole": {
+   "p50": 8.295392690972221,
+   "p80": 29.945768078703715,
+   "n": 272.0
+  },
+  "Bed Bugs": {
+   "p50": 9.021370179398147,
+   "p80": 124.1573382662038,
+   "n": 288.0
+  },
+  "Bicycle Issues": {
+   "p50": 6.576035613425925,
+   "p80": 49.71232761342593,
+   "n": 63.0
+  },
+  "Building Inspection Request": {
+   "p50": 7.427552743055556,
+   "p80": 109.59891545370384,
+   "n": 2153.0
+  },
+  "CE Collection": {
+   "p50": 0.07911886574074074,
+   "p80": 0.4650445972222224,
+   "n": 64847.0
+  },
+  "Catchbasin": {
+   "p50": 10.955212806712963,
+   "p80": 37.31379170601852,
+   "n": 1164.0
+  },
+  "Cemetery Maintenance Request": {
+   "p50": 5.786648194444444,
+   "p80": 99.15304243518521,
+   "n": 99.0
+  },
+  "Chronic Dampness/Mold": {
+   "p50": 9.761030636574075,
+   "p80": 86.12219584490741,
+   "n": 715.0
+  },
+  "Construction Debris": {
+   "p50": 0.11784267361111112,
+   "p80": 0.6485855393518523,
+   "n": 707.0
+  },
+  "Contractor Complaints": {
+   "p50": 1.7929974537037037,
+   "p80": 9.143781219907407,
+   "n": 4042.0
+  },
+  "Contractors Complaint": {
+   "p50": 10.33233630787037,
+   "p80": 100.91635489814816,
+   "n": 3049.0
+  },
+  "Cross Metering - Sub-Metering": {
+   "p50": 12.068794328703703,
+   "p80": 123.03904151620371,
+   "n": 366.0
+  },
+  "Dumpster & Loading Noise Disturbances": {
+   "p50": 10.492118518518518,
+   "p80": 31.230554562500007,
+   "n": 35.0
+  },
+  "Egress": {
+   "p50": 17.635785688657407,
+   "p80": 287.55919067129605,
+   "n": 340.0
+  },
+  "Electrical": {
+   "p50": 4.007181215277778,
+   "p80": 38.9038483726852,
+   "n": 1453.0
+  },
+  "Empty Litter Basket": {
+   "p50": 0.10012708912037038,
+   "p80": 0.6408577314814812,
+   "n": 10984.0
+  },
+  "Encampments": {
+   "p50": 11.079224583333334,
+   "p80": 47.74480203703705,
+   "n": 515.0
+  },
+  "Equipment Repair": {
+   "p50": 2.714714351851852,
+   "p80": 13.90360459027778,
+   "n": 10115.0
+  },
+  "Exceeding Terms of Permit": {
+   "p50": 10.985040081018518,
+   "p80": 168.24574239583333,
+   "n": 509.0
+  },
+  "Fire Hydrant": {
+   "p50": 5.2226421875,
+   "p80": 12.82792357175926,
+   "n": 770.0
+  },
+  "Fire in Food Establishment": {
+   "p50": 1.1856355324074075,
+   "p80": 2.6924761319444457,
+   "n": 97.0
+  },
+  "Food Alert - Confirmed": {
+   "p50": 1.1687658912037038,
+   "p80": 3.826411956018519,
+   "n": 751.0
+  },
+  "Food Alert - Unconfirmed": {
+   "p50": 1.177548478009259,
+   "p80": 3.89680544212963,
+   "n": 474.0
+  },
+  "General Comments For An Employee": {
+   "p50": 0.7187708333333334,
+   "p80": 2.035292027777778,
+   "n": 738.0
+  },
+  "General Comments For a Program or Policy": {
+   "p50": 0.8669324247685185,
+   "p80": 6.84973576388889,
+   "n": 2504.0
+  },
+  "General Lighting Request": {
+   "p50": 0.2490764583333333,
+   "p80": 28.049227314814818,
+   "n": 3021.0
+  },
+  "General Traffic Engineering Request": {
+   "p50": 2.1282417013888892,
+   "p80": 114.29503621527789,
+   "n": 467.0
+  },
+  "Graffiti Removal": {
+   "p50": 36.701560682870365,
+   "p80": 157.7444847013889,
+   "n": 8958.0
+  },
+  "Ground Maintenance": {
+   "p50": 1.0319326736111112,
+   "p80": 4.7714800115740745,
+   "n": 12660.0
+  },
+  "Heat - Excessive  Insufficient": {
+   "p50": 1.372304207175926,
+   "p80": 7.999913085648152,
+   "n": 2408.0
+  },
+  "Illegal Auto Body Shop": {
+   "p50": 1.0135629976851852,
+   "p80": 3.0084704050925923,
+   "n": 591.0
+  },
+  "Illegal Dumping": {
+   "p50": 0.11577006944444444,
+   "p80": 0.657346136574074,
+   "n": 11433.0
+  },
+  "Illegal Occupancy": {
+   "p50": 38.02401983796296,
+   "p80": 423.1584641828704,
+   "n": 309.0
+  },
+  "Illegal Posting of Signs": {
+   "p50": 0.26103082175925924,
+   "p80": 0.7198602199074076,
+   "n": 369.0
+  },
+  "Illegal Rooming House": {
+   "p50": 65.05894980324075,
+   "p80": 547.1482879166666,
+   "n": 221.0
+  },
+  "Illegal Vending": {
+   "p50": 0.42659745370370367,
+   "p80": 0.7537737268518518,
+   "n": 551.0
+  },
+  "Improper Storage of Trash (Barrels)": {
+   "p50": 0.13249895833333333,
+   "p80": 0.5811615254629631,
+   "n": 75208.0
+  },
+  "Install New Lighting": {
+   "p50": 81.02995700231482,
+   "p80": 294.7262748032408,
+   "n": 60.0
+  },
+  "Item Price Missing": {
+   "p50": 1.4149873032407407,
+   "p80": 2.9130164699074075,
+   "n": 37.0
+  },
+  "Knockdown Replacement": {
+   "p50": 32.900551469907406,
+   "p80": 219.29157060185193,
+   "n": 513.0
+  },
+  "Lead": {
+   "p50": 13.565588425925927,
+   "p80": 171.30655019675936,
+   "n": 35.0
+  },
+  "Litter Basket Maintenance": {
+   "p50": 0.2171365162037037,
+   "p80": 1.1442851574074075,
+   "n": 332.0
+  },
+  "Loud Parties/Music/People": {
+   "p50": 1.3419583333333334,
+   "p80": 8.553413969907407,
+   "n": 136.0
+  },
+  "Maintenance - Homeowner": {
+   "p50": 25.518087962962966,
+   "p80": 393.31853977546297,
+   "n": 388.0
+  },
+  "Maintenance Complaint - Residential": {
+   "p50": 7.141636840277777,
+   "p80": 34.93145603009259,
+   "n": 1243.0
+  },
+  "Major System Failure": {
+   "p50": 0.25609498842592593,
+   "p80": 2.7657798310185226,
+   "n": 979.0
+  },
+  "Mattress_Pickup": {
+   "p50": 0.9102994212962963,
+   "p80": 7.012455048611112,
+   "n": 1649.0
+  },
+  "Mechanical": {
+   "p50": 68.21077924768518,
+   "p80": 503.1584871342593,
+   "n": 53.0
+  },
+  "Mice Infestation - Residential": {
+   "p50": 8.293425543981481,
+   "p80": 38.86300833333333,
+   "n": 1191.0
+  },
+  "Missed Trash/Recycling/Yard Waste/Bulk Item": {
+   "p50": 0.5230780092592593,
+   "p80": 0.7939547453703704,
+   "n": 44936.0
+  },
+  "Missing Sign": {
+   "p50": 7.998864716435184,
+   "p80": 34.406419493055616,
+   "n": 1524.0
+  },
+  "Municipal Parking Lot Complaints": {
+   "p50": 2.747833003472222,
+   "p80": 16.06337988194446,
+   "n": 64.0
+  },
+  "Needle Pickup": {
+   "p50": 0.030968287037037034,
+   "p80": 0.08733734722222226,
+   "n": 36373.0
+  },
+  "New Sign  Crosswalk or Pavement Marking": {
+   "p50": 3.04897994212963,
+   "p80": 135.75956431712964,
+   "n": 2721.0
+  },
+  "New Tree Requests": {
+   "p50": 77.93657802662037,
+   "p80": 166.96920927546296,
+   "n": 4950.0
+  },
+  "No Utilities - Food Establishment - Water": {
+   "p50": 1.8044432060185187,
+   "p80": 2.92475125462963,
+   "n": 33.0
+  },
+  "No Utilities Residential - Electricity": {
+   "p50": 1.804514178240741,
+   "p80": 7.771268212962964,
+   "n": 130.0
+  },
+  "No Utilities Residential - Gas": {
+   "p50": 2.8997161574074073,
+   "p80": 11.086882479166668,
+   "n": 47.0
+  },
+  "No Utilities Residential - Water": {
+   "p50": 2.5743085069444445,
+   "p80": 11.124614641203706,
+   "n": 282.0
+  },
+  "No-Tow Complaint Confirmation": {
+   "p50": 0.35088564814814815,
+   "p80": 1.4505539074074152,
+   "n": 233.0
+  },
+  "Overcrowding": {
+   "p50": 7.961354131944444,
+   "p80": 120.09968772685201,
+   "n": 55.0
+  },
+  "Overflowing or Un-kept Dumpster": {
+   "p50": 0.8810583333333334,
+   "p80": 1.8285878495370371,
+   "n": 482.0
+  },
+  "PWD Graffiti": {
+   "p50": 2.920897650462963,
+   "p80": 35.14047688194445,
+   "n": 4577.0
+  },
+  "Park Improvement Requests": {
+   "p50": 22.06802207175926,
+   "p80": 286.0796107638889,
+   "n": 741.0
+  },
+  "Parking Enforcement": {
+   "p50": 0.3923297395833333,
+   "p80": 3.015297175925926,
+   "n": 166636.0
+  },
+  "Parking on Front/Back Yards (Illegal Parking)": {
+   "p50": 0.16759907407407407,
+   "p80": 0.7847402245370373,
+   "n": 485.0
+  },
+  "Parks General Request": {
+   "p50": 2.079599265046296,
+   "p80": 10.393975659722221,
+   "n": 466.0
+  },
+  "Parks Lighting/Electrical Issues": {
+   "p50": 2.1227450810185187,
+   "p80": 39.65190356712964,
+   "n": 1330.0
+  },
+  "Pavement Marking Inspection": {
+   "p50": 5.785005474537037,
+   "p80": 143.73708295138889,
+   "n": 421.0
+  },
+  "Pest Infestation - Residential": {
+   "p50": 2.143312638888889,
+   "p80": 5.731121263888893,
+   "n": 5588.0
+  },
+  "Pick up Dead Animal": {
+   "p50": 0.052256712962962956,
+   "p80": 0.1465863425925926,
+   "n": 27781.0
+  },
+  "Pigeon Infestation": {
+   "p50": 0.8630480902777777,
+   "p80": 4.903175925925926,
+   "n": 36.0
+  },
+  "Planting": {
+   "p50": 4.639041203703703,
+   "p80": 18.376535761574086,
+   "n": 47.0
+  },
+  "Plumbing": {
+   "p50": 91.25149215277779,
+   "p80": 335.99130173611127,
+   "n": 190.0
+  },
+  "Pole Compliance": {
+   "p50": 8.441528784722223,
+   "p80": 29.594069791666666,
+   "n": 161.0
+  },
+  "Poor Conditions of Property": {
+   "p50": 0.1178696701388889,
+   "p80": 0.6185078981481482,
+   "n": 32082.0
+  },
+  "Poor Ventilation": {
+   "p50": 9.894155590277776,
+   "p80": 158.36671569907443,
+   "n": 77.0
+  },
+  "Protection of Adjoining Property": {
+   "p50": 29.139582042824074,
+   "p80": 465.31330011574124,
+   "n": 870.0
+  },
+  "Public Works General Request": {
+   "p50": 0.7871040162037036,
+   "p80": 2.2452025949074086,
+   "n": 2203.0
+  },
+  "Rat Bite": {
+   "p50": 0.7603028472222222,
+   "p80": 2.363053518518519,
+   "n": 57.0
+  },
+  "Recycling Cart Return": {
+   "p50": 15.000152048611112,
+   "p80": 24.020399935185186,
+   "n": 14877.0
+  },
+  "Rental Unit Delivery Conditions": {
+   "p50": 9.451272881944444,
+   "p80": 272.61189920601885,
+   "n": 34.0
+  },
+  "Request for Litter Basket Installation": {
+   "p50": 0.9867342245370371,
+   "p80": 2.9363071620370387,
+   "n": 409.0
+  },
+  "Request for Pothole Repair": {
+   "p50": 1.0213775810185186,
+   "p80": 4.872731759259259,
+   "n": 29601.0
+  },
+  "Request for Recycling Cart": {
+   "p50": 12.802842743055555,
+   "p80": 17.693447951388887,
+   "n": 15211.0
+  },
+  "Request for Snow Plowing": {
+   "p50": 0.11051936342592592,
+   "p80": 0.40355732175925946,
+   "n": 2975.0
+  },
+  "Request for Snow Plowing (Emergency Responder)": {
+   "p50": 0.08523482060185185,
+   "p80": 0.23284424768518516,
+   "n": 156.0
+  },
+  "Requests for Street Cleaning": {
+   "p50": 0.12132759259259258,
+   "p80": 0.7775939675925927,
+   "n": 77587.0
+  },
+  "Requests for Traffic Signal Studies or Reviews": {
+   "p50": 7.868204282407407,
+   "p80": 73.11916547453704,
+   "n": 1891.0
+  },
+  "Roadway Repair": {
+   "p50": 1.0108564062499998,
+   "p80": 7.408246724537037,
+   "n": 446.0
+  },
+  "Rodent Activity": {
+   "p50": 0.9154199652777779,
+   "p80": 2.786607949074074,
+   "n": 17454.0
+  },
+  "Rooftop & Mechanical Disturbances": {
+   "p50": 8.188106863425926,
+   "p80": 17.118617706018522,
+   "n": 64.0
+  },
+  "Scanning Overcharge": {
+   "p50": 1.1394915914351853,
+   "p80": 3.9845554074074077,
+   "n": 44.0
+  },
+  "Schedule a Bulk Item Pickup": {
+   "p50": 0.9998997106481482,
+   "p80": 4.86867824074074,
+   "n": 1060.0
+  },
+  "Schedule a Bulk Item Pickup SS": {
+   "p50": 2.5539428819444447,
+   "p80": 5.974635150462963,
+   "n": 236.0
+  },
+  "Sewage/Septic Back-Up": {
+   "p50": 3.19624525462963,
+   "p80": 46.88769607175926,
+   "n": 105.0
+  },
+  "Short Term Rental": {
+   "p50": 9.751472997685186,
+   "p80": 58.08077876851852,
+   "n": 615.0
+  },
+  "Sidewalk Cover / Manhole": {
+   "p50": 6.111519872685186,
+   "p80": 16.532588377314806,
+   "n": 719.0
+  },
+  "Sidewalk Repair (Make Safe)": {
+   "p50": 2.1121461458333335,
+   "p80": 128.09137376620387,
+   "n": 7785.0
+  },
+  "Sign Repair": {
+   "p50": 9.052606099537037,
+   "p80": 45.178324949074096,
+   "n": 17585.0
+  },
+  "Space Savers": {
+   "p50": 0.16616334490740742,
+   "p80": 0.7403201226851852,
+   "n": 933.0
+  },
+  "Squalid Living Conditions": {
+   "p50": 8.998447881944445,
+   "p80": 136.28306543287044,
+   "n": 155.0
+  },
+  "Sticker Request": {
+   "p50": 0.5369018171296297,
+   "p80": 0.8129981134259259,
+   "n": 8731.0
+  },
+  "Street Light Knock Downs": {
+   "p50": 0.13135292824074074,
+   "p80": 0.7403562499999999,
+   "n": 1521.0
+  },
+  "Street Light Outages": {
+   "p50": 7.687065659722222,
+   "p80": 95.56545333796302,
+   "n": 14347.0
+  },
+  "StreetLight Pole WO": {
+   "p50": 4.005606273148148,
+   "p80": 160.6071005601854,
+   "n": 72.0
+  },
+  "Student Move-in Issues": {
+   "p50": 0.1304264814814815,
+   "p80": 0.6310142893518521,
+   "n": 490.0
+  },
+  "Traffic Signal Inspection": {
+   "p50": 0.3288494212962963,
+   "p80": 1.870088634259259,
+   "n": 12418.0
+  },
+  "Traffic Signal Repair": {
+   "p50": 0.7714920601851852,
+   "p80": 4.3094554398148155,
+   "n": 619.0
+  },
+  "Transportation General Request": {
+   "p50": 4.9770137326388895,
+   "p80": 198.51742177083335,
+   "n": 1218.0
+  },
+  "Trash on Vacant Lot": {
+   "p50": 0.9849250752314815,
+   "p80": 2.076901388888889,
+   "n": 236.0
+  },
+  "Tree Emergencies": {
+   "p50": 0.09457291666666667,
+   "p80": 0.7385677962962963,
+   "n": 2887.0
+  },
+  "Tree Maintenance Requests": {
+   "p50": 17.365846527777776,
+   "p80": 117.91690204398147,
+   "n": 22412.0
+  },
+  "Tree in Park": {
+   "p50": 14.802138113425926,
+   "p80": 234.31331138194446,
+   "n": 169.0
+  },
+  "Undefined Noise Disturbance": {
+   "p50": 0.22346119212962962,
+   "p80": 3.5299676851851873,
+   "n": 39.0
+  },
+  "Unsafe Dangerous Conditions": {
+   "p50": 13.859538177083333,
+   "p80": 172.29852903472232,
+   "n": 1158.0
+  },
+  "Unsanitary Conditions - Employees": {
+   "p50": 1.0212447164351852,
+   "p80": 3.0062989930555557,
+   "n": 176.0
+  },
+  "Unsanitary Conditions - Establishment": {
+   "p50": 1.12650109375,
+   "p80": 3.7058170879629637,
+   "n": 2202.0
+  },
+  "Unsanitary Conditions - Food": {
+   "p50": 1.2920335648148147,
+   "p80": 3.8208864421296296,
+   "n": 705.0
+  },
+  "Unsatisfactory Living Conditions": {
+   "p50": 7.7726572916666665,
+   "p80": 20.695313594907415,
+   "n": 6109.0
+  },
+  "Unsatisfactory Utilities - Electrical  Plumbing": {
+   "p50": 7.040521099537037,
+   "p80": 76.1071813541667,
+   "n": 547.0
+  },
+  "Unshoveled Sidewalk": {
+   "p50": 0.42619228009259263,
+   "p80": 0.9027466782407407,
+   "n": 16166.0
+  },
+  "Upgrade Existing Lighting": {
+   "p50": 64.85780246527779,
+   "p80": 183.25220086805558,
+   "n": 65.0
+  },
+  "Utility Casting Repair": {
+   "p50": 13.235702002314815,
+   "p80": 54.982925925925926,
+   "n": 737.0
+  },
+  "Work Hours-Loud Noise Complaints": {
+   "p50": 3.4028464930555553,
+   "p80": 38.27046962500005,
+   "n": 667.0
+  },
+  "Work w/out Permit": {
+   "p50": 6.965427662037037,
+   "p80": 89.83125637731483,
+   "n": 2919.0
+  },
+  "Working Beyond Hours": {
+   "p50": 5.270276770833334,
+   "p80": 65.52400778935186,
+   "n": 2426.0
+  },
+  "Zoning": {
+   "p50": 20.868159837962963,
+   "p80": 352.7975186944445,
+   "n": 109.0
+  }
+ },
+ "reason": {
+  "Abandoned Bicycle": {
+   "p50": 2.5547514699074076,
+   "p80": 8.888026701388888,
+   "n": 2661.0
+  },
+  "Administrative & General Requests": {
+   "p50": 1.1447608796296296,
+   "p80": 10.649609756944445,
+   "n": 4931.0
+  },
+  "Air Pollution Control": {
+   "p50": 8.188106863425926,
+   "p80": 17.118617706018522,
+   "n": 64.0
+  },
+  "Animal Issues": {
+   "p50": 0.5275421469907406,
+   "p80": 1.8308417824074075,
+   "n": 9516.0
+  },
+  "Boston Bikes": {
+   "p50": 6.576035613425925,
+   "p80": 49.71232761342593,
+   "n": 63.0
+  },
+  "Building": {
+   "p50": 8.927590277777778,
+   "p80": 124.30529438425987,
+   "n": 16164.0
+  },
+  "Catchbasin": {
+   "p50": 10.91292814236111,
+   "p80": 37.30921454861111,
+   "n": 1166.0
+  },
+  "Cemetery": {
+   "p50": 5.786648194444444,
+   "p80": 99.15304243518521,
+   "n": 99.0
+  },
+  "Code Enforcement": {
+   "p50": 0.14283630787037038,
+   "p80": 0.6395676736111111,
+   "n": 137001.0
+  },
+  "Employee & General Comments": {
+   "p50": 0.8244250983796295,
+   "p80": 4.874816053240741,
+   "n": 3242.0
+  },
+  "Enforcement & Abandoned Vehicles": {
+   "p50": 0.5019285532407407,
+   "p80": 4.559148097222224,
+   "n": 182433.0
+  },
+  "Environmental Services": {
+   "p50": 0.9247625810185185,
+   "p80": 2.80739369212963,
+   "n": 19118.0
+  },
+  "Fire Hydrant": {
+   "p50": 5.2226421875,
+   "p80": 12.82792357175926,
+   "n": 770.0
+  },
+  "General Request": {
+   "p50": 0.1304264814814815,
+   "p80": 0.6310142893518521,
+   "n": 490.0
+  },
+  "Generic Noise Disturbance": {
+   "p50": 0.22346119212962962,
+   "p80": 3.5299676851851873,
+   "n": 39.0
+  },
+  "Graffiti": {
+   "p50": 36.701560682870365,
+   "p80": 157.7444847013889,
+   "n": 8958.0
+  },
+  "Health": {
+   "p50": 1.1633940393518518,
+   "p80": 3.7418565625,
+   "n": 4486.0
+  },
+  "Highway Maintenance": {
+   "p50": 0.8617181712962962,
+   "p80": 5.890499641203705,
+   "n": 59277.0
+  },
+  "Housing": {
+   "p50": 4.797539623842592,
+   "p80": 15.893343798611115,
+   "n": 20002.0
+  },
+  "Needle Program": {
+   "p50": 0.030968287037037034,
+   "p80": 0.08733734722222226,
+   "n": 36373.0
+  },
+  "Neighborhood Services Issues": {
+   "p50": 10.492118518518518,
+   "p80": 31.230554562500007,
+   "n": 35.0
+  },
+  "Noise Disturbance": {
+   "p50": 1.1310708333333332,
+   "p80": 5.4083043263888895,
+   "n": 150.0
+  },
+  "Operations": {
+   "p50": 5.846261030092593,
+   "p80": 143.9738532592593,
+   "n": 435.0
+  },
+  "Park Maintenance & Safety": {
+   "p50": 1.7532030497685185,
+   "p80": 8.66826370370371,
+   "n": 24894.0
+  },
+  "Parking Complaints": {
+   "p50": 2.747833003472222,
+   "p80": 16.06337988194446,
+   "n": 64.0
+  },
+  "Pothole": {
+   "p50": 8.295392690972221,
+   "p80": 29.945768078703715,
+   "n": 272.0
+  },
+  "Quality of Life": {
+   "p50": 11.079224583333334,
+   "p80": 47.74480203703705,
+   "n": 515.0
+  },
+  "Recycling": {
+   "p50": 10.819766163194444,
+   "p80": 17.95801432175926,
+   "n": 38822.0
+  },
+  "Sanitation": {
+   "p50": 0.5256792650462963,
+   "p80": 0.8320593518518519,
+   "n": 48814.0
+  },
+  "Sidewalk Cover / Manhole": {
+   "p50": 6.111519872685186,
+   "p80": 16.532588377314806,
+   "n": 719.0
+  },
+  "Signs & Signals": {
+   "p50": 3.6882435185185183,
+   "p80": 28.859574243055572,
+   "n": 34867.0
+  },
+  "Street Cleaning": {
+   "p50": 0.08356975694444443,
+   "p80": 0.628985,
+   "n": 173763.0
+  },
+  "Street Lights": {
+   "p50": 2.5070808043981483,
+   "p80": 75.31121424305555,
+   "n": 20682.0
+  },
+  "Traffic Management & Engineering": {
+   "p50": 6.062148975694445,
+   "p80": 74.74468622685187,
+   "n": 2370.0
+  },
+  "Trees": {
+   "p50": 11.76851240162037,
+   "p80": 125.02452304861112,
+   "n": 30418.0
+  },
+  "Weights and Measures": {
+   "p50": 1.7309934837962961,
+   "p80": 3.975968673611111,
+   "n": 154.0
+  }
+ },
+ "global": {
+  "p50": 0.45932554398148145,
+  "p80": 4.031110041666669,
+  "n": 883905
+ },
+ "type_to_reason": {
+  "Abandoned Bicycle": "Abandoned Bicycle",
+  "Abandoned Building": "Environmental Services",
+  "Abandoned Vehicles": "Enforcement & Abandoned Vehicles",
+  "Abandoned Vehicles - Private Tow": "Enforcement & Abandoned Vehicles",
+  "Animal Generic Request": "Animal Issues",
+  "Animal Noise Disturbances": "Animal Issues",
+  "Automotive Noise Disturbance": "Noise Disturbance",
+  "BWSC General Request": "Administrative & General Requests",
+  "BWSC Pothole": "Pothole",
+  "Bed Bugs": "Housing",
+  "Bicycle Issues": "Boston Bikes",
+  "Big Buildings Recycling (INTERNAL)": "Recycling",
+  "Billing Complaint": "Billing",
+  "Bridge Maintenance": "Bridge Maintenance",
+  "Building Inspection Request": "Building",
+  "CE Collection": "Street Cleaning",
+  "Capital Improvement Long Term": "Park Maintenance & Safety",
+  "Carbon Monoxide": "Housing",
+  "Catchbasin": "Catchbasin",
+  "Cemetery Maintenance Request": "Cemetery",
+  "Chronic Dampness/Mold": "Housing",
+  "City/State Snow Issues": "Programs",
+  "Construction Debris": "Code Enforcement",
+  "Contractor Complaints": "Highway Maintenance",
+  "Contractors Complaint": "Building",
+  "Cross Metering - Sub-Metering": "Housing",
+  "Dumpster & Loading Noise Disturbances": "Neighborhood Services Issues",
+  "Egress": "Building",
+  "Electrical": "Building",
+  "Empty Litter Basket": "Highway Maintenance",
+  "Encampments": "Quality of Life",
+  "Equipment Repair": "Park Maintenance & Safety",
+  "Exceeding Terms of Permit": "Building",
+  "Fire Hydrant": "Fire Hydrant",
+  "Fire in Food Establishment": "Health",
+  "Food Alert - Confirmed": "Health",
+  "Food Alert - Unconfirmed": "Health",
+  "General Comments For An Employee": "Employee & General Comments",
+  "General Comments For a Program or Policy": "Employee & General Comments",
+  "General Lighting Request": "Street Lights",
+  "General Traffic Engineering Request": "Traffic Management & Engineering",
+  "Graffiti Removal": "Graffiti",
+  "Ground Maintenance": "Park Maintenance & Safety",
+  "Heat - Excessive  Insufficient": "Housing",
+  "Illegal Auto Body Shop": "Environmental Services",
+  "Illegal Dumping": "Code Enforcement",
+  "Illegal Occupancy": "Building",
+  "Illegal Posting of Signs": "Code Enforcement",
+  "Illegal Rooming House": "Building",
+  "Illegal Use": "Building",
+  "Illegal Vending": "Code Enforcement",
+  "Improper Storage of Trash (Barrels)": "Code Enforcement",
+  "Install New Lighting": "Street Lights",
+  "Item Price Missing": "Weights and Measures",
+  "Knockdown Replacement": "Street Lights",
+  "Lead": "Housing",
+  "Litter Basket Maintenance": "Highway Maintenance",
+  "Loud Parties/Music/People": "Noise Disturbance",
+  "Maintenance - Homeowner": "Building",
+  "Maintenance Complaint - Residential": "Housing",
+  "Major System Failure": "Street Lights",
+  "Mattress_Pickup": "Sanitation",
+  "Mechanical": "Building",
+  "Mice Infestation - Residential": "Housing",
+  "Misc. Snow Complaint": "Administrative & General Requests",
+  "Missed Trash/Recycling/Yard Waste/Bulk Item": "Sanitation",
+  "Missing Sign": "Signs & Signals",
+  "Mosquitoes (West Nile)": "Environmental Services",
+  "Municipal Parking Lot Complaints": "Parking Complaints",
+  "Needle Pickup": "Needle Program",
+  "New Sign  Crosswalk or Pavement Marking": "Signs & Signals",
+  "New Tree Requests": "Trees",
+  "News Boxes": "Highway Maintenance",
+  "No Price on Gas/Wrong Price": "Weights and Measures",
+  "No Utilities - Food Establishment - Electricity": "Health",
+  "No Utilities - Food Establishment - Flood": "Health",
+  "No Utilities - Food Establishment - Sewer": "Health",
+  "No Utilities - Food Establishment - Water": "Health",
+  "No Utilities Residential - Electricity": "Housing",
+  "No Utilities Residential - Gas": "Housing",
+  "No Utilities Residential - Water": "Housing",
+  "No-Tow Complaint Confirmation": "Administrative & General Requests",
+  "Notification": "Notification",
+  "Occupying W/Out A Valid CO/CI": "Building",
+  "Oil Truck - No Receipt": "Weights and Measures",
+  "Overcrowding": "Housing",
+  "Overflowing or Un-kept Dumpster": "Environmental Services",
+  "PWD Graffiti": "Highway Maintenance",
+  "Park Improvement Requests": "Park Maintenance & Safety",
+  "Parking Enforcement": "Enforcement & Abandoned Vehicles",
+  "Parking Meter Repairs": "Operations",
+  "Parking on Front/Back Yards (Illegal Parking)": "Code Enforcement",
+  "Parks General Request": "Administrative & General Requests",
+  "Parks Lighting/Electrical Issues": "Park Maintenance & Safety",
+  "Pavement Marking Inspection": "Operations",
+  "Pavement Marking Maintenance": "Operations",
+  "Pest Infestation - Residential": "Housing",
+  "Phone Bank Service Inquiry": "Office of The Parking Clerk",
+  "Pick up Dead Animal": "Street Cleaning",
+  "Pickup/Clear Conduit": "Street Lights",
+  "Pigeon Infestation": "Environmental Services",
+  "Planting": "Park Maintenance & Safety",
+  "Plumbing": "Building",
+  "Pole Compliance": "Street Lights",
+  "Poor Conditions of Property": "Code Enforcement",
+  "Poor Ventilation": "Housing",
+  "Product Short Measure": "Weights and Measures",
+  "Protection of Adjoining Property": "Building",
+  "Public Works General Request": "Administrative & General Requests",
+  "Rat Bite": "Environmental Services",
+  "Recycling Cart Return": "Recycling",
+  "Rental Unit Delivery Conditions": "Housing",
+  "Request for Litter Basket Installation": "Street Cleaning",
+  "Request for Pothole Repair": "Highway Maintenance",
+  "Request for Recycling Cart": "Recycling",
+  "Request for Snow Plowing": "Street Cleaning",
+  "Request for Snow Plowing (Emergency Responder)": "Street Cleaning",
+  "Requests for Directional or Roadway Changes": "Traffic Management & Engineering",
+  "Requests for Street Cleaning": "Street Cleaning",
+  "Requests for Traffic Signal Studies or Reviews": "Traffic Management & Engineering",
+  "Roadway Flooding": "Catchbasin",
+  "Roadway Repair": "Highway Maintenance",
+  "Rodent Activity": "Environmental Services",
+  "Rooftop & Mechanical Disturbances": "Air Pollution Control",
+  "Scale Not Visible": "Weights and Measures",
+  "Scanning Overcharge": "Weights and Measures",
+  "Schedule a Bulk Item Pickup": "Sanitation",
+  "Schedule a Bulk Item Pickup SS": "Sanitation",
+  "Sewage/Septic Back-Up": "Housing",
+  "Short Measure - Gas": "Weights and Measures",
+  "Short Term Rental": "Housing",
+  "Sidewalk Cover / Manhole": "Sidewalk Cover / Manhole",
+  "Sidewalk Repair": "Highway Maintenance",
+  "Sidewalk Repair (Make Safe)": "Highway Maintenance",
+  "Sign Repair": "Signs & Signals",
+  "Sign Shop WO": "Operations",
+  "Snow/Ice Control": "Street Cleaning",
+  "Space Savers": "Sanitation",
+  "Squalid Living Conditions": "Housing",
+  "Sticker Request": "Recycling",
+  "Street Light Knock Downs": "Street Lights",
+  "Street Light Longterm Repair": "Street Lights",
+  "Street Light Outages": "Street Lights",
+  "StreetLight Pole WO": "Highway Maintenance",
+  "Student Move-in Issues": "General Request",
+  "Traffic Signal Inspection": "Signs & Signals",
+  "Traffic Signal Repair": "Signs & Signals",
+  "Transportation General Request": "Administrative & General Requests",
+  "Trash on Vacant Lot": "Environmental Services",
+  "Tree Emergencies": "Trees",
+  "Tree Maintenance Requests": "Trees",
+  "Tree in Park": "Trees",
+  "Undefined Noise Disturbance": "Generic Noise Disturbance",
+  "Unit Pricing Wrong/Missing": "Weights and Measures",
+  "Unsafe Dangerous Conditions": "Building",
+  "Unsanitary Conditions - Employees": "Health",
+  "Unsanitary Conditions - Establishment": "Health",
+  "Unsanitary Conditions - Food": "Health",
+  "Unsatisfactory Living Conditions": "Housing",
+  "Unsatisfactory Utilities - Electrical  Plumbing": "Housing",
+  "Unshoveled Sidewalk": "Code Enforcement",
+  "Upgrade Existing Lighting": "Street Lights",
+  "Utility Call-In": "Highway Maintenance",
+  "Utility Casting Repair": "Highway Maintenance",
+  "Valet Parking Problems": "Valet",
+  "Walk-In Service Inquiry": "Office of The Parking Clerk",
+  "Water in Gas - High Priority": "Weights and Measures",
+  "Work Hours-Loud Noise Complaints": "Highway Maintenance",
+  "Work w/out Permit": "Building",
+  "Working Beyond Hours": "Building",
+  "Zoning": "Building"
+ }
+}

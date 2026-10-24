@@ -1,0 +1,443 @@
+{
+ "test_years": [
+  2025
+ ],
+ "n_test": 196534,
+ "share_test_rows_using_ml_in_app": 0.9560076119144779,
+ "note": "Test = valid closures only; ~25% of 2025 cases were still open at snapshot.",
+ "test_baseline": {
+  "overall": {
+   "n": 196534,
+   "p50_mae": 8.687000397617858,
+   "p50_medae": 0.33888982349537033,
+   "p50_pinball": 4.343500198808929,
+   "p80_coverage": 0.8507281182899651,
+   "p80_pinball": 6.319078683798626
+  },
+  "Request for Pothole Repair": {
+   "n": 6793,
+   "p50_mae": 5.2039852083520755,
+   "p50_medae": 1.067703125,
+   "p50_pinball": 2.6019926041760377,
+   "p80_coverage": 0.8744295598410128,
+   "p80_pinball": 3.712608986367162
+  },
+  "Street Light Outages": {
+   "n": 1848,
+   "p50_mae": 30.290600554829044,
+   "p50_medae": 8.684402372685184,
+   "p50_pinball": 15.145300277414522,
+   "p80_coverage": 0.920995670995671,
+   "p80_pinball": 18.752684714009643
+  },
+  "Missed Trash/Recycling/Yard Waste/Bulk Item": {
+   "n": 9601,
+   "p50_mae": 0.40649067426063834,
+   "p50_medae": 0.41276365740740745,
+   "p50_pinball": 0.20324533713031917,
+   "p80_coverage": 0.8618893865222372,
+   "p80_pinball": 0.1744488988159991
+  },
+  "Abandoned Vehicles": {
+   "n": 4403,
+   "p50_mae": 23.92436328147081,
+   "p50_medae": 24.620150133101856,
+   "p50_pinball": 11.962181640735405,
+   "p80_coverage": 0.9895525777878719,
+   "p80_pinball": 18.71747203041171
+  },
+  "Rodent Activity": {
+   "n": 4967,
+   "p50_mae": 1.4442290071951736,
+   "p50_medae": 0.7344130787037038,
+   "p50_pinball": 0.7221145035975868,
+   "p80_coverage": 0.8512180390577814,
+   "p80_pinball": 0.820006616510264
+  }
+ },
+ "test_model": {
+  "overall": {
+   "n": 196534,
+   "p50_mae": 7.84072482537087,
+   "p50_medae": 0.2652625839454491,
+   "p50_pinball": 3.920362412685435,
+   "p80_coverage": 0.8316627148483214,
+   "p80_pinball": 5.590076648632635
+  },
+  "Request for Pothole Repair": {
+   "n": 6793,
+   "p50_mae": 5.013074447184902,
+   "p50_medae": 0.9682666946725238,
+   "p50_pinball": 2.506537223592451,
+   "p80_coverage": 0.8775209774768143,
+   "p80_pinball": 3.566176414318758
+  },
+  "Street Light Outages": {
+   "n": 1848,
+   "p50_mae": 29.408227943839965,
+   "p50_medae": 13.866993521179172,
+   "p50_pinball": 14.704113971919982,
+   "p80_coverage": 0.933982683982684,
+   "p80_pinball": 21.778716320580365
+  },
+  "Missed Trash/Recycling/Yard Waste/Bulk Item": {
+   "n": 9601,
+   "p50_mae": 0.27954088615052336,
+   "p50_medae": 0.08077555408679682,
+   "p50_pinball": 0.13977044307526168,
+   "p80_coverage": 0.7861681074888033,
+   "p80_pinball": 0.13668954446900206
+  },
+  "Abandoned Vehicles": {
+   "n": 4403,
+   "p50_mae": 15.232761430792818,
+   "p50_medae": 12.207205695202797,
+   "p50_pinball": 7.616380715396409,
+   "p80_coverage": 0.9756983874630933,
+   "p80_pinball": 13.827781615034393
+  },
+  "Rodent Activity": {
+   "n": 4967,
+   "p50_mae": 1.250840997793908,
+   "p50_medae": 0.45820093157973885,
+   "p50_pinball": 0.625420498896954,
+   "p80_coverage": 0.8375276827058586,
+   "p80_pinball": 0.7502693528400803
+  }
+ },
+ "test_app": {
+  "overall": {
+   "n": 196534,
+   "p50_mae": 7.840844475122118,
+   "p50_medae": 0.26334754251581866,
+   "p50_pinball": 3.920422237561059,
+   "p80_coverage": 0.8323547070735853,
+   "p80_pinball": 5.671138441322519
+  },
+  "Request for Pothole Repair": {
+   "n": 6793,
+   "p50_mae": 5.013074447184902,
+   "p50_medae": 0.9682666946725238,
+   "p50_pinball": 2.506537223592451,
+   "p80_coverage": 0.8775209774768143,
+   "p80_pinball": 3.566176414318758
+  },
+  "Street Light Outages": {
+   "n": 1848,
+   "p50_mae": 29.408227943839965,
+   "p50_medae": 13.866993521179172,
+   "p50_pinball": 14.704113971919982,
+   "p80_coverage": 0.933982683982684,
+   "p80_pinball": 21.778716320580365
+  },
+  "Missed Trash/Recycling/Yard Waste/Bulk Item": {
+   "n": 9601,
+   "p50_mae": 0.27954088615052336,
+   "p50_medae": 0.08077555408679682,
+   "p50_pinball": 0.13977044307526168,
+   "p80_coverage": 0.7861681074888033,
+   "p80_pinball": 0.13668954446900206
+  },
+  "Abandoned Vehicles": {
+   "n": 4403,
+   "p50_mae": 15.232761430792818,
+   "p50_medae": 12.207205695202797,
+   "p50_pinball": 7.616380715396409,
+   "p80_coverage": 0.9756983874630933,
+   "p80_pinball": 13.827781615034393
+  },
+  "Rodent Activity": {
+   "n": 4967,
+   "p50_mae": 1.250840997793908,
+   "p50_medae": 0.45820093157973885,
+   "p50_pinball": 0.625420498896954,
+   "p80_coverage": 0.8375276827058586,
+   "p80_pinball": 0.7502693528400803
+  }
+ },
+ "bootstrap_model_vs_baseline": {
+  "overall": {
+   "p50_mae_diff": {
+    "mean": -0.8462755722469889,
+    "ci95": [
+     -0.8895601955240467,
+     -0.8046964307176677
+    ]
+   },
+   "p80_pinball_diff": {
+    "mean": -0.7290020351659903,
+    "ci95": [
+     -0.7610743996041609,
+     -0.6901072266020821
+    ]
+   }
+  },
+  "Request for Pothole Repair": {
+   "p50_mae_diff": {
+    "mean": -0.19091076116717395,
+    "ci95": [
+     -0.21951061184871967,
+     -0.16078257885164685
+    ]
+   },
+   "p80_pinball_diff": {
+    "mean": -0.1464325720484038,
+    "ci95": [
+     -0.17589599288866828,
+     -0.1188367003099059
+    ]
+   }
+  },
+  "Street Light Outages": {
+   "p50_mae_diff": {
+    "mean": -0.8823726109890806,
+    "ci95": [
+     -1.341343076120706,
+     -0.4479475750566252
+    ]
+   },
+   "p80_pinball_diff": {
+    "mean": 3.026031606570724,
+    "ci95": [
+     2.5241421970793736,
+     3.546395548541421
+    ]
+   }
+  },
+  "Missed Trash/Recycling/Yard Waste/Bulk Item": {
+   "p50_mae_diff": {
+    "mean": -0.126949788110115,
+    "ci95": [
+     -0.13260413278504496,
+     -0.12139750099569617
+    ]
+   },
+   "p80_pinball_diff": {
+    "mean": -0.03775935434699704,
+    "ci95": [
+     -0.042958438063151874,
+     -0.033067736625023075
+    ]
+   }
+  },
+  "Abandoned Vehicles": {
+   "p50_mae_diff": {
+    "mean": -8.691601850677992,
+    "ci95": [
+     -9.023027161983725,
+     -8.342286121908156
+    ]
+   },
+   "p80_pinball_diff": {
+    "mean": -4.88969041537732,
+    "ci95": [
+     -5.114908725755302,
+     -4.649840043104299
+    ]
+   }
+  },
+  "Rodent Activity": {
+   "p50_mae_diff": {
+    "mean": -0.19338800940126546,
+    "ci95": [
+     -0.20957521234524554,
+     -0.1783441753808048
+    ]
+   },
+   "p80_pinball_diff": {
+    "mean": -0.06973726367018362,
+    "ci95": [
+     -0.07826963768669785,
+     -0.06029054951872175
+    ]
+   }
+  }
+ },
+ "test_by_month": {
+  "1": {
+   "n": 14923,
+   "model_p80_coverage": 0.8746900757220398,
+   "baseline_p80_coverage": 0.874824097031428,
+   "model_p50_mae": 8.26124961471946,
+   "baseline_p50_mae": 8.56291201225977
+  },
+  "2": {
+   "n": 16661,
+   "model_p80_coverage": 0.8234799831942861,
+   "baseline_p80_coverage": 0.8595522477642399,
+   "model_p50_mae": 5.979837537990951,
+   "baseline_p50_mae": 6.210414889759393
+  },
+  "3": {
+   "n": 16172,
+   "model_p80_coverage": 0.8169675983180806,
+   "baseline_p80_coverage": 0.8564185011130349,
+   "model_p50_mae": 10.634778405904518,
+   "baseline_p50_mae": 11.118031047496645
+  },
+  "4": {
+   "n": 14735,
+   "model_p80_coverage": 0.8403121818798779,
+   "baseline_p80_coverage": 0.8601289446895147,
+   "model_p50_mae": 10.583539939258388,
+   "baseline_p50_mae": 11.045869802913195
+  },
+  "5": {
+   "n": 16564,
+   "model_p80_coverage": 0.8421878773243178,
+   "baseline_p80_coverage": 0.8584279159623279,
+   "model_p50_mae": 8.42068847511622,
+   "baseline_p50_mae": 9.057756885298858
+  },
+  "6": {
+   "n": 17748,
+   "model_p80_coverage": 0.8404890691908947,
+   "baseline_p80_coverage": 0.8479265269326122,
+   "model_p50_mae": 8.958439444892342,
+   "baseline_p50_mae": 9.425995151439208
+  },
+  "7": {
+   "n": 18284,
+   "model_p80_coverage": 0.8165062349595275,
+   "baseline_p80_coverage": 0.8413366878144826,
+   "model_p50_mae": 8.229380791013023,
+   "baseline_p50_mae": 9.515146077090904
+  },
+  "8": {
+   "n": 20804,
+   "model_p80_coverage": 0.8241684291482407,
+   "baseline_p80_coverage": 0.8457988848298404,
+   "model_p50_mae": 6.7059700887458,
+   "baseline_p50_mae": 8.010130580120977
+  },
+  "9": {
+   "n": 20280,
+   "model_p80_coverage": 0.8292899408284023,
+   "baseline_p80_coverage": 0.8571499013806706,
+   "model_p50_mae": 6.44199559752031,
+   "baseline_p50_mae": 7.812957265268874
+  },
+  "10": {
+   "n": 15748,
+   "model_p80_coverage": 0.8242951485902972,
+   "baseline_p80_coverage": 0.8302006604013208,
+   "model_p50_mae": 7.505835567092941,
+   "baseline_p50_mae": 10.151133408089299
+  },
+  "11": {
+   "n": 12829,
+   "model_p80_coverage": 0.830774027593733,
+   "baseline_p80_coverage": 0.8303842856029309,
+   "model_p50_mae": 7.155636464770809,
+   "baseline_p50_mae": 7.366267171283304
+  },
+  "12": {
+   "n": 11786,
+   "model_p80_coverage": 0.8216528084167657,
+   "baseline_p80_coverage": 0.8433734939759037,
+   "model_p50_mae": 5.177780206133739,
+   "baseline_p50_mae": 5.321702851969793
+  }
+ },
+ "test_ontime": {
+  "n": 244533,
+  "pos_rate": 0.6426290112172999,
+  "snapshot": "2026-09-16 14:49:13.623000",
+  "auc": 0.6842232936825282,
+  "brier": 0.2563213192857973,
+  "brier_constant_train_rate": 0.2491091218711994,
+  "mean_predicted": 0.8272172226305068,
+  "calibration": [
+   {
+    "mean_pred": 0.17578361954307578,
+    "observed": 0.257299419317903
+   },
+   {
+    "mean_pred": 0.5179996717571732,
+    "observed": 0.518341307814992
+   },
+   {
+    "mean_pred": 0.792178553192742,
+    "observed": 0.6849163838573823
+   },
+   {
+    "mean_pred": 0.9154501600039774,
+    "observed": 0.7692213315884181
+   },
+   {
+    "mean_pred": 0.9509919989198015,
+    "observed": 0.5556009979141957
+   },
+   {
+    "mean_pred": 0.9667922033531141,
+    "observed": 0.5095080358238253
+   },
+   {
+    "mean_pred": 0.9776781485521688,
+    "observed": 0.598372387846072
+   },
+   {
+    "mean_pred": 0.9861895922577504,
+    "observed": 0.7122060928235535
+   },
+   {
+    "mean_pred": 0.9924598598622508,
+    "observed": 0.864545417365343
+   },
+   {
+    "mean_pred": 0.9966881048085015,
+    "observed": 0.9562852703034268
+   }
+  ],
+  "auc_by_demo_type": {
+   "Request for Pothole Repair": 0.7262313445440949,
+   "Street Light Outages": 0.5219657464638555,
+   "Missed Trash/Recycling/Yard Waste/Bulk Item": 0.6275996570973734,
+   "Abandoned Vehicles": 0.5672302638561694,
+   "Rodent Activity": 0.7331087904709395
+  }
+ },
+ "permutation_importance_p50": {
+  "type": 0.211,
+  "target_days": 0.0783,
+  "roll_p50_type": 0.0463,
+  "roll_p50_type_nbhd": 0.0344,
+  "hour_bucket": 0.0322,
+  "weekday": 0.0159,
+  "roll_p80_type": 0.013,
+  "source": 0.0123,
+  "backlog_90d_type": 0.0103,
+  "neighborhood": 0.0041,
+  "backlog_type_nbhd": 0.0022,
+  "roll_n_type": 0.0011,
+  "is_holiday": 0.0009,
+  "month": -0.0005,
+  "roll_n_type_nbhd": -0.0008
+ },
+ "ml_beats_baseline_on_test": {
+  "overall": {
+   "p50_mae": true,
+   "p80_pinball": true
+  },
+  "Request for Pothole Repair": {
+   "p50_mae": true,
+   "p80_pinball": true
+  },
+  "Street Light Outages": {
+   "p50_mae": true,
+   "p80_pinball": false
+  },
+  "Missed Trash/Recycling/Yard Waste/Bulk Item": {
+   "p50_mae": true,
+   "p80_pinball": true
+  },
+  "Abandoned Vehicles": {
+   "p50_mae": true,
+   "p80_pinball": true
+  },
+  "Rodent Activity": {
+   "p50_mae": true,
+   "p80_pinball": true
+  }
+ }
+}
