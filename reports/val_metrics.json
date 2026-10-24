@@ -1,0 +1,388 @@
+{
+ "split": {
+  "train": [
+   2022,
+   2023
+  ],
+  "val": [
+   2024,
+   2024
+  ],
+  "test": [
+   2025,
+   2025
+  ]
+ },
+ "n": {
+  "train": 454407,
+  "val": 232964
+ },
+ "val_baseline": {
+  "overall": {
+   "n": 232964,
+   "p50_mae": 12.406746742315999,
+   "p50_medae": 0.3960789756944444,
+   "p50_pinball": 6.2033733711579995,
+   "p80_coverage": 0.7983465256434471,
+   "p80_pinball": 7.738317286779379
+  },
+  "Request for Pothole Repair": {
+   "n": 6751,
+   "p50_mae": 12.297680289175265,
+   "p50_medae": 1.0723838310185185,
+   "p50_pinball": 6.148840144587632,
+   "p80_coverage": 0.8372093023255814,
+   "p80_pinball": 9.223016577523426
+  },
+  "Street Light Outages": {
+   "n": 3576,
+   "p50_mae": 55.11092182960672,
+   "p50_medae": 5.683847916666667,
+   "p50_pinball": 27.55546091480336,
+   "p80_coverage": 0.810682326621924,
+   "p80_pinball": 30.717651121667725
+  },
+  "Missed Trash/Recycling/Yard Waste/Bulk Item": {
+   "n": 10194,
+   "p50_mae": 0.40108082966491726,
+   "p50_medae": 0.36716861689814817,
+   "p50_pinball": 0.20054041483245863,
+   "p80_coverage": 0.8508926819697862,
+   "p80_pinball": 0.1720298510763866
+  },
+  "Abandoned Vehicles": {
+   "n": 3879,
+   "p50_mae": 35.5083571755455,
+   "p50_medae": 24.56774978587963,
+   "p50_pinball": 17.75417858777275,
+   "p80_coverage": 0.8878576952822892,
+   "p80_pinball": 16.841080484919985
+  },
+  "Rodent Activity": {
+   "n": 4778,
+   "p50_mae": 1.555644895363394,
+   "p50_medae": 0.7427438252314813,
+   "p50_pinball": 0.777822447681697,
+   "p80_coverage": 0.8229384679782336,
+   "p80_pinball": 0.8576430425037402
+  }
+ },
+ "baseline_levels_val": {
+  "type": 232785,
+  "reason": 133,
+  "global": 46
+ },
+ "val_grid": [
+  {
+   "quantile": "p50",
+   "features": "all",
+   "params": 0,
+   "pinball": 5.941622080950739,
+   "coverage": 0.5665253000463591,
+   "sec": 6.5
+  },
+  {
+   "quantile": "p80",
+   "features": "all",
+   "params": 0,
+   "pinball": 7.35123114964953,
+   "coverage": 0.8097474287872805,
+   "sec": 6.1
+  },
+  {
+   "quantile": "p50",
+   "features": "all",
+   "params": 1,
+   "pinball": 6.0236690027065505,
+   "coverage": 0.5771106265345719,
+   "sec": 8.0
+  },
+  {
+   "quantile": "p80",
+   "features": "all",
+   "params": 1,
+   "pinball": 7.345217461829179,
+   "coverage": 0.8067212101440566,
+   "sec": 8.1
+  },
+  {
+   "quantile": "p50",
+   "features": "all",
+   "params": 2,
+   "pinball": 5.995375530623851,
+   "coverage": 0.5699507219999657,
+   "sec": 15.7
+  },
+  {
+   "quantile": "p80",
+   "features": "all",
+   "params": 2,
+   "pinball": 7.417579890564617,
+   "coverage": 0.8041628749506361,
+   "sec": 15.5
+  },
+  {
+   "quantile": "p50",
+   "features": "all",
+   "params": 3,
+   "pinball": 5.951858337764235,
+   "coverage": 0.5745909239195756,
+   "sec": 23.6
+  },
+  {
+   "quantile": "p80",
+   "features": "all",
+   "params": 3,
+   "pinball": 7.346544313281622,
+   "coverage": 0.7997330059580021,
+   "sec": 22.0
+  },
+  {
+   "quantile": "p50",
+   "features": "no_backlog_type",
+   "params": 0,
+   "pinball": 5.970486191410664,
+   "coverage": 0.5497673460277125,
+   "sec": 6.2
+  },
+  {
+   "quantile": "p80",
+   "features": "no_backlog_type",
+   "params": 0,
+   "pinball": 7.377576167437004,
+   "coverage": 0.8052445871465119,
+   "sec": 6.3
+  },
+  {
+   "quantile": "p50",
+   "features": "no_backlog_type",
+   "params": 1,
+   "pinball": 5.996369620169989,
+   "coverage": 0.561266976871963,
+   "sec": 8.2
+  },
+  {
+   "quantile": "p80",
+   "features": "no_backlog_type",
+   "params": 1,
+   "pinball": 7.3344341962105375,
+   "coverage": 0.8007632080493123,
+   "sec": 7.7
+  },
+  {
+   "quantile": "p50",
+   "features": "no_backlog_type",
+   "params": 2,
+   "pinball": 5.968449910367665,
+   "coverage": 0.5578072148486461,
+   "sec": 15.5
+  },
+  {
+   "quantile": "p80",
+   "features": "no_backlog_type",
+   "params": 2,
+   "pinball": 7.35724388412234,
+   "coverage": 0.7981361927164712,
+   "sec": 15.3
+  },
+  {
+   "quantile": "p50",
+   "features": "no_backlog_type",
+   "params": 3,
+   "pinball": 5.971684635099963,
+   "coverage": 0.5736937895983929,
+   "sec": 22.3
+  },
+  {
+   "quantile": "p80",
+   "features": "no_backlog_type",
+   "params": 3,
+   "pinball": 7.381823563239872,
+   "coverage": 0.7980718050857644,
+   "sec": 21.3
+  }
+ ],
+ "feature_set_choice": {
+  "totals": {
+   "all": 13.28683954277992,
+   "no_backlog_type": 13.302884106578203
+  },
+  "chosen": "no_backlog_type",
+  "rule": "prefer no_backlog_type if within 1%"
+ },
+ "val_model": {
+  "overall": {
+   "n": 232964,
+   "p50_mae": 11.93689982073533,
+   "p50_medae": 0.3963648815388654,
+   "p50_pinball": 5.968449910367665,
+   "p80_coverage": 0.8037465016053983,
+   "p80_pinball": 7.327582621399908
+  },
+  "Request for Pothole Repair": {
+   "n": 6751,
+   "p50_mae": 12.07689907727036,
+   "p50_medae": 1.1052333007513129,
+   "p50_pinball": 6.03844953863518,
+   "p80_coverage": 0.8173603910531773,
+   "p80_pinball": 9.053411764102986
+  },
+  "Street Light Outages": {
+   "n": 3576,
+   "p50_mae": 53.442427488651326,
+   "p50_medae": 14.355540228188463,
+   "p50_pinball": 26.721213744325663,
+   "p80_coverage": 0.8204697986577181,
+   "p80_pinball": 28.99974354914271
+  },
+  "Missed Trash/Recycling/Yard Waste/Bulk Item": {
+   "n": 10194,
+   "p50_mae": 0.2802656073946843,
+   "p50_medae": 0.0823220124595741,
+   "p50_pinball": 0.14013280369734216,
+   "p80_coverage": 0.8134196586227193,
+   "p80_pinball": 0.1360710214633245
+  },
+  "Abandoned Vehicles": {
+   "n": 3879,
+   "p50_mae": 35.6994866334706,
+   "p50_medae": 24.776026397358805,
+   "p50_pinball": 17.8497433167353,
+   "p80_coverage": 0.7589584944573343,
+   "p80_pinball": 16.182471335855062
+  },
+  "Rodent Activity": {
+   "n": 4778,
+   "p50_mae": 1.3372070416475144,
+   "p50_medae": 0.5102508119228025,
+   "p50_pinball": 0.6686035208237572,
+   "p80_coverage": 0.806613645876936,
+   "p80_pinball": 0.7846547837799625
+  }
+ },
+ "chosen": {
+  "p50": {
+   "quantile": "p50",
+   "features": "no_backlog_type",
+   "params": {
+    "learning_rate": 0.05,
+    "max_iter": 600,
+    "max_leaf_nodes": 63,
+    "min_samples_leaf": 100
+   },
+   "pinball": 5.968449910367665,
+   "coverage": 0.5578072148486461,
+   "sec": 15.5
+  },
+  "p80": {
+   "quantile": "p80",
+   "features": "no_backlog_type",
+   "params": {
+    "learning_rate": 0.1,
+    "max_iter": 300,
+    "max_leaf_nodes": 63,
+    "min_samples_leaf": 100
+   },
+   "pinball": 7.3344341962105375,
+   "coverage": 0.8007632080493123,
+   "sec": 7.7
+  }
+ },
+ "use_model_by_type": {
+  "Abandoned Bicycle": true,
+  "Abandoned Vehicles": true,
+  "Animal Generic Request": true,
+  "BWSC General Request": false,
+  "Building Inspection Request": true,
+  "CE Collection": true,
+  "Catchbasin": true,
+  "Chronic Dampness/Mold": true,
+  "Construction Debris": true,
+  "Contractor Complaints": true,
+  "Contractors Complaint": false,
+  "Electrical": true,
+  "Empty Litter Basket": true,
+  "Equipment Repair": true,
+  "Exceeding Terms of Permit": false,
+  "Fire Hydrant": true,
+  "Food Alert - Confirmed": true,
+  "Food Alert - Unconfirmed": true,
+  "General Comments For An Employee": true,
+  "General Comments For a Program or Policy": false,
+  "General Lighting Request": true,
+  "General Traffic Engineering Request": false,
+  "Graffiti Removal": true,
+  "Ground Maintenance": true,
+  "Heat - Excessive  Insufficient": true,
+  "Illegal Auto Body Shop": true,
+  "Illegal Dumping": true,
+  "Illegal Posting of Signs": true,
+  "Illegal Vending": false,
+  "Improper Storage of Trash (Barrels)": true,
+  "Maintenance - Homeowner": false,
+  "Maintenance Complaint - Residential": true,
+  "Major System Failure": true,
+  "Mattress_Pickup": true,
+  "Mice Infestation - Residential": true,
+  "Missed Trash/Recycling/Yard Waste/Bulk Item": true,
+  "Missing Sign": false,
+  "Needle Pickup": true,
+  "New Sign  Crosswalk or Pavement Marking": false,
+  "New Tree Requests": true,
+  "PWD Graffiti": true,
+  "Park Improvement Requests": true,
+  "Parking Enforcement": true,
+  "Parking on Front/Back Yards (Illegal Parking)": true,
+  "Parks General Request": true,
+  "Parks Lighting/Electrical Issues": true,
+  "Pavement Marking Inspection": false,
+  "Pest Infestation - Residential": true,
+  "Pick up Dead Animal": true,
+  "Poor Conditions of Property": true,
+  "Protection of Adjoining Property": true,
+  "Public Works General Request": true,
+  "Recycling Cart Return": true,
+  "Request for Pothole Repair": true,
+  "Request for Recycling Cart": true,
+  "Request for Snow Plowing": false,
+  "Requests for Street Cleaning": true,
+  "Requests for Traffic Signal Studies or Reviews": false,
+  "Roadway Repair": false,
+  "Rodent Activity": true,
+  "Schedule a Bulk Item Pickup": false,
+  "Schedule a Bulk Item Pickup SS": false,
+  "Short Term Rental": false,
+  "Sidewalk Cover / Manhole": true,
+  "Sidewalk Repair (Make Safe)": true,
+  "Sign Repair": true,
+  "Space Savers": true,
+  "Sticker Request": true,
+  "Street Light Knock Downs": false,
+  "Street Light Outages": true,
+  "Student Move-in Issues": false,
+  "Traffic Signal Inspection": true,
+  "Traffic Signal Repair": true,
+  "Transportation General Request": true,
+  "Tree Emergencies": false,
+  "Tree Maintenance Requests": true,
+  "Unsafe Dangerous Conditions": false,
+  "Unsanitary Conditions - Establishment": true,
+  "Unsanitary Conditions - Food": true,
+  "Unsatisfactory Living Conditions": true,
+  "Unsatisfactory Utilities - Electrical  Plumbing": true,
+  "Unshoveled Sidewalk": true,
+  "Utility Casting Repair": true,
+  "Work Hours-Loud Noise Complaints": true,
+  "Work w/out Permit": true,
+  "Working Beyond Hours": false
+ },
+ "val_ontime": {
+  "snapshot": "2026-09-16 14:49:13.623000",
+  "open_overdue_added": 131429,
+  "train_pos_rate": 0.7820993138469106,
+  "val_pos_rate": 0.7133278722097072,
+  "auc": 0.858781621550738,
+  "brier": 0.1353207046970438,
+  "brier_constant": 0.2092207301233381
+ }
+}

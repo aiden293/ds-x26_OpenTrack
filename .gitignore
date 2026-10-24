@@ -4,6 +4,8 @@
 !.env.example
 
 # Local datasets and generated outputs
+# (Boston 311 raw CSVs ~800MB and processed parquet files; re-download from
+#  data.boston.gov and rebuild with the src/ pipeline, see APP_HANDOFF.md)
 data/
 outputs/
 tmp/

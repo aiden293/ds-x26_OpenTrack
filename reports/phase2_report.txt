@@ -1,0 +1,134 @@
+=== All cases: 1,433,236
+
+=== Neighborhood after merge
+neighborhood
+Dorchester                                      202732
+South Boston / South Boston Waterfront          134238
+Roxbury                                         126684
+Allston / Brighton                              119595
+South End                                        99448
+East Boston                                      97192
+Jamaica Plain                                    83090
+Downtown / Financial District                    77406
+Back Bay                                         71208
+Unknown / Citywide                               64702
+Greater Mattapan                                 61371
+Hyde Park                                        55069
+Roslindale                                       51026
+West Roxbury                                     46587
+Charlestown                                      45937
+Beacon Hill                                      44315
+Fenway / Kenmore / Audubon Circle / Longwood     26538
+Mission Hill                                     26018
+Chestnut Hill                                       80
+
+=== closure_cat counts (closed cases)
+closure_cat
+resolved        741854
+noted           345741
+automation       75709
+invalid          39640
+duplicate        32533
+bulk_closure     11257
+other            11155
+referred          4599
+resubmitted        794
+<NA>               784
+
+Examples per excluded / other category:
+  [automation] Case Closed. Closed date : 2023-10-11 16:15:27.533 Mattress Pickup Automation Mattress Scheduled Pickup Automation
+  [automation] Case Closed. Closed date : 2023-04-04 16:30:45.947 Bulk Item Automation
+  [automation] Case Closed. Closed date : 2023-06-21 16:15:24.757 Mattress Pickup Automation Mattress Scheduled Pickup Automation
+  [bulk_closure] Case Closed. Closed date : 2024-10-15 12:16:45.957 Case Noted Thank you for your request to the City of Boston. In response to the COVID-19 
+  [bulk_closure] Case Closed Case Resolved  Dear Constituent   If you receive a message from the City of Boston regarding an old service request  311 is curr
+  [bulk_closure] Case Closed. Closed date : 2022-07-28 14:51:35.89 Case Resolved A new tree was planted by MON in the SPRING of 2022. The tree is under warra
+  [duplicate] Case Closed. Closed date : 2022-09-29 06:59:51.213 Duplicate of Existing Case Duplicate CRM
+  [duplicate] Case Closed. Closed date : 2023-06-19 15:21:33.82 Duplicate of Existing Case duplicate 4887168
+  [duplicate] Case Closed. Closed date : 2024-01-26 06:40:58.927 Duplicate of Existing Case Case has been added to pavement markings.
+  [invalid] Case Closed. Closed date : 2023-02-23 09:07:07.25 Case Invalid
+  [invalid] Case Closed. Closed date : 2023-05-22 19:20:05.933 Case Invalid
+  [invalid] Case Closed. Closed date : 2024-09-24 12:21:41.227 Case Invalid
+  [other] Case Closed. Closed date : 2022-10-24 08:25:48.84 Per Parks Dept: Alley is private property
+  [other] Case Closed. Closed date : 2022-03-02 09:42:13.733 Per Public Works: The hospital was notified
+  [other] Case Closed. Closed date : 2022-04-12 10:00:48.383 Per Public Works: Need better location
+  [referred] Case Closed. Closed date : 2025-06-23 14:25:23.273 Case Referred to External Agency contacted Eversource.
+  [referred] Case Closed. Closed date : 2023-07-21 07:58:14.607 Case Referred to External Agency This case has been closed as there is not enough informa
+  [referred] Case Closed. Closed date : 2022-12-15 10:58:30.07 Case Referred to External Agency South Bay  private property.  Prop Mngr (edens.com) notif
+  [resubmitted] Case Closed. Closed date : 2024-05-13 09:21:14.013 Resubmitted as case 101005460699
+  [resubmitted] Case Closed. Closed date : 2023-02-06 08:25:53.453 Resubmitted as 101004657426
+  [resubmitted] Case Closed. Closed date : 2024-05-24 09:11:38.903 Resubmitted as 101005476094
+
+=== Drop / exclusion funnel (closed cases)
+closed: 1,264,066
+  resolution_days <= 0: 0
+  excluded closure_cat: 164,532
+  valid_target (kept): 1,099,534
+open (no closed_dt): 169,170
+
+=== Excluded share by demo type
+Request for Pothole Repair: closed=38,566 excluded=7.2% nonpos=0.00% cats={'resolved': 26506, 'noted': 8043, 'other': 1244, 'invalid': 1183, 'referred': 856, 'duplicate': 492, 'bulk_closure': 195, 'resubmitted': 47}
+Street Light Outages: closed=19,785 excluded=4.1% nonpos=0.00% cats={'resolved': 16851, 'noted': 1957, 'duplicate': 317, 'invalid': 261, 'other': 165, 'referred': 149, 'bulk_closure': 75, 'resubmitted': 10}
+Missed Trash/Recycling/Yard Waste/Bulk Item: closed=60,954 excluded=4.3% nonpos=0.00% cats={'noted': 30540, 'resolved': 27592, 'invalid': 2362, 'duplicate': 215, 'other': 210, 'resubmitted': 32, 'referred': 2, 'automation': 1}
+Abandoned Vehicles: closed=23,906 excluded=26.4% nonpos=0.00% cats={'resolved': 14600, 'duplicate': 3316, 'noted': 2912, 'bulk_closure': 2612, 'invalid': 350, 'other': 90, 'referred': 20, 'resubmitted': 6}
+Rodent Activity: closed=21,800 excluded=4.8% nonpos=0.00% cats={'noted': 17047, 'resolved': 3490, 'duplicate': 563, 'invalid': 449, 'other': 216, 'resubmitted': 17, 'referred': 15}
+
+=== % still open (censoring) by year
+year
+2021     5.1
+2022     6.0
+2023     6.1
+2024    16.3
+2025    25.4
+
+=== % still open by demo type x year
+year                                         2021  2022  2023  2024  2025
+type                                                                     
+Abandoned Vehicles                            0.0   0.1   0.4   2.3   3.8
+Missed Trash/Recycling/Yard Waste/Bulk Item   0.0   0.0   0.0   0.0   0.0
+Request for Pothole Repair                   29.6  32.2  29.2  31.3  35.2
+Rodent Activity                               1.7   1.0   1.1   1.0   1.1
+Street Light Outages                          4.7   5.4   7.1  12.6  34.8
+
+=== resolution_days quantiles (valid closures), all types, by year
+       p10   p50   p80     p95     p99         n     max
+2021  0.02  0.31  3.14  122.90  775.57  215629.0  1952.1
+2022  0.02  0.46  2.96   74.10  454.19  222825.0  1631.2
+2023  0.02  0.57  5.07   56.75  321.07  231582.0  1238.2
+2024  0.02  0.47  4.79   70.79  287.67  232964.0   971.9
+2025  0.02  0.28  2.78   35.56  172.52  196534.0   606.9
+
+=== resolution_days quantiles by demo type (all years)
+                                              p10    p50    p80     p95      p99        n     max
+Request for Pothole Repair                   0.00   0.95   4.62   19.89   549.77  35793.0  1745.8
+Street Light Outages                         0.02   7.65  96.65  322.44   632.23  18973.0  1730.1
+Missed Trash/Recycling/Yard Waste/Bulk Item  0.02   0.52   0.79    1.91     2.91  58342.0    36.3
+Abandoned Vehicles                           5.93  33.90  88.88  182.00  1104.59  17602.0  1362.1
+Rodent Activity                              0.11   0.95   2.93    6.09    20.01  20756.0  1750.3
+
+=== resolution_days p50 / p80 by demo type x year
+year                                          2021   2022   2023   2024   2025
+type                                                                          
+Abandoned Vehicles                           77.88  42.12  37.09  48.05  16.03
+Missed Trash/Recycling/Yard Waste/Bulk Item   0.53   0.55   0.53   0.51   0.47
+Request for Pothole Repair                    0.73   0.98   1.67   1.01   0.88
+Rodent Activity                               1.50   0.99   1.00   0.90   0.82
+Street Light Outages                          7.59  10.46   2.64   9.84  14.37
+year                                           2021    2022    2023    2024   2025
+type                                                                              
+Abandoned Vehicles                           134.27  117.94  106.20   86.96  28.00
+Missed Trash/Recycling/Yard Waste/Bulk Item    0.79    0.84    0.83    0.76   0.72
+Request for Pothole Repair                     2.82    4.63    6.89    4.71   3.80
+Rodent Activity                                4.72    3.00    2.84    2.77   2.55
+Street Light Outages                          99.71  138.32   82.38  101.90  58.31
+
+=== Very short closures (< 5 min) share by demo type (kept, reported only)
+type
+Abandoned Vehicles                              0.1
+Missed Trash/Recycling/Yard Waste/Bulk Item     1.2
+Request for Pothole Repair                     10.3
+Rodent Activity                                 2.3
+Street Light Outages                            3.2
+
+No capping/winsorizing applied; extremes kept (see p99 / max above).
+
+Saved all_cases.parquet (1,433,236) and clean.parquet (1,099,534)
