@@ -4,7 +4,7 @@ A Boston 311 project that aims to estimate how long citizen service requests tak
 
 ## Current stage
 
-Data analysis and modeling are done; the Streamlit app is in progress.
+Data analysis and modeling are done. The app uses a Next.js interface and a FastAPI adapter for the existing Python models.
 
 - Data: City of Boston 311 Service Requests 2021-2025 (data.boston.gov, PDDL), 1,433,236 requests, 1,099,534 valid closures after cleaning.
 - Models: per-type baseline and gradient-boosted quantile models (p50, p80) for resolution days, plus an on-time classifier. Trained on 2022-2023, tuned on 2024, tested on 2025.
@@ -13,15 +13,15 @@ Data analysis and modeling are done; the Streamlit app is in progress.
 
 Estimates are historical, not official City of Boston deadlines. About 25% of 2025 requests were never closed in the data, and Boston's October 2025 311 system change truncates later closures.
 
-## First milestone
+## App milestone
 
-Choose a Boston 311 dataset, inspect its fields, and calculate historical resolution times for one request category.
-
-An initial example could show the typical resolution time for similar requests. Predictions and explanations will need validation before they are presented as reliable estimates.
+Select a request type, neighborhood, and Boston-local date/time to retrieve a real model estimate. The app shows typical and longer waits, estimated city targets, on-time probabilities when supported, and historical cases when the separate dataset is installed.
 
 ## Repository
 
-- `README.md` - project overview.
+- `README.md` - project overview and local setup.
+- `frontend/` - Next.js app (request form, predictions, and similar cases).
+- `backend/` - FastAPI HTTP adapter; model code remains in `src/`.
 - `BLUEPRINT.md` - minimal scope and next steps.
 - `APP_HANDOFF.md` - how the app calls `predict()` and `similar_cases()`, and which caveats to show.
 - `src/` - data pipeline (`load`, `clean`, `features`, `train`, `evaluate`, `export`) and app-facing `predict.py`, `similar.py`.
@@ -33,6 +33,36 @@ An initial example could show the typical resolution time for similar requests. 
 
 ## Getting started
 
-Read [the blueprint](BLUEPRINT.md). The first contribution should document the chosen dataset and the fields available for measuring resolution time.
+Use Node.js 22+ and Python 3.12 or the model teammate's Python 3.14 environment (as specified in `APP_HANDOFF.md`). This app was verified locally on Python 3.12 with the pinned model dependencies. Keep those dependency versions: loading scikit-learn model files with different versions is unsupported.
 
-No dependencies or installation steps are required at this stage.
+From the repository root, in PowerShell:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python -X utf8 -m pip install -r backend/requirements.txt
+.\.venv\Scripts\python -X utf8 -m uvicorn backend.main:app --reload --host 127.0.0.1 --port 8000
+```
+
+In a second terminal:
+
+```powershell
+cd frontend
+npm ci
+npm run dev
+```
+
+Open http://localhost:3000. Next.js proxies `/api/*` to `http://127.0.0.1:8000`; set `BACKEND_URL` in `frontend/.env.local` to change that address. API documentation is at http://127.0.0.1:8000/docs.
+
+The API reads dropdown options from `models/choices.json` and invokes the real `src.predict.predict` function. Datetimes entered in the app are Boston local time. No mock predictions are shown; model errors produce an unavailable message.
+
+Get `cases_for_app.parquet` from the data teammate and put it in `data/processed/` to enable similar cases. Without it, predictions still work and the history panel explains that records are not connected. Restart the API after replacing an already loaded dataset or model.
+
+Checks:
+
+```powershell
+.\.venv\Scripts\python -m unittest tests.test_api
+cd frontend
+npm run build
+```
+
+The API tests verify validation, timezone handling, the prediction adapter, and missing-data behavior. They use a stub only for the model call. A real prediction was also verified through the Next.js proxy: `Request for Pothole Repair`, `Dorchester`, `2026-10-26T10:00:00` returned p50 `0.921` days and p80 `2.486` days, matching the handoff example after rounding.
