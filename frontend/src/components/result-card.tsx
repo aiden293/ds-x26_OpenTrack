@@ -79,7 +79,7 @@ function Compare({ insights, request }: { insights: Insights; request: EstimateR
 
 type Panel = "cmp" | "dist" | "det";
 const PANELS: { key: Panel; label: string }[] = [
-  { key: "cmp", label: "Other neighborhoods" }, { key: "dist", label: "How long it took" }, { key: "det", label: "Details" },
+  { key: "cmp", label: "Other neighborhoods" }, { key: "dist", label: "Time distribution" }, { key: "det", label: "Details" },
 ];
 
 export function ResultCard({ request, result, insights, insightsError }: {
