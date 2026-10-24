@@ -1,0 +1,58 @@
+train=454,407 val=232,964 test=196,534 (test untouched)
+baseline val overall: {'n': 232964, 'p50_mae': 12.407, 'p50_medae': 0.396, 'p50_pinball': 6.203, 'p80_coverage': 0.798, 'p80_pinball': 7.738}
+{'quantile': 'p50', 'features': 'all', 'params': 0, 'pinball': 5.941622080950739, 'coverage': 0.5665253000463591, 'sec': 6.5}
+{'quantile': 'p80', 'features': 'all', 'params': 0, 'pinball': 7.35123114964953, 'coverage': 0.8097474287872805, 'sec': 6.1}
+{'quantile': 'p50', 'features': 'all', 'params': 1, 'pinball': 6.0236690027065505, 'coverage': 0.5771106265345719, 'sec': 8.0}
+{'quantile': 'p80', 'features': 'all', 'params': 1, 'pinball': 7.345217461829179, 'coverage': 0.8067212101440566, 'sec': 8.1}
+{'quantile': 'p50', 'features': 'all', 'params': 2, 'pinball': 5.995375530623851, 'coverage': 0.5699507219999657, 'sec': 15.7}
+{'quantile': 'p80', 'features': 'all', 'params': 2, 'pinball': 7.417579890564617, 'coverage': 0.8041628749506361, 'sec': 15.5}
+{'quantile': 'p50', 'features': 'all', 'params': 3, 'pinball': 5.951858337764235, 'coverage': 0.5745909239195756, 'sec': 23.6}
+{'quantile': 'p80', 'features': 'all', 'params': 3, 'pinball': 7.346544313281622, 'coverage': 0.7997330059580021, 'sec': 22.0}
+{'quantile': 'p50', 'features': 'no_backlog_type', 'params': 0, 'pinball': 5.970486191410664, 'coverage': 0.5497673460277125, 'sec': 6.2}
+{'quantile': 'p80', 'features': 'no_backlog_type', 'params': 0, 'pinball': 7.377576167437004, 'coverage': 0.8052445871465119, 'sec': 6.3}
+{'quantile': 'p50', 'features': 'no_backlog_type', 'params': 1, 'pinball': 5.996369620169989, 'coverage': 0.561266976871963, 'sec': 8.2}
+{'quantile': 'p80', 'features': 'no_backlog_type', 'params': 1, 'pinball': 7.3344341962105375, 'coverage': 0.8007632080493123, 'sec': 7.7}
+{'quantile': 'p50', 'features': 'no_backlog_type', 'params': 2, 'pinball': 5.968449910367665, 'coverage': 0.5578072148486461, 'sec': 15.5}
+{'quantile': 'p80', 'features': 'no_backlog_type', 'params': 2, 'pinball': 7.35724388412234, 'coverage': 0.7981361927164712, 'sec': 15.3}
+{'quantile': 'p50', 'features': 'no_backlog_type', 'params': 3, 'pinball': 5.971684635099963, 'coverage': 0.5736937895983929, 'sec': 22.3}
+{'quantile': 'p80', 'features': 'no_backlog_type', 'params': 3, 'pinball': 7.381823563239872, 'coverage': 0.7980718050857644, 'sec': 21.3}
+feature set: {'totals': {'all': 13.28683954277992, 'no_backlog_type': 13.302884106578203}, 'chosen': 'no_backlog_type', 'rule': 'prefer no_backlog_type if within 1%'}
+{
+ "chosen": {
+  "p50": {
+   "quantile": "p50",
+   "features": "no_backlog_type",
+   "params": {
+    "learning_rate": 0.05,
+    "max_iter": 600,
+    "max_leaf_nodes": 63,
+    "min_samples_leaf": 100
+   },
+   "pinball": 5.968449910367665,
+   "coverage": 0.5578072148486461,
+   "sec": 15.5
+  },
+  "p80": {
+   "quantile": "p80",
+   "features": "no_backlog_type",
+   "params": {
+    "learning_rate": 0.1,
+    "max_iter": 300,
+    "max_leaf_nodes": 63,
+    "min_samples_leaf": 100
+   },
+   "pinball": 7.3344341962105375,
+   "coverage": 0.8007632080493123,
+   "sec": 7.7
+  }
+ },
+ "val_ontime": {
+  "snapshot": "2026-09-16 14:49:13.623000",
+  "open_overdue_added": 131429,
+  "train_pos_rate": 0.7820993138469106,
+  "val_pos_rate": 0.7133278722097072,
+  "auc": 0.858781621550738,
+  "brier": 0.1353207046970438,
+  "brier_constant": 0.2092207301233381
+ }
+}
