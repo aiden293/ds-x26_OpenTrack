@@ -25,7 +25,8 @@ An initial example could show the typical resolution time for similar requests. 
 - `BLUEPRINT.md` - minimal scope and next steps.
 - `APP_HANDOFF.md` - how the app calls `predict()` and `similar_cases()`, and which caveats to show.
 - `src/` - data pipeline (`load`, `clean`, `features`, `train`, `evaluate`, `export`) and app-facing `predict.py`, `similar.py`.
-- `tests/` - sanity tests for features and similar cases.
+- `tests/` - sanity tests for features, similar cases, and predict() edge-case flags.
+- `EDGE_CASES.md` - every exclusion and fallback, the flag it raises, and how to present it.
 - `models/` - final models and lookup files used by `predict()`; `models/eval/` holds the train-only models behind the reported metrics.
 - `reports/` - metrics, charts, and phase reports.
 - `requirements.txt` - Python dependencies.

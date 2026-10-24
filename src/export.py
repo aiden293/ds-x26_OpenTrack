@@ -9,6 +9,7 @@ chosen on 2024 validation (reports/val_metrics.json). Writes:
                                  at STATE_TIME, computed with the same build_features code
   models/target_days.json        estimated SLA days per (type, weekday) from 2025 cases
   models/meta.json               fit years, state time, data range, policy
+  models/type_stats.json, models/local_counts.json  lookups for predict() edge-case flags
   data/processed/cases_for_app.parquet, models/choices.json
 """
 import json
@@ -33,6 +34,8 @@ DEFAULT_SOURCE = "Citizens Connect App"   # resident filing through the app
 STATE_TIME = pd.Timestamp("2025-10-01")
 APP_COLUMNS = ["case_enquiry_id", "type", "neighborhood", "source", "open_dt", "closed_dt",
                "target_dt", "resolution_days", "closure_reason", "year"]
+# Sources a resident can use; City Worker App / Employee Generated are staff-logged and much faster.
+RESIDENT_SOURCES = ["Citizens Connect App", "Constituent Call", "Self Service"]
 
 
 def state_snapshot(cases: pd.DataFrame, clean: pd.DataFrame, state_time: pd.Timestamp) -> pd.DataFrame:
@@ -56,6 +59,33 @@ def target_days_table(clean_all: pd.DataFrame) -> dict:
     for t, g in by_wd.groupby(level=0):
         out[t] = {str(w): round(float(v), 3) for (_, w), v in g.items()}
     return out
+
+
+def export_edge_stats() -> None:
+    """Lookups behind predict()'s edge-case flags (no model refit needed).
+    models/type_stats.json: per type, share of cases opened 2022-01..STATE_TIME never closed
+      in the data (later opens are skipped: the Oct 2025 system change hides their closures).
+    models/local_counts.json: valid closures per type and neighborhood in FINAL_YEARS.
+    """
+    cases = pd.read_parquet(PROC / "all_cases.parquet", columns=["type", "open_dt", "is_closed"])
+    c = cases[(cases["open_dt"] >= f"{FINAL_YEARS[0]}-01-01") & (cases["open_dt"] < STATE_TIME)]
+    g = c.groupby("type")["is_closed"]
+    stats = {t: {"pct_unclosed": round(1 - float(m), 4), "n_cases": int(n)}
+             for t, m, n in zip(g.mean().index, g.mean().values, g.size().values)}
+    (MODELS / "type_stats.json").write_text(json.dumps(stats, indent=1))
+
+    clean = pd.read_parquet(PROC / "clean.parquet", columns=["type", "neighborhood", "year"])
+    fit = clean[clean["year"].between(*FINAL_YEARS)]
+    local = {}
+    for (t, nb), n in fit.groupby(["type", "neighborhood"]).size().items():
+        local.setdefault(t, {})[nb] = int(n)
+    (MODELS / "local_counts.json").write_text(json.dumps(local, indent=1))
+
+    path = MODELS / "choices.json"
+    choices = json.loads(path.read_text())
+    choices["resident_sources"] = RESIDENT_SOURCES
+    path.write_text(json.dumps(choices, indent=1))
+    print(f"edge stats: {len(stats)} types, local counts for {len(local)} types")
 
 
 def main() -> None:
@@ -115,6 +145,7 @@ def main() -> None:
         "source": "City of Boston 311 Service Requests, data.boston.gov, PDDL",
     }
     (MODELS / "meta.json").write_text(json.dumps(meta, indent=1, default=str))
+    export_edge_stats()
     print(f"state_time={state_time}; snapshot rows={len(snap):,}; cases_for_app rows={len(app):,}; "
           f"types in choices={len(choices['types'])}")
 
