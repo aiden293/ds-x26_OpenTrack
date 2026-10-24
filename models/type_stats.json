@@ -1,0 +1,722 @@
+{
+ "Abandoned Bicycle": {
+  "pct_unclosed": 0.3302,
+  "n_cases": 3998
+ },
+ "Abandoned Building": {
+  "pct_unclosed": 0.1182,
+  "n_cases": 296
+ },
+ "Abandoned Vehicles": {
+  "pct_unclosed": 0.0157,
+  "n_cases": 18043
+ },
+ "Abandoned Vehicles - Private Tow": {
+  "pct_unclosed": 0.0,
+  "n_cases": 1
+ },
+ "Aircraft Noise Disturbance": {
+  "pct_unclosed": 0.8929,
+  "n_cases": 28
+ },
+ "Animal Generic Request": {
+  "pct_unclosed": 0.0984,
+  "n_cases": 11753
+ },
+ "Animal Noise Disturbances": {
+  "pct_unclosed": 0.442,
+  "n_cases": 371
+ },
+ "Automotive Noise Disturbance": {
+  "pct_unclosed": 0.8472,
+  "n_cases": 432
+ },
+ "BWSC General Request": {
+  "pct_unclosed": 0.262,
+  "n_cases": 1084
+ },
+ "BWSC Pothole": {
+  "pct_unclosed": 0.3057,
+  "n_cases": 422
+ },
+ "Bed Bugs": {
+  "pct_unclosed": 0.1044,
+  "n_cases": 364
+ },
+ "Bicycle Issues": {
+  "pct_unclosed": 0.599,
+  "n_cases": 207
+ },
+ "Big Buildings Recycling (INTERNAL)": {
+  "pct_unclosed": 0.0,
+  "n_cases": 3
+ },
+ "Billing Complaint": {
+  "pct_unclosed": 0.6452,
+  "n_cases": 31
+ },
+ "Boston Public Health Commission (BPHC)": {
+  "pct_unclosed": 1.0,
+  "n_cases": 1
+ },
+ "Bridge Maintenance": {
+  "pct_unclosed": 0.1714,
+  "n_cases": 35
+ },
+ "Building Inspection Request": {
+  "pct_unclosed": 0.0291,
+  "n_cases": 2614
+ },
+ "CE Collection": {
+  "pct_unclosed": 0.0045,
+  "n_cases": 60928
+ },
+ "Capital Improvement Long Term": {
+  "pct_unclosed": 0.0,
+  "n_cases": 2
+ },
+ "Carbon Monoxide": {
+  "pct_unclosed": 0.1364,
+  "n_cases": 22
+ },
+ "Catchbasin": {
+  "pct_unclosed": 0.4788,
+  "n_cases": 2358
+ },
+ "Cemetery Maintenance Request": {
+  "pct_unclosed": 0.0,
+  "n_cases": 115
+ },
+ "Chronic Dampness/Mold": {
+  "pct_unclosed": 0.2058,
+  "n_cases": 972
+ },
+ "City/State Snow Issues": {
+  "pct_unclosed": 0.2464,
+  "n_cases": 69
+ },
+ "Construction Debris": {
+  "pct_unclosed": 0.0145,
+  "n_cases": 692
+ },
+ "Contractor Complaints": {
+  "pct_unclosed": 0.144,
+  "n_cases": 4804
+ },
+ "Contractors Complaint": {
+  "pct_unclosed": 0.0319,
+  "n_cases": 3828
+ },
+ "Cross Metering - Sub-Metering": {
+  "pct_unclosed": 0.155,
+  "n_cases": 458
+ },
+ "Dumpster & Loading Noise Disturbances": {
+  "pct_unclosed": 0.4198,
+  "n_cases": 81
+ },
+ "Egress": {
+  "pct_unclosed": 0.1244,
+  "n_cases": 434
+ },
+ "Electrical": {
+  "pct_unclosed": 0.0032,
+  "n_cases": 2188
+ },
+ "Empty Litter Basket": {
+  "pct_unclosed": 0.0382,
+  "n_cases": 11169
+ },
+ "Encampments": {
+  "pct_unclosed": 0.6557,
+  "n_cases": 819
+ },
+ "Equipment Repair": {
+  "pct_unclosed": 0.1167,
+  "n_cases": 11735
+ },
+ "Exceeding Terms of Permit": {
+  "pct_unclosed": 0.0205,
+  "n_cases": 536
+ },
+ "Fire Department Request": {
+  "pct_unclosed": 0.75,
+  "n_cases": 12
+ },
+ "Fire Hydrant": {
+  "pct_unclosed": 0.1546,
+  "n_cases": 899
+ },
+ "Fire in Food Establishment": {
+  "pct_unclosed": 0.0083,
+  "n_cases": 121
+ },
+ "Follow-Up": {
+  "pct_unclosed": 0.0,
+  "n_cases": 1
+ },
+ "Food Alert - Confirmed": {
+  "pct_unclosed": 0.0013,
+  "n_cases": 774
+ },
+ "Food Alert - Unconfirmed": {
+  "pct_unclosed": 0.0,
+  "n_cases": 497
+ },
+ "General Comments For An Employee": {
+  "pct_unclosed": 0.174,
+  "n_cases": 862
+ },
+ "General Comments For a Program or Policy": {
+  "pct_unclosed": 0.2194,
+  "n_cases": 3099
+ },
+ "General Lighting Request": {
+  "pct_unclosed": 0.0379,
+  "n_cases": 3245
+ },
+ "General Traffic Engineering Request": {
+  "pct_unclosed": 0.1496,
+  "n_cases": 595
+ },
+ "Graffiti Removal": {
+  "pct_unclosed": 0.0097,
+  "n_cases": 9408
+ },
+ "Ground Maintenance": {
+  "pct_unclosed": 0.125,
+  "n_cases": 14802
+ },
+ "Heat - Excessive  Insufficient": {
+  "pct_unclosed": 0.2059,
+  "n_cases": 3259
+ },
+ "Heat/Fuel Assistance": {
+  "pct_unclosed": 0.5,
+  "n_cases": 2
+ },
+ "Illegal Auto Body Shop": {
+  "pct_unclosed": 0.0378,
+  "n_cases": 661
+ },
+ "Illegal Dumping": {
+  "pct_unclosed": 0.0045,
+  "n_cases": 11143
+ },
+ "Illegal Occupancy": {
+  "pct_unclosed": 0.228,
+  "n_cases": 465
+ },
+ "Illegal Posting of Signs": {
+  "pct_unclosed": 0.0554,
+  "n_cases": 397
+ },
+ "Illegal Rooming House": {
+  "pct_unclosed": 0.1261,
+  "n_cases": 341
+ },
+ "Illegal Use": {
+  "pct_unclosed": 0.0,
+  "n_cases": 1
+ },
+ "Illegal Vending": {
+  "pct_unclosed": 0.0277,
+  "n_cases": 578
+ },
+ "Improper Storage of Trash (Barrels)": {
+  "pct_unclosed": 0.0032,
+  "n_cases": 71560
+ },
+ "Install New Lighting": {
+  "pct_unclosed": 0.2778,
+  "n_cases": 90
+ },
+ "Item Price Missing": {
+  "pct_unclosed": 0.0,
+  "n_cases": 37
+ },
+ "Knockdown Replacement": {
+  "pct_unclosed": 0.0609,
+  "n_cases": 558
+ },
+ "Lead": {
+  "pct_unclosed": 0.1667,
+  "n_cases": 54
+ },
+ "Litter Basket Maintenance": {
+  "pct_unclosed": 0.0157,
+  "n_cases": 383
+ },
+ "Loud Parties/Music/People": {
+  "pct_unclosed": 0.8684,
+  "n_cases": 2827
+ },
+ "MBTA Request": {
+  "pct_unclosed": 0.5,
+  "n_cases": 2
+ },
+ "Maintenance - Homeowner": {
+  "pct_unclosed": 0.1159,
+  "n_cases": 509
+ },
+ "Maintenance Complaint - Residential": {
+  "pct_unclosed": 0.2845,
+  "n_cases": 1947
+ },
+ "Major System Failure": {
+  "pct_unclosed": 0.0306,
+  "n_cases": 1080
+ },
+ "Mattress_Pickup": {
+  "pct_unclosed": 0.0,
+  "n_cases": 36548
+ },
+ "Mechanical": {
+  "pct_unclosed": 0.0179,
+  "n_cases": 56
+ },
+ "Mice Infestation - Residential": {
+  "pct_unclosed": 0.1992,
+  "n_cases": 1581
+ },
+ "Misc. Snow Complaint": {
+  "pct_unclosed": 0.8865,
+  "n_cases": 423
+ },
+ "Missed Trash/Recycling/Yard Waste/Bulk Item": {
+  "pct_unclosed": 0.0001,
+  "n_cases": 44197
+ },
+ "Missing Sign": {
+  "pct_unclosed": 0.0708,
+  "n_cases": 1737
+ },
+ "Mosquitoes (West Nile)": {
+  "pct_unclosed": 0.1333,
+  "n_cases": 45
+ },
+ "Municipal Parking Lot Complaints": {
+  "pct_unclosed": 0.0909,
+  "n_cases": 77
+ },
+ "Needle Pickup": {
+  "pct_unclosed": 0.0007,
+  "n_cases": 34488
+ },
+ "New Sign  Crosswalk or Pavement Marking": {
+  "pct_unclosed": 0.1212,
+  "n_cases": 3399
+ },
+ "New Tree Requests": {
+  "pct_unclosed": 0.1042,
+  "n_cases": 8545
+ },
+ "News Boxes": {
+  "pct_unclosed": 0.0,
+  "n_cases": 9
+ },
+ "No Price on Gas/Wrong Price": {
+  "pct_unclosed": 0.0,
+  "n_cases": 21
+ },
+ "No Utilities - Food Establishment - Electricity": {
+  "pct_unclosed": 0.0769,
+  "n_cases": 13
+ },
+ "No Utilities - Food Establishment - Flood": {
+  "pct_unclosed": 0.0,
+  "n_cases": 31
+ },
+ "No Utilities - Food Establishment - Sewer": {
+  "pct_unclosed": 0.0667,
+  "n_cases": 15
+ },
+ "No Utilities - Food Establishment - Water": {
+  "pct_unclosed": 0.0,
+  "n_cases": 41
+ },
+ "No Utilities Residential - Electricity": {
+  "pct_unclosed": 0.2534,
+  "n_cases": 221
+ },
+ "No Utilities Residential - Gas": {
+  "pct_unclosed": 0.1594,
+  "n_cases": 69
+ },
+ "No Utilities Residential - Water": {
+  "pct_unclosed": 0.1642,
+  "n_cases": 408
+ },
+ "No-Tow Complaint Confirmation": {
+  "pct_unclosed": 0.0824,
+  "n_cases": 255
+ },
+ "Notification": {
+  "pct_unclosed": 0.9244,
+  "n_cases": 238
+ },
+ "Occupying W/Out A Valid CO/CI": {
+  "pct_unclosed": 0.1923,
+  "n_cases": 26
+ },
+ "Oil Truck - No Receipt": {
+  "pct_unclosed": 0.0,
+  "n_cases": 1
+ },
+ "Overcrowding": {
+  "pct_unclosed": 0.1932,
+  "n_cases": 88
+ },
+ "Overflowing or Un-kept Dumpster": {
+  "pct_unclosed": 0.0103,
+  "n_cases": 485
+ },
+ "PWD Graffiti": {
+  "pct_unclosed": 0.1302,
+  "n_cases": 5255
+ },
+ "Park Improvement Requests": {
+  "pct_unclosed": 0.0292,
+  "n_cases": 789
+ },
+ "Parking Enforcement": {
+  "pct_unclosed": 0.2211,
+  "n_cases": 224096
+ },
+ "Parking Meter Repairs": {
+  "pct_unclosed": 0.8871,
+  "n_cases": 186
+ },
+ "Parking on Front/Back Yards (Illegal Parking)": {
+  "pct_unclosed": 0.0641,
+  "n_cases": 577
+ },
+ "Parks General Request": {
+  "pct_unclosed": 0.1459,
+  "n_cases": 555
+ },
+ "Parks Lighting/Electrical Issues": {
+  "pct_unclosed": 0.1973,
+  "n_cases": 1693
+ },
+ "Pavement Marking Inspection": {
+  "pct_unclosed": 0.0832,
+  "n_cases": 493
+ },
+ "Pavement Marking Maintenance": {
+  "pct_unclosed": 0.3425,
+  "n_cases": 146
+ },
+ "Pest Infestation - Residential": {
+  "pct_unclosed": 0.07,
+  "n_cases": 6401
+ },
+ "Phone Bank Service Inquiry": {
+  "pct_unclosed": 0.0,
+  "n_cases": 32
+ },
+ "Pick up Dead Animal": {
+  "pct_unclosed": 0.0506,
+  "n_cases": 28637
+ },
+ "Pickup/Clear Conduit": {
+  "pct_unclosed": 0.1765,
+  "n_cases": 17
+ },
+ "Pigeon Infestation": {
+  "pct_unclosed": 0.1549,
+  "n_cases": 71
+ },
+ "Planting": {
+  "pct_unclosed": 0.0192,
+  "n_cases": 52
+ },
+ "Plumbing": {
+  "pct_unclosed": 0.0155,
+  "n_cases": 258
+ },
+ "Pole Compliance": {
+  "pct_unclosed": 0.0638,
+  "n_cases": 188
+ },
+ "Poor Conditions of Property": {
+  "pct_unclosed": 0.0056,
+  "n_cases": 30975
+ },
+ "Poor Ventilation": {
+  "pct_unclosed": 0.0943,
+  "n_cases": 106
+ },
+ "Private Parking Lot Complaints": {
+  "pct_unclosed": 0.7692,
+  "n_cases": 26
+ },
+ "Product Short Measure": {
+  "pct_unclosed": 0.0,
+  "n_cases": 16
+ },
+ "Protection of Adjoining Property": {
+  "pct_unclosed": 0.1178,
+  "n_cases": 1053
+ },
+ "Public Works General Request": {
+  "pct_unclosed": 0.1357,
+  "n_cases": 2484
+ },
+ "Rat Bite": {
+  "pct_unclosed": 0.0,
+  "n_cases": 64
+ },
+ "Recycling Cart Return": {
+  "pct_unclosed": 0.0,
+  "n_cases": 14410
+ },
+ "Rental Unit Delivery Conditions": {
+  "pct_unclosed": 0.14,
+  "n_cases": 50
+ },
+ "Request for Litter Basket Installation": {
+  "pct_unclosed": 0.0159,
+  "n_cases": 440
+ },
+ "Request for Pothole Repair": {
+  "pct_unclosed": 0.3201,
+  "n_cases": 45288
+ },
+ "Request for Recycling Cart": {
+  "pct_unclosed": 0.0,
+  "n_cases": 15836
+ },
+ "Request for Snow Plowing": {
+  "pct_unclosed": 0.0269,
+  "n_cases": 3195
+ },
+ "Request for Snow Plowing (Emergency Responder)": {
+  "pct_unclosed": 0.0353,
+  "n_cases": 170
+ },
+ "Requests for Directional or Roadway Changes": {
+  "pct_unclosed": 0.2105,
+  "n_cases": 38
+ },
+ "Requests for Street Cleaning": {
+  "pct_unclosed": 0.0545,
+  "n_cases": 79667
+ },
+ "Requests for Traffic Signal Studies or Reviews": {
+  "pct_unclosed": 0.1738,
+  "n_cases": 2434
+ },
+ "Roadway Flooding": {
+  "pct_unclosed": 0.9858,
+  "n_cases": 211
+ },
+ "Roadway Repair": {
+  "pct_unclosed": 0.6849,
+  "n_cases": 1882
+ },
+ "Rodent Activity": {
+  "pct_unclosed": 0.0104,
+  "n_cases": 17393
+ },
+ "Rooftop & Mechanical Disturbances": {
+  "pct_unclosed": 0.443,
+  "n_cases": 158
+ },
+ "Scale Not Visible": {
+  "pct_unclosed": 0.0,
+  "n_cases": 4
+ },
+ "Scanning Overcharge": {
+  "pct_unclosed": 0.0,
+  "n_cases": 54
+ },
+ "Schedule a Bulk Item Pickup": {
+  "pct_unclosed": 0.3607,
+  "n_cases": 35469
+ },
+ "Schedule a Bulk Item Pickup SS": {
+  "pct_unclosed": 0.4734,
+  "n_cases": 17581
+ },
+ "Sewage/Septic Back-Up": {
+  "pct_unclosed": 0.3011,
+  "n_cases": 176
+ },
+ "Short Measure - Gas": {
+  "pct_unclosed": 0.0,
+  "n_cases": 8
+ },
+ "Short Term Rental": {
+  "pct_unclosed": 0.1367,
+  "n_cases": 878
+ },
+ "Sidewalk Cover / Manhole": {
+  "pct_unclosed": 0.2877,
+  "n_cases": 1206
+ },
+ "Sidewalk Repair": {
+  "pct_unclosed": 0.5507,
+  "n_cases": 365
+ },
+ "Sidewalk Repair (Make Safe)": {
+  "pct_unclosed": 0.4935,
+  "n_cases": 22541
+ },
+ "Sign Repair": {
+  "pct_unclosed": 0.1304,
+  "n_cases": 21380
+ },
+ "Sign Shop WO": {
+  "pct_unclosed": 0.5,
+  "n_cases": 2
+ },
+ "Snow/Ice Control": {
+  "pct_unclosed": 0.1111,
+  "n_cases": 9
+ },
+ "Space Savers": {
+  "pct_unclosed": 0.0896,
+  "n_cases": 1060
+ },
+ "Squalid Living Conditions": {
+  "pct_unclosed": 0.251,
+  "n_cases": 255
+ },
+ "State/Cass Shelter Sites": {
+  "pct_unclosed": 0.0,
+  "n_cases": 1
+ },
+ "Sticker Request": {
+  "pct_unclosed": 0.0,
+  "n_cases": 8330
+ },
+ "Street Light Knock Downs": {
+  "pct_unclosed": 0.0551,
+  "n_cases": 1760
+ },
+ "Street Light Longterm Repair": {
+  "pct_unclosed": 0.0,
+  "n_cases": 1
+ },
+ "Street Light Outages": {
+  "pct_unclosed": 0.1196,
+  "n_cases": 16750
+ },
+ "StreetLight Pole WO": {
+  "pct_unclosed": 0.8462,
+  "n_cases": 494
+ },
+ "Student Move-in Issues": {
+  "pct_unclosed": 0.0772,
+  "n_cases": 570
+ },
+ "Student Overcrowding": {
+  "pct_unclosed": 0.2,
+  "n_cases": 5
+ },
+ "Traffic Signal Inspection": {
+  "pct_unclosed": 0.1304,
+  "n_cases": 16069
+ },
+ "Traffic Signal Repair": {
+  "pct_unclosed": 0.1543,
+  "n_cases": 687
+ },
+ "Transportation General Request": {
+  "pct_unclosed": 0.383,
+  "n_cases": 2214
+ },
+ "Trash on Vacant Lot": {
+  "pct_unclosed": 0.0203,
+  "n_cases": 246
+ },
+ "Tree Emergencies": {
+  "pct_unclosed": 0.0161,
+  "n_cases": 3051
+ },
+ "Tree Maintenance Requests": {
+  "pct_unclosed": 0.0479,
+  "n_cases": 25664
+ },
+ "Tree in Park": {
+  "pct_unclosed": 0.1087,
+  "n_cases": 230
+ },
+ "Undefined Noise Disturbance": {
+  "pct_unclosed": 0.5912,
+  "n_cases": 274
+ },
+ "Unit Pricing Wrong/Missing": {
+  "pct_unclosed": 0.0,
+  "n_cases": 26
+ },
+ "Unsafe Dangerous Conditions": {
+  "pct_unclosed": 0.0887,
+  "n_cases": 1409
+ },
+ "Unsanitary Conditions - Employees": {
+  "pct_unclosed": 0.01,
+  "n_cases": 200
+ },
+ "Unsanitary Conditions - Establishment": {
+  "pct_unclosed": 0.0099,
+  "n_cases": 2334
+ },
+ "Unsanitary Conditions - Food": {
+  "pct_unclosed": 0.0014,
+  "n_cases": 738
+ },
+ "Unsatisfactory Living Conditions": {
+  "pct_unclosed": 0.2264,
+  "n_cases": 9398
+ },
+ "Unsatisfactory Utilities - Electrical  Plumbing": {
+  "pct_unclosed": 0.1582,
+  "n_cases": 803
+ },
+ "Unshoveled Sidewalk": {
+  "pct_unclosed": 0.0124,
+  "n_cases": 16112
+ },
+ "Upgrade Existing Lighting": {
+  "pct_unclosed": 0.1235,
+  "n_cases": 81
+ },
+ "Utility Call-In": {
+  "pct_unclosed": 0.0909,
+  "n_cases": 11
+ },
+ "Utility Casting Repair": {
+  "pct_unclosed": 0.3735,
+  "n_cases": 1186
+ },
+ "Valet Parking Problems": {
+  "pct_unclosed": 0.7812,
+  "n_cases": 32
+ },
+ "Walk-In Service Inquiry": {
+  "pct_unclosed": 0.0,
+  "n_cases": 6
+ },
+ "Water in Gas - High Priority": {
+  "pct_unclosed": 0.0,
+  "n_cases": 3
+ },
+ "Work Hours-Loud Noise Complaints": {
+  "pct_unclosed": 0.0445,
+  "n_cases": 742
+ },
+ "Work w/out Permit": {
+  "pct_unclosed": 0.0045,
+  "n_cases": 3357
+ },
+ "Working Beyond Hours": {
+  "pct_unclosed": 0.0099,
+  "n_cases": 2517
+ },
+ "Zoning": {
+  "pct_unclosed": 0.1333,
+  "n_cases": 135
+ }
+}

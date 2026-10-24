@@ -707,5 +707,10 @@
   "Maximo Integration",
   "Self Service"
  ],
- "default_source": "Citizens Connect App"
+ "default_source": "Citizens Connect App",
+ "resident_sources": [
+  "Citizens Connect App",
+  "Constituent Call",
+  "Self Service"
+ ]
 }

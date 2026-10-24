@@ -19,7 +19,11 @@ from src.similar import similar_cases
 predict("Request for Pothole Repair", "Dorchester", datetime(2026, 10, 26, 10, 0))
 # {'p50': 0.92, 'p80': 2.49, 'baseline_p50': 1.02, 'baseline_p80': 4.87,
 #  'target_days': 1.0, 'p_ontime': 0.586, 'n_support': 29601, 'used_model': 'ml',
-#  'p80_used_model': 'ml', 'baseline_level': 'type', 'state_time': '2025-10-01 00:00:00'}
+#  'p80_used_model': 'ml', 'baseline_level': 'type', 'state_time': '2025-10-01 00:00:00',
+#  'pct_unclosed': 0.3201, 'flags': ['queue_snapshot', 'high_unclosed_rate']}
+
+from src.predict import flag_messages
+flag_messages(result)   # suggested UI text, one per flag
 
 similar_cases("Request for Pothole Repair", "Dorchester", datetime(2026, 10, 26), k=10)
 # DataFrame: case_enquiry_id, type, neighborhood, open_dt, closed_dt,
@@ -31,6 +35,11 @@ similar_cases("Request for Pothole Repair", "Dorchester", datetime(2026, 10, 26)
 - `used_model` / `p80_used_model`: `"baseline"` means the historical per-type percentile.
   Street Light Outages always uses baseline for p80.
 - Extra keys (`p80_used_model`, `baseline_level`, `state_time`) are safe to ignore.
+- **Edge cases:** show `flag_messages(result)` under the estimate (1 to 3 notes is typical).
+  `flags` lists codes such as `high_unclosed_rate`, `weekend_or_holiday`, `wide_range`,
+  `unknown_type`; the full list and the reason for each is in **`EDGE_CASES.md`**.
+  `pct_unclosed` is the share of that type's past requests never closed in the data.
+- Source dropdown: offer `choices.json` `resident_sources` only; staff channels give unrealistically fast estimates.
 - First call loads models (~1 s); later calls ~15 ms. `similar_cases` first call ~0.3 s.
 - Dropdowns: use `models/choices.json` (`types` with `demo` flag, `neighborhoods`,
   `sources`, `default_source`). Demo types: Pothole, Street Light, Missed Trash,
@@ -57,3 +66,10 @@ AUC 0.869 (`reports/recalibration.json`). Do not quote the final-model numbers; 
  && .venv/bin/python -m src.train && .venv/bin/python -m src.evaluate && .venv/bin/python -m src.export
 ```
 (needs the raw CSVs in `data/raw/`).
+
+## Tests
+```bash
+.venv/bin/python -m tests.test_predict    # edge-case flags + invariants, models/ only, ~70 s
+.venv/bin/python -m tests.test_similar    # needs cases_for_app.parquet
+.venv/bin/python -m tests.test_features   # needs data/processed/
+```
