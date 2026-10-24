@@ -45,6 +45,19 @@ similar_cases("Request for Pothole Repair", "Dorchester", datetime(2026, 10, 26)
   `sources`, `default_source`). Demo types: Pothole, Street Light, Missed Trash,
   Abandoned Vehicles, Rodent Activity.
 
+## Web app endpoints (backend/main.py)
+Existing: `GET /api/choices`, `POST /api/predict` (adds `notes`), `POST /api/similar` (5 matches).
+Added for the result page (logic in `src/app_insights.py`):
+- `GET /api/meta`: types with `group` (11 resident-friendly categories), `demo`, case counts and
+  the out-of-sample "Allow longer" hit rate (`models/app_accuracy.json`, from `src/app_accuracy.py`).
+- `POST /api/insights` (same body as predict): hit-rate details, time-to-close distribution,
+  the neighborhood's own history, and model estimates for the same request in every neighborhood.
+- `POST /api/cases` (predict body + `scope` nb|all, `sort` rel|recent|old|short|long, `page`):
+  every closed request of the type before the request date, 5 per page, fastest 10% marked.
+
+Run locally: `.venv/bin/uvicorn backend.main:app --port 8000` from the repo root, then
+`npm --prefix frontend run dev` (proxies `/api` to port 8000).
+
 ## Assumptions to show in the UI
 - Estimates are historical, not official deadlines or guarantees. Not an official City of Boston service.
 - Queue conditions are as of **2025-10-01** (just before Boston's Oct 2025 311 system change;
@@ -72,4 +85,5 @@ AUC 0.869 (`reports/recalibration.json`). Do not quote the final-model numbers; 
 .venv/bin/python -m tests.test_predict    # edge-case flags + invariants, models/ only, ~70 s
 .venv/bin/python -m tests.test_similar    # needs cases_for_app.parquet
 .venv/bin/python -m tests.test_features   # needs data/processed/
+.venv/bin/python -m unittest tests.test_api tests.test_prediction_notes tests.test_app_insights
 ```

@@ -1,107 +1,148 @@
 "use client";
-import { useEffect, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { api } from "@/lib/api";
-import { EstimateNotes } from "@/components/estimate-notes";
-import type { Choices, Prediction, SimilarCase, SimilarResult, EstimateRequest } from "@/types";
+import { bostonNow, count, useCountUp } from "@/lib/format";
+import { TypePicker } from "@/components/type-picker";
+import { ResultCard } from "@/components/result-card";
+import { SimilarCases } from "@/components/similar-cases";
+import { InfoPage } from "@/components/info-page";
+import type { CasesPage, EstimateRequest, Insights, Meta, Prediction } from "@/types";
 
-function bostonNow() {
-  const parts = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).formatToParts(new Date());
-  const get = (key: string) => parts.find(p => p.type === key)?.value;
-  return `${get("year")}-${get("month")}-${get("day")}T${get("hour")}:${get("minute")}`;
-}
-function days(n: number | null) {
-  if (n === null) return "Not available";
-  if (n < 1) { const h = n * 24; return h < 1 ? "under 1 hour" : `about ${Math.round(h)} hours`; }
-  const shown = n.toLocaleString(undefined, { maximumFractionDigits: 1 });
-  return `${shown} ${shown === "1" ? "day" : "days"}`;
-}
-const SORTS: Record<string, { label: string; compare?: (a: SimilarCase, b: SimilarCase) => number }> = {
-  match: { label: "Best match" },
-  newest: { label: "Newest first", compare: (a, b) => b.closed_dt.localeCompare(a.closed_dt) },
-  oldest: { label: "Oldest first", compare: (a, b) => a.closed_dt.localeCompare(b.closed_dt) },
-  fastest: { label: "Shortest resolution", compare: (a, b) => a.resolution_days - b.resolution_days },
-  slowest: { label: "Longest resolution", compare: (a, b) => b.resolution_days - a.resolution_days },
-};
-const sortCases = (cases: SimilarCase[], key: string) => { const compare = SORTS[key].compare; return compare ? [...cases].sort(compare) : cases; };
-const matchLabel =(level: string) => level === "same_neighborhood_season" ? "Same neighborhood and season" : level === "any_neighborhood_season" ? "Similar season, across Boston" : "Across Boston and seasons";
+const MIN_LOADING_MS = 1300;
 
-function modelStatus(result: Prediction) {
-  const ml = (used: string) => used === "ml" ? "prediction model" : "historical baseline";
-  if (result.used_model === "ml" && result.p80_used_model === "ml") return <><b>Model estimate.</b> Both numbers come from the trained prediction model.</>;
-  if (result.used_model !== "ml" && result.p80_used_model !== "ml") return <><b>Historical estimate.</b> Based on the per-type median and 80th percentile of past closed cases.</>;
-  return <><b>Mixed estimate.</b> Typical wait: {ml(result.used_model)}. Longer estimate: {ml(result.p80_used_model)}.</>;
+function Stat({ to, label, delayed }: { to: number; label: string; delayed: boolean }) {
+  const v = useCountUp(delayed ? to : null, 1800);
+  return <div><strong>{count(v)}</strong><span>{label}</span></div>;
 }
+
+/** Scroll progress bar + hero orb parallax, as in the prototype. */
+function useScrollEffects() {
+  const prog = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return; ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY, h = document.documentElement.scrollHeight - window.innerHeight;
+        if (prog.current) prog.current.style.width = `${h > 0 ? (y / h) * 100 : 0}%`;
+        document.querySelectorAll<HTMLElement>(".orb").forEach(o => { o.style.transform = `translateY(${y * Number(o.dataset.p)}px)`; });
+        ticking = false;
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  return prog;
+}
+
+type View = "form" | "load" | "res";
 
 export default function Home() {
-  const [choices, setChoices] = useState<Choices | null>(null);
-  const [type, setType] = useState("");
-  const [neighborhood, setNeighborhood] = useState("");
+  const [tab, setTab] = useState<"est" | "info">("est");
+  const [meta, setMeta] = useState<Meta | null>(null);
+  const [metaError, setMetaError] = useState("");
+  const [type, setType] = useState("Request for Pothole Repair");
+  const [neighborhood, setNeighborhood] = useState("Dorchester");
   const [date, setDate] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [choiceError, setChoiceError] = useState("");
-  const [error, setError] = useState("");
+  const [view, setView] = useState<View>("form");
+  const [request, setRequest] = useState<EstimateRequest | null>(null);
   const [result, setResult] = useState<Prediction | null>(null);
-  const [submitted, setSubmitted] = useState<EstimateRequest | null>(null);
-  const [similar, setSimilar] = useState<SimilarResult | null>(null);
-  const [similarError, setSimilarError] = useState("");
-  const [sort, setSort] = useState("match");
-  async function loadChoices() {
-    setChoiceError("");
+  const [error, setError] = useState("");
+  const [insights, setInsights] = useState<Insights | null>(null);
+  const [insightsError, setInsightsError] = useState("");
+  const [cases, setCases] = useState<CasesPage | null>(null);
+  const [statsOn, setStatsOn] = useState(false);
+  const est = useRef<HTMLElement>(null);
+  const prog = useScrollEffects();
+
+  async function loadMeta() {
+    setMetaError("");
     try {
-      const data = await api<Choices>("choices"); setChoices(data);
-      setType(data.types.find(t => t.type === "Request for Pothole Repair")?.type || data.types[0].type);
-      setNeighborhood(data.neighborhoods.includes("Dorchester") ? "Dorchester" : data.neighborhoods[0]);
-    } catch { setChoiceError("We couldn’t load request options. Check that the API is running, then retry."); }
+      const m = await api<Meta>("meta"); setMeta(m);
+      if (!m.types.some(t => t.type === type)) setType(m.types[0].type);
+      if (!m.neighborhoods.includes(neighborhood)) setNeighborhood(m.neighborhoods[0]);
+    } catch { setMetaError("We couldn’t load request options. Check that the API is running, then retry."); }
   }
-  useEffect(() => { setDate(bostonNow()); void loadChoices(); }, []);
+  useEffect(() => {
+    setDate(bostonNow()); void loadMeta();
+    const t = setTimeout(() => setStatsOn(true), 700);
+    return () => clearTimeout(t);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  function show(v: View) { setView(v); est.current?.scrollIntoView({ behavior: "smooth" }); }
+  function switchTab(t: "est" | "info") { setTab(t); window.scrollTo({ top: 0 }); }
+
   async function submit(event: FormEvent) {
-    event.preventDefault(); setLoading(true); setError(""); setResult(null); setSimilar(null); setSimilarError("");
-    const request = { type, neighborhood, open_date: date };
-    setSubmitted(request);
+    event.preventDefault();
+    const started = Date.now();
+    const req = { type, neighborhood, open_date: date || bostonNow() };
+    setRequest(req); setResult(null); setError(""); setInsights(null); setInsightsError(""); setCases(null);
+    show("load");
     await Promise.all([
-      api<Prediction>("predict", request).then(setResult).catch(e => setError(e.message)),
-      api<SimilarResult>("similar", request).then(setSimilar).catch(() => setSimilarError("Historical cases are temporarily unavailable.")),
+      api<Prediction>("predict", req).then(setResult).catch(e => setError(e.message)),
+      api<Insights>("insights", req).then(setInsights).catch(e => setInsightsError(e.message)),
+      api<CasesPage>("cases", { ...req, sort: "rel", scope: "nb", page: 1 }).then(setCases).catch(() => setCases(null)),
     ]);
-    setLoading(false);
+    const left = MIN_LOADING_MS - (Date.now() - started);
+    if (left > 0) await new Promise(r => setTimeout(r, left));
+    show("res");
   }
+
+  const s = meta?.stats;
   return <>
-    <header>
-      <div className="bar"><a className="brand" href="/" aria-label="CivicPulse home">civic<b>pulse</b></a><div className="tag">BOSTON · 311</div></div>
-      <div className="hero"><h1>Your request.<br />A clearer timeline.</h1><p>See how long similar Boston 311 requests have taken, based on past cases.</p></div>
-    </header>
-    <main>
-      <div className="grid">
-        <section className="card" aria-label="Request details">
-          <div className="head"><span className="num">1</span><h2>Your request</h2></div>
-          {choiceError ? <div role="alert" className="error">{choiceError}<button className="text-button" onClick={loadChoices}>Retry loading options</button></div> : !choices ? <p role="status" className="note">Loading request options…</p> :
-          <form onSubmit={submit}><fieldset disabled={loading}>
-            <label htmlFor="type">Request type</label><select id="type" value={type} onChange={e => setType(e.target.value)} required><optgroup label="Featured requests">{choices.types.filter(t => t.demo).map(t => <option key={t.type}>{t.type}</option>)}</optgroup><optgroup label="All other requests">{choices.types.filter(t => !t.demo).map(t => <option key={t.type}>{t.type}</option>)}</optgroup></select>
-            <label htmlFor="neighborhood">Neighborhood</label><select id="neighborhood" value={neighborhood} onChange={e => setNeighborhood(e.target.value)} required>{choices.neighborhoods.map(n => <option key={n}>{n}</option>)}</select>
-            <label htmlFor="date">Date and time</label><input id="date" type="datetime-local" value={date} onChange={e => setDate(e.target.value)} required /><p className="note">Boston time. Timing can affect the estimate.</p>
-            <button className="go" disabled={!date || loading} type="submit">{loading ? "Calculating your estimate…" : "Estimate resolution time"}</button>
-          </fieldset></form>}
-          <p className="note">This tool does not submit a 311 request.</p>
-        </section>
-        <section className="card" aria-live="polite" aria-busy={loading} aria-label="Estimate">
-          <div className="head"><span className="num">2</span><h2>Estimated timeline</h2></div>
-          {error ? <div role="alert" className="error">{error}</div> : result ? <>
-            <p className="note context-line">{submitted?.type} · {submitted?.neighborhood} · {submitted?.open_date.replace("T", " at ")} Eastern</p>
-            <div className="metrics"><div className="m main"><p>Typical wait</p><strong>{days(result.p50)}</strong><small>Median</small></div><div className="m"><p>Allow longer</p><strong>{days(result.p80)}</strong><small>8 in 10 done by then</small></div></div>
-            <div className="range" aria-hidden="true"><div className="track"><div className="fill" /></div><div className="ticks"><span>Request</span><span>Typical</span><span>8 in 10 done</span></div></div>
-            <dl><div><dt>City target (estimated)</dt><dd>{days(result.target_days)}</dd></div><div><dt>Chance of meeting target</dt><dd>{result.p_ontime === null ? "Not available" : `${Math.round(result.p_ontime * 100)}%`}</dd></div><div><dt>Historical typical wait</dt><dd>{days(result.baseline_p50)}</dd></div><div><dt>Past cases of this type</dt><dd>{result.n_support.toLocaleString()}</dd></div></dl>
-            <EstimateNotes notes={result.notes} />
-          </> : <div className="empty"><div className={loading ? "ring spin" : "ring"} />{loading ? "Checking historical patterns for your request…" : "Choose your details and press the button to see an estimate."}</div>}
-        </section>
-      </div>
-      <div className="status" role="status">{result ? modelStatus(result) : <><b>Real data.</b> Request types and neighborhoods come from the model files. Press the button to see an estimate.</>}</div>
-      {result && <section className="card history"><div className="head"><span className="num">3</span><h2>Similar past requests</h2></div><p className="note context-line">Real closed cases, matched by request type, season, and neighborhood when possible.</p>
-        {similarError ? <p role="status" className="note">{similarError}</p> : !similar ? <p className="note">Loading historical cases…</p> : !similar.available ? <p className="status">{similar.message} Your prediction is available independently.</p> : similar.cases.length === 0 ? <p className="note">No matching closed cases were found before this request date.</p> : <><div className="sort"><label htmlFor="sort">Sort by</label><select id="sort" value={sort} onChange={e => setSort(e.target.value)}>{Object.entries(SORTS).map(([key, s]) => <option key={key} value={key}>{s.label}</option>)}</select></div><div className={sort === "newest" || sort === "oldest" ? "case-list by-date" : "case-list"}>{sortCases(similar.cases, sort).map(c => <article className="case" key={c.case_enquiry_id}><div><strong>{c.neighborhood}</strong><span>{days(c.resolution_days)}</span></div><p>{c.closure_reason || "No closure note available."}</p><small>Case {c.case_enquiry_id} · <span className="closed">Closed {c.closed_dt.slice(0, 10)}</span> ·{matchLabel(c.match_level)}</small></article>)}</div></>}
-      </section>}
-      <section className="context">
-        <div><h2>Good to know</h2><p>Estimates are historical, not official deadlines or guarantees. The city target shown is an estimate derived from historical records.</p></div>
-        <div><h2>Limits</h2><p>Only closed cases are used, and about 25% of 2025 requests remained unclosed in the data, so real waits may be longer. Queue conditions are as of {result?.state_time.slice(0, 10) || "2025-10-01"}, before Boston’s 311 system change, not today’s live backlog.</p></div>
-      </section>
-    </main>
-    <footer><p>Independent project · Not an official City of Boston service · Data: City of Boston 311, 2021–2025 (PDDL)</p><a href="https://www.boston.gov/departments/boston-311">Visit Boston 311 ↗</a></footer>
+    <div id="prog" ref={prog} />
+    <nav><div className="w"><span className="logo">civic<b>pulse</b></span><span>
+      <button className={tab === "est" ? "tab on" : "tab"} onClick={() => switchTab("est")}>Estimate</button>
+      <button className={tab === "info" ? "tab on" : "tab"} onClick={() => switchTab("info")}>How it works<span className="lg"> &amp; limits</span></button>
+    </span></div></nav>
+
+    {tab === "est" ? <div className="page on" id="p-est">
+      <header className="hero">
+        <div className="orb o1" data-p=".12" /><div className="orb o2" data-p="-.08" />
+        <div className="w">
+          <h1><span className="ln" style={{ ["--i" as string]: 1, display: "block" }}>Your request.</span><span className="ln" style={{ ["--i" as string]: 2, display: "block" }}>A clearer timeline.</span></h1>
+          <p className="lead ln" style={{ ["--i" as string]: 3 }}>See how long Boston 311 requests like yours have really taken, built from 1.1 million closed requests filed 2021–2025.</p>
+          <button className="btn ln" style={{ ["--i" as string]: 4 }} onClick={() => est.current?.scrollIntoView({ behavior: "smooth" })}>Estimate my wait</button>
+          <div className="stats ln" style={{ ["--i" as string]: 5 }}>
+            <Stat to={s?.cases ?? 0} label="closed requests analysed" delayed={statsOn && !!s} />
+            <Stat to={s?.types ?? 0} label="request types" delayed={statsOn && !!s} />
+            <Stat to={s?.neighborhoods ?? 0} label="neighborhoods" delayed={statsOn && !!s} />
+            <Stat to={5} label={`years of data (${s?.years ?? "2021–2025"})`} delayed={statsOn} />
+          </div>
+        </div>
+      </header>
+
+      <section id="est" ref={est}><div className="w">
+        {view === "form" && <div className="view on"><div className="fwrap">
+          <h2>Find your estimate</h2><p className="sub">Pick what you reported, where, and when. No personal information needed.</p>
+          <div className="card">
+            {metaError ? <div role="alert" className="error">{metaError}<button className="text-button" onClick={loadMeta}>Retry loading options</button></div>
+              : !meta ? <p role="status" className="note">Loading request options…</p>
+              : <form onSubmit={submit}><fieldset>
+                <label id="typeLbl">Request type</label>
+                <TypePicker meta={meta} value={type} onChange={setType} />
+                <label htmlFor="hood">Neighborhood</label>
+                <select id="hood" value={neighborhood} onChange={e => setNeighborhood(e.target.value)}>{meta.neighborhoods.map(n => <option key={n}>{n}</option>)}</select>
+                <label htmlFor="when">Date and time</label>
+                <input id="when" type="datetime-local" value={date} onChange={e => setDate(e.target.value)} required />
+                <p className="note">Boston time. The day of the week changes the estimate.</p>
+                <button className="btn" type="submit">Estimate resolution time</button>
+                <p className="note"><b>Disclosure:</b> This is only an estimate based on past 311 cases. It is not an official deadline or a guarantee. This tool does not submit a 311 request.</p>
+              </fieldset></form>}
+          </div>
+        </div></div>}
+
+        {view === "load" && <div className="view on" id="v-load" aria-live="polite"><div className="empty"><div className="ring" />Looking up past cases…</div></div>}
+
+        {view === "res" && request && <div className="view on" id="v-res"><div className="rwrap">
+          <button className="back" onClick={() => show("form")}>← New estimate</button>
+          {error ? <div className="card"><div role="alert" className="error">{error}</div></div>
+            : result && <ResultCard request={request} result={result} insights={insights} insightsError={insightsError} />}
+          <SimilarCases request={request} initial={cases} />
+        </div></div>}
+      </div></section>
+    </div> : <InfoPage />}
+
+    <footer>Independent project · Not an official City of Boston service · Data: City of Boston 311 Service Requests 2021–2025, data.boston.gov (PDDL) · <a href="https://www.boston.gov/departments/boston-311" style={{ color: "#fff" }}>Visit Boston 311 ↗</a></footer>
   </>;
 }
