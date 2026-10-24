@@ -1,0 +1,13 @@
+pos rate: val2024=0.713 2024H2=0.694 test2025=0.643; Brier of constant(2024H2 rate)=0.2323
+A original      AUC=0.684 Brier=0.2563 logloss=0.929 ECE=0.201 mean_pred=0.827  AUC/type={'Request for Po': 0.726, 'Street Light O': 0.522, 'Missed Trash/R': 0.628, 'Abandoned Vehi': 0.567, 'Rodent Activit': 0.733}
+B platt_val     AUC=0.684 Brier=0.2388 logloss=0.745 ECE=0.164 mean_pred=0.783  AUC/type={'Request for Po': 0.726, 'Street Light O': 0.522, 'Missed Trash/R': 0.628, 'Abandoned Vehi': 0.567, 'Rodent Activit': 0.733}
+C isotonic_val  AUC=0.685 Brier=0.2386 logloss=0.736 ECE=0.167 mean_pred=0.783  AUC/type={'Request for Po': 0.725, 'Street Light O': 0.521, 'Missed Trash/R': 0.598, 'Abandoned Vehi': 0.567, 'Rodent Activit': 0.728}
+D refit_platt   AUC=0.718 Brier=0.2200 logloss=0.658 ECE=0.148 mean_pred=0.752  AUC/type={'Request for Po': 0.736, 'Street Light O': 0.552, 'Missed Trash/R': 0.624, 'Abandoned Vehi': 0.553, 'Rodent Activit': 0.763}
+
+excl_parking: n=184,948 pos=0.777 const Brier=0.1741
+  A original      auc=0.897 brier=0.106 ece=0.037 mean_pred=0.782
+  D refit_platt   auc=0.911 brier=0.100 ece=0.064 mean_pred=0.713
+
+demo_types: n=32,765 pos=0.665 const Brier=0.2231
+  A original      auc=0.869 brier=0.135 ece=0.049 mean_pred=0.627
+  D refit_platt   auc=0.869 brier=0.136 ece=0.079 mean_pred=0.586
