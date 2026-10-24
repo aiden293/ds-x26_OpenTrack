@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="CivicPulse">
+  <!-- App icon / favicon: the two i stems of "civic" with gold dots joined by a heartbeat line. -->
+  <rect width="120" height="120" rx="28" fill="#0f2a52"/>
+  <g transform="translate(10 12)">
+    <rect x="15.5" y="36.25" width="14" height="55" fill="#ffffff"/>
+    <rect x="70.5" y="36.25" width="14" height="55" fill="#ffffff"/>
+    <polyline points="22.5,18.75 36.5,18.75 42.5,3.75 49.5,33.75 55.5,10.75 59.5,18.75 77.5,18.75" fill="none" stroke="#E0B93A" stroke-width="4.4" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="22.5" cy="18.75" r="9" fill="#E0B93A"/>
+    <circle cx="77.5" cy="18.75" r="9" fill="#E0B93A"/>
+  </g>
+</svg>
