@@ -1,0 +1,24 @@
+Matplotlib is building the font cache; this may take a moment.
+test n=196,534  rows using ML in app=95.6%
+type                           n |      p50 MAE b/m/app |   medAE b/m |      p80 pin b/m/app |       cov b/m/app
+overall                   196534 |   8.69   7.84   7.84 |  0.34  0.27 |   6.32   5.59   5.67 | 0.851 0.832 0.832
+Request for Pothole Repa    6793 |   5.20   5.01   5.01 |  1.07  0.97 |   3.71   3.57   3.57 | 0.874 0.878 0.878
+Street Light Outages        1848 |  30.29  29.41  29.41 |  8.68 13.87 |  18.75  21.78  21.78 | 0.921 0.934 0.934
+Missed Trash/Recycling/Y    9601 |   0.41   0.28   0.28 |  0.41  0.08 |   0.17   0.14   0.14 | 0.862 0.786 0.786
+Abandoned Vehicles          4403 |  23.92  15.23  15.23 | 24.62 12.21 |  18.72  13.83  13.83 | 0.990 0.976 0.976
+Rodent Activity             4967 |   1.44   1.25   1.25 |  0.73  0.46 |   0.82   0.75   0.75 | 0.851 0.838 0.838
+
+bootstrap (model - baseline), 95% CI:
+  overall                  p50 MAE -0.846 [-0.89  -0.805]  p80 pin -0.729 [-0.761 -0.69 ]
+  Request for Pothole Repa p50 MAE -0.191 [-0.22  -0.161]  p80 pin -0.146 [-0.176 -0.119]
+  Street Light Outages     p50 MAE -0.882 [-1.341 -0.448]  p80 pin +3.026 [2.524 3.546]
+  Missed Trash/Recycling/Y p50 MAE -0.127 [-0.133 -0.121]  p80 pin -0.038 [-0.043 -0.033]
+  Abandoned Vehicles       p50 MAE -8.692 [-9.023 -8.342]  p80 pin -4.890 [-5.115 -4.65 ]
+  Rodent Activity          p50 MAE -0.193 [-0.21  -0.178]  p80 pin -0.070 [-0.078 -0.06 ]
+
+ontime: n=244,533 pos=0.643 mean_pred=0.827 AUC=0.684 Brier=0.256 (const 0.249)
+ontime AUC by demo type: {'Request for Po': 0.726, 'Street Light O': 0.522, 'Missed Trash/R': 0.628, 'Abandoned Vehi': 0.567, 'Rodent Activit': 0.733}
+
+monthly p80 coverage model/baseline: {1: (0.87, 0.87), 2: (0.82, 0.86), 3: (0.82, 0.86), 4: (0.84, 0.86), 5: (0.84, 0.86), 6: (0.84, 0.85), 7: (0.82, 0.84), 8: (0.82, 0.85), 9: (0.83, 0.86), 10: (0.82, 0.83), 11: (0.83, 0.83), 12: (0.82, 0.84)}
+
+top features: {'type': 0.211, 'target_days': 0.0783, 'roll_p50_type': 0.0463, 'roll_p50_type_nbhd': 0.0344, 'hour_bucket': 0.0322, 'weekday': 0.0159, 'roll_p80_type': 0.013, 'source': 0.0123}
