@@ -18,7 +18,7 @@ from sklearn.inspection import permutation_importance
 from sklearn.metrics import brier_score_loss, mean_absolute_error, mean_pinball_loss, roc_auc_score
 
 from src.clean import DEMO_TYPES
-from src.train import (MODELS, REPORTS, by_type, make_X, ontime_data, predict_baseline,
+from src.train import (EVAL_DIR, REPORTS, by_type, make_X, ontime_data, predict_baseline,
                        predict_days, split)
 from src.features import PROC
 
@@ -27,8 +27,8 @@ N_BOOT, IMP_ROWS, IMP_REPEATS = 500, 40_000, 5
 
 
 def predictions(test: pd.DataFrame) -> dict:
-    base = json.loads((MODELS / "baseline.json").read_text())
-    b50, b80 = joblib.load(MODELS / "p50.joblib"), joblib.load(MODELS / "p80.joblib")
+    base = json.loads((EVAL_DIR / "baseline.json").read_text())
+    b50, b80 = joblib.load(EVAL_DIR / "p50.joblib"), joblib.load(EVAL_DIR / "p80.joblib")
     bp = predict_baseline(base, test)
     m50 = predict_days(b50["model"], make_X(test, b50["features"], b50["levels"]))
     m80 = np.maximum(predict_days(b80["model"], make_X(test, b80["features"], b80["levels"])), m50)
@@ -127,7 +127,7 @@ def main() -> None:
         for mo in range(1, 13)}
 
     # On-time classifier on 2025 (closures + open cases already past target at snapshot)
-    clf = joblib.load(MODELS / "ontime.joblib")
+    clf = joblib.load(EVAL_DIR / "ontime.joblib")
     data, _, snapshot = ontime_data(feats)
     ct = split(data, "test")
     prob = clf["model"].predict_proba(make_X(ct, clf["features"], clf["levels"]))[:, 1]
@@ -143,7 +143,7 @@ def main() -> None:
     }
 
     metrics["permutation_importance_p50"] = plot_importance(
-        joblib.load(MODELS / "p50.joblib"), test, REPORTS / "importance.png", rng)
+        joblib.load(EVAL_DIR / "p50.joblib"), test, REPORTS / "importance.png", rng)
     metrics["ml_beats_baseline_on_test"] = {
         t: {"p50_mae": metrics["test_model"][t]["p50_mae"] < metrics["test_baseline"][t]["p50_mae"],
             "p80_pinball": metrics["test_model"][t]["p80_pinball"] < metrics["test_baseline"][t]["p80_pinball"]}

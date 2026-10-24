@@ -1,7 +1,7 @@
 """Phase 7: real similar past cases for a new request.
 
 Usage: .venv/bin/python -m src.similar   (prints examples for the demo types)
-Candidates are valid closures (clean.parquet) of the same type closed before
+Candidates are valid closures (cases_for_app.parquet) of the same type closed before
 reference_date. Matching never uses resolution time. Match levels, tried in order:
   1 same_neighborhood_season: same neighborhood, day-of-year within +-60 days
   2 any_neighborhood_season:  any neighborhood, day-of-year within +-60 days
@@ -38,7 +38,7 @@ def clean_reason(s: pd.Series) -> pd.Series:
 def _by_type() -> dict:
     cols = ["case_enquiry_id", "type", "neighborhood", "open_dt", "closed_dt",
             "resolution_days", "closure_reason"]
-    df = pd.read_parquet(PROC / "clean.parquet", columns=cols)
+    df = pd.read_parquet(PROC / "cases_for_app.parquet", columns=cols)
     df["doy"] = df["open_dt"].dt.day_of_year
     return {t: g.sort_values("closed_dt").reset_index(drop=True) for t, g in df.groupby("type")}
 

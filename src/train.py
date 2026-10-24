@@ -3,9 +3,9 @@
 Usage: .venv/bin/python -m src.train
 Split by open_dt year: train 2022-2023, validation 2024, test 2025 (test untouched here).
 All model / feature-set choices are made on validation only. Writes:
-  models/baseline.json, models/p50.joblib, models/p80.joblib, models/ontime.joblib
+  models/eval/{baseline.json,p50.joblib,p80.joblib,ontime.joblib} (train-only)
   reports/val_metrics.json
-Models saved here are fit on train only; Phase 6 evaluates them on test, then refits.
+Phase 6 evaluates these on test; src/export.py refits final app models into models/.
 """
 from pathlib import Path
 import json
@@ -22,6 +22,7 @@ from src.features import CAT_FEATURES, FEATURES, PROC, build_features
 
 ROOT = Path(__file__).resolve().parents[1]
 MODELS, REPORTS = ROOT / "models", ROOT / "reports"
+EVAL_DIR = MODELS / "eval"  # train-only models evaluated on test; final app models live in MODELS
 
 SPLITS = {"train": (2022, 2023), "val": (2024, 2024), "test": (2025, 2025)}
 QUANTILES = {"p50": 0.5, "p80": 0.8}
@@ -139,7 +140,7 @@ def main() -> None:
     feats = pd.read_parquet(PROC / "features.parquet")
     train, val = split(feats, "train"), split(feats, "val")
     print(f"train={len(train):,} val={len(val):,} test={len(split(feats, 'test')):,} (test untouched)")
-    MODELS.mkdir(exist_ok=True)
+    EVAL_DIR.mkdir(parents=True, exist_ok=True)
     metrics = {"split": SPLITS, "n": {"train": len(train), "val": len(val)}}
 
     # Baseline
@@ -147,7 +148,7 @@ def main() -> None:
     bp = predict_baseline(base, val)
     metrics["val_baseline"] = by_type(val, bp["p50"].values, bp["p80"].values)
     metrics["baseline_levels_val"] = bp["level"].value_counts().to_dict()
-    (MODELS / "baseline.json").write_text(json.dumps(base, indent=1, default=float))
+    (EVAL_DIR / "baseline.json").write_text(json.dumps(base, indent=1, default=float))
     print("baseline val overall:", {k: round(v, 3) for k, v in metrics["val_baseline"]["overall"].items()})
 
     # Quantile grid on validation: feature set x params, chosen per quantile by val pinball
@@ -200,7 +201,7 @@ def main() -> None:
     for qname, b in best.items():
         joblib.dump({"model": b["model"], "features": b["features"], "levels": levels,
                      "use_model_by_type": use_model, "fit_years": SPLITS["train"]},
-                    MODELS / f"{qname}.joblib")
+                    EVAL_DIR / f"{qname}.joblib")
 
     # On-time classifier (features from the chosen p50 set)
     data, n_open, snapshot = ontime_data(feats)
@@ -217,7 +218,7 @@ def main() -> None:
         "brier_constant": float(brier_score_loss(cva["label"], np.full(len(cva), ctr["label"].mean()))),
     }
     joblib.dump({"model": clf, "features": fs, "levels": levels, "fit_years": SPLITS["train"]},
-                MODELS / "ontime.joblib")
+                EVAL_DIR / "ontime.joblib")
 
     (REPORTS / "val_metrics.json").write_text(json.dumps(metrics, indent=1, default=str))
     print(json.dumps({k: metrics[k] for k in ["chosen", "val_ontime"]}, indent=1, default=str))

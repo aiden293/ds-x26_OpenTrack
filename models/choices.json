@@ -1,0 +1,711 @@
+{
+ "types": [
+  {
+   "type": "Parking Enforcement",
+   "n": 166636,
+   "demo": false
+  },
+  {
+   "type": "Requests for Street Cleaning",
+   "n": 77587,
+   "demo": false
+  },
+  {
+   "type": "Improper Storage of Trash (Barrels)",
+   "n": 75208,
+   "demo": false
+  },
+  {
+   "type": "CE Collection",
+   "n": 64847,
+   "demo": false
+  },
+  {
+   "type": "Missed Trash/Recycling/Yard Waste/Bulk Item",
+   "n": 44936,
+   "demo": true
+  },
+  {
+   "type": "Needle Pickup",
+   "n": 36373,
+   "demo": false
+  },
+  {
+   "type": "Poor Conditions of Property",
+   "n": 32082,
+   "demo": false
+  },
+  {
+   "type": "Request for Pothole Repair",
+   "n": 29601,
+   "demo": true
+  },
+  {
+   "type": "Pick up Dead Animal",
+   "n": 27781,
+   "demo": false
+  },
+  {
+   "type": "Tree Maintenance Requests",
+   "n": 22412,
+   "demo": false
+  },
+  {
+   "type": "Sign Repair",
+   "n": 17585,
+   "demo": false
+  },
+  {
+   "type": "Rodent Activity",
+   "n": 17454,
+   "demo": true
+  },
+  {
+   "type": "Unshoveled Sidewalk",
+   "n": 16166,
+   "demo": false
+  },
+  {
+   "type": "Abandoned Vehicles",
+   "n": 15796,
+   "demo": true
+  },
+  {
+   "type": "Request for Recycling Cart",
+   "n": 15211,
+   "demo": false
+  },
+  {
+   "type": "Recycling Cart Return",
+   "n": 14877,
+   "demo": false
+  },
+  {
+   "type": "Street Light Outages",
+   "n": 14347,
+   "demo": true
+  },
+  {
+   "type": "Ground Maintenance",
+   "n": 12660,
+   "demo": false
+  },
+  {
+   "type": "Traffic Signal Inspection",
+   "n": 12418,
+   "demo": false
+  },
+  {
+   "type": "Illegal Dumping",
+   "n": 11433,
+   "demo": false
+  },
+  {
+   "type": "Empty Litter Basket",
+   "n": 10984,
+   "demo": false
+  },
+  {
+   "type": "Equipment Repair",
+   "n": 10115,
+   "demo": false
+  },
+  {
+   "type": "Animal Generic Request",
+   "n": 9329,
+   "demo": false
+  },
+  {
+   "type": "Graffiti Removal",
+   "n": 8958,
+   "demo": false
+  },
+  {
+   "type": "Sticker Request",
+   "n": 8731,
+   "demo": false
+  },
+  {
+   "type": "Sidewalk Repair (Make Safe)",
+   "n": 7785,
+   "demo": false
+  },
+  {
+   "type": "Unsatisfactory Living Conditions",
+   "n": 6109,
+   "demo": false
+  },
+  {
+   "type": "Pest Infestation - Residential",
+   "n": 5588,
+   "demo": false
+  },
+  {
+   "type": "New Tree Requests",
+   "n": 4950,
+   "demo": false
+  },
+  {
+   "type": "PWD Graffiti",
+   "n": 4577,
+   "demo": false
+  },
+  {
+   "type": "Contractor Complaints",
+   "n": 4042,
+   "demo": false
+  },
+  {
+   "type": "Contractors Complaint",
+   "n": 3049,
+   "demo": false
+  },
+  {
+   "type": "General Lighting Request",
+   "n": 3021,
+   "demo": false
+  },
+  {
+   "type": "Request for Snow Plowing",
+   "n": 2975,
+   "demo": false
+  },
+  {
+   "type": "Work w/out Permit",
+   "n": 2919,
+   "demo": false
+  },
+  {
+   "type": "Tree Emergencies",
+   "n": 2887,
+   "demo": false
+  },
+  {
+   "type": "New Sign  Crosswalk or Pavement Marking",
+   "n": 2721,
+   "demo": false
+  },
+  {
+   "type": "Abandoned Bicycle",
+   "n": 2661,
+   "demo": false
+  },
+  {
+   "type": "General Comments For a Program or Policy",
+   "n": 2504,
+   "demo": false
+  },
+  {
+   "type": "Working Beyond Hours",
+   "n": 2426,
+   "demo": false
+  },
+  {
+   "type": "Heat - Excessive  Insufficient",
+   "n": 2408,
+   "demo": false
+  },
+  {
+   "type": "Public Works General Request",
+   "n": 2203,
+   "demo": false
+  },
+  {
+   "type": "Unsanitary Conditions - Establishment",
+   "n": 2202,
+   "demo": false
+  },
+  {
+   "type": "Building Inspection Request",
+   "n": 2153,
+   "demo": false
+  },
+  {
+   "type": "Requests for Traffic Signal Studies or Reviews",
+   "n": 1891,
+   "demo": false
+  },
+  {
+   "type": "Mattress_Pickup",
+   "n": 1649,
+   "demo": false
+  },
+  {
+   "type": "Missing Sign",
+   "n": 1524,
+   "demo": false
+  },
+  {
+   "type": "Street Light Knock Downs",
+   "n": 1521,
+   "demo": false
+  },
+  {
+   "type": "Electrical",
+   "n": 1453,
+   "demo": false
+  },
+  {
+   "type": "Parks Lighting/Electrical Issues",
+   "n": 1330,
+   "demo": false
+  },
+  {
+   "type": "Maintenance Complaint - Residential",
+   "n": 1243,
+   "demo": false
+  },
+  {
+   "type": "Transportation General Request",
+   "n": 1218,
+   "demo": false
+  },
+  {
+   "type": "Mice Infestation - Residential",
+   "n": 1191,
+   "demo": false
+  },
+  {
+   "type": "Catchbasin",
+   "n": 1164,
+   "demo": false
+  },
+  {
+   "type": "Unsafe Dangerous Conditions",
+   "n": 1158,
+   "demo": false
+  },
+  {
+   "type": "Schedule a Bulk Item Pickup",
+   "n": 1060,
+   "demo": false
+  },
+  {
+   "type": "Major System Failure",
+   "n": 979,
+   "demo": false
+  },
+  {
+   "type": "Space Savers",
+   "n": 933,
+   "demo": false
+  },
+  {
+   "type": "Protection of Adjoining Property",
+   "n": 870,
+   "demo": false
+  },
+  {
+   "type": "BWSC General Request",
+   "n": 797,
+   "demo": false
+  },
+  {
+   "type": "Fire Hydrant",
+   "n": 770,
+   "demo": false
+  },
+  {
+   "type": "Food Alert - Confirmed",
+   "n": 751,
+   "demo": false
+  },
+  {
+   "type": "Park Improvement Requests",
+   "n": 741,
+   "demo": false
+  },
+  {
+   "type": "General Comments For An Employee",
+   "n": 738,
+   "demo": false
+  },
+  {
+   "type": "Utility Casting Repair",
+   "n": 737,
+   "demo": false
+  },
+  {
+   "type": "Sidewalk Cover / Manhole",
+   "n": 719,
+   "demo": false
+  },
+  {
+   "type": "Chronic Dampness/Mold",
+   "n": 715,
+   "demo": false
+  },
+  {
+   "type": "Construction Debris",
+   "n": 707,
+   "demo": false
+  },
+  {
+   "type": "Unsanitary Conditions - Food",
+   "n": 705,
+   "demo": false
+  },
+  {
+   "type": "Work Hours-Loud Noise Complaints",
+   "n": 667,
+   "demo": false
+  },
+  {
+   "type": "Traffic Signal Repair",
+   "n": 619,
+   "demo": false
+  },
+  {
+   "type": "Short Term Rental",
+   "n": 615,
+   "demo": false
+  },
+  {
+   "type": "Illegal Auto Body Shop",
+   "n": 591,
+   "demo": false
+  },
+  {
+   "type": "Illegal Vending",
+   "n": 551,
+   "demo": false
+  },
+  {
+   "type": "Unsatisfactory Utilities - Electrical  Plumbing",
+   "n": 547,
+   "demo": false
+  },
+  {
+   "type": "Encampments",
+   "n": 515,
+   "demo": false
+  },
+  {
+   "type": "Knockdown Replacement",
+   "n": 513,
+   "demo": false
+  },
+  {
+   "type": "Exceeding Terms of Permit",
+   "n": 509,
+   "demo": false
+  },
+  {
+   "type": "Student Move-in Issues",
+   "n": 490,
+   "demo": false
+  },
+  {
+   "type": "Parking on Front/Back Yards (Illegal Parking)",
+   "n": 485,
+   "demo": false
+  },
+  {
+   "type": "Overflowing or Un-kept Dumpster",
+   "n": 482,
+   "demo": false
+  },
+  {
+   "type": "Food Alert - Unconfirmed",
+   "n": 474,
+   "demo": false
+  },
+  {
+   "type": "General Traffic Engineering Request",
+   "n": 467,
+   "demo": false
+  },
+  {
+   "type": "Parks General Request",
+   "n": 466,
+   "demo": false
+  },
+  {
+   "type": "Roadway Repair",
+   "n": 446,
+   "demo": false
+  },
+  {
+   "type": "Pavement Marking Inspection",
+   "n": 421,
+   "demo": false
+  },
+  {
+   "type": "Request for Litter Basket Installation",
+   "n": 409,
+   "demo": false
+  },
+  {
+   "type": "Maintenance - Homeowner",
+   "n": 388,
+   "demo": false
+  },
+  {
+   "type": "Illegal Posting of Signs",
+   "n": 369,
+   "demo": false
+  },
+  {
+   "type": "Cross Metering - Sub-Metering",
+   "n": 366,
+   "demo": false
+  },
+  {
+   "type": "Egress",
+   "n": 340,
+   "demo": false
+  },
+  {
+   "type": "Litter Basket Maintenance",
+   "n": 332,
+   "demo": false
+  },
+  {
+   "type": "Illegal Occupancy",
+   "n": 309,
+   "demo": false
+  },
+  {
+   "type": "Bed Bugs",
+   "n": 288,
+   "demo": false
+  },
+  {
+   "type": "No Utilities Residential - Water",
+   "n": 282,
+   "demo": false
+  },
+  {
+   "type": "BWSC Pothole",
+   "n": 272,
+   "demo": false
+  },
+  {
+   "type": "Schedule a Bulk Item Pickup SS",
+   "n": 236,
+   "demo": false
+  },
+  {
+   "type": "Trash on Vacant Lot",
+   "n": 236,
+   "demo": false
+  },
+  {
+   "type": "Abandoned Building",
+   "n": 235,
+   "demo": false
+  },
+  {
+   "type": "No-Tow Complaint Confirmation",
+   "n": 233,
+   "demo": false
+  },
+  {
+   "type": "Illegal Rooming House",
+   "n": 221,
+   "demo": false
+  },
+  {
+   "type": "Plumbing",
+   "n": 190,
+   "demo": false
+  },
+  {
+   "type": "Animal Noise Disturbances",
+   "n": 187,
+   "demo": false
+  },
+  {
+   "type": "Unsanitary Conditions - Employees",
+   "n": 176,
+   "demo": false
+  },
+  {
+   "type": "Tree in Park",
+   "n": 169,
+   "demo": false
+  },
+  {
+   "type": "Pole Compliance",
+   "n": 161,
+   "demo": false
+  },
+  {
+   "type": "Request for Snow Plowing (Emergency Responder)",
+   "n": 156,
+   "demo": false
+  },
+  {
+   "type": "Squalid Living Conditions",
+   "n": 155,
+   "demo": false
+  },
+  {
+   "type": "Loud Parties/Music/People",
+   "n": 136,
+   "demo": false
+  },
+  {
+   "type": "No Utilities Residential - Electricity",
+   "n": 130,
+   "demo": false
+  },
+  {
+   "type": "Zoning",
+   "n": 109,
+   "demo": false
+  },
+  {
+   "type": "Sewage/Septic Back-Up",
+   "n": 105,
+   "demo": false
+  },
+  {
+   "type": "Cemetery Maintenance Request",
+   "n": 99,
+   "demo": false
+  },
+  {
+   "type": "Fire in Food Establishment",
+   "n": 97,
+   "demo": false
+  },
+  {
+   "type": "Poor Ventilation",
+   "n": 77,
+   "demo": false
+  },
+  {
+   "type": "StreetLight Pole WO",
+   "n": 72,
+   "demo": false
+  },
+  {
+   "type": "Upgrade Existing Lighting",
+   "n": 65,
+   "demo": false
+  },
+  {
+   "type": "Rooftop & Mechanical Disturbances",
+   "n": 64,
+   "demo": false
+  },
+  {
+   "type": "Municipal Parking Lot Complaints",
+   "n": 64,
+   "demo": false
+  },
+  {
+   "type": "Bicycle Issues",
+   "n": 63,
+   "demo": false
+  },
+  {
+   "type": "Install New Lighting",
+   "n": 60,
+   "demo": false
+  },
+  {
+   "type": "Rat Bite",
+   "n": 57,
+   "demo": false
+  },
+  {
+   "type": "Overcrowding",
+   "n": 55,
+   "demo": false
+  },
+  {
+   "type": "Mechanical",
+   "n": 53,
+   "demo": false
+  },
+  {
+   "type": "No Utilities Residential - Gas",
+   "n": 47,
+   "demo": false
+  },
+  {
+   "type": "Planting",
+   "n": 47,
+   "demo": false
+  },
+  {
+   "type": "Scanning Overcharge",
+   "n": 44,
+   "demo": false
+  },
+  {
+   "type": "Undefined Noise Disturbance",
+   "n": 39,
+   "demo": false
+  },
+  {
+   "type": "Item Price Missing",
+   "n": 37,
+   "demo": false
+  },
+  {
+   "type": "Pigeon Infestation",
+   "n": 36,
+   "demo": false
+  },
+  {
+   "type": "Dumpster & Loading Noise Disturbances",
+   "n": 35,
+   "demo": false
+  },
+  {
+   "type": "Lead",
+   "n": 35,
+   "demo": false
+  },
+  {
+   "type": "Rental Unit Delivery Conditions",
+   "n": 34,
+   "demo": false
+  },
+  {
+   "type": "No Utilities - Food Establishment - Water",
+   "n": 33,
+   "demo": false
+  }
+ ],
+ "demo_types": [
+  "Request for Pothole Repair",
+  "Street Light Outages",
+  "Missed Trash/Recycling/Yard Waste/Bulk Item",
+  "Abandoned Vehicles",
+  "Rodent Activity"
+ ],
+ "neighborhoods": [
+  "Allston / Brighton",
+  "Back Bay",
+  "Beacon Hill",
+  "Charlestown",
+  "Chestnut Hill",
+  "Dorchester",
+  "Downtown / Financial District",
+  "East Boston",
+  "Fenway / Kenmore / Audubon Circle / Longwood",
+  "Greater Mattapan",
+  "Hyde Park",
+  "Jamaica Plain",
+  "Mission Hill",
+  "Roslindale",
+  "Roxbury",
+  "South Boston / South Boston Waterfront",
+  "South End",
+  "Unknown / Citywide",
+  "West Roxbury"
+ ],
+ "sources": [
+  "Citizens Connect App",
+  "City Worker App",
+  "Constituent Call",
+  "Employee Generated",
+  "Maximo Integration",
+  "Self Service"
+ ],
+ "default_source": "Citizens Connect App"
+}

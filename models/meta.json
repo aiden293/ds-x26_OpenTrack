@@ -1,0 +1,25 @@
+{
+ "fit_years": [
+  2022,
+  2025
+ ],
+ "state_time": "2025-10-01 00:00:00",
+ "data_snapshot": "2026-09-16 14:49:13.623000",
+ "open_dt_range": [
+  "2021-01-01 00:06:37.397000",
+  "2025-12-31 23:49:00"
+ ],
+ "default_source": "Citizens Connect App",
+ "ontime_types": [
+  "Abandoned Vehicles",
+  "Missed Trash/Recycling/Yard Waste/Bulk Item",
+  "Request for Pothole Repair",
+  "Rodent Activity",
+  "Street Light Outages"
+ ],
+ "p80_baseline_types": [
+  "Street Light Outages"
+ ],
+ "reported_metrics": "reports/metrics.json (train-only models, 2025 test)",
+ "source": "City of Boston 311 Service Requests, data.boston.gov, PDDL"
+}

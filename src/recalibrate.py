@@ -26,7 +26,7 @@ from sklearn.metrics import brier_score_loss, log_loss, roc_auc_score
 from src.clean import DEMO_TYPES
 from src.evaluate import BLUE, GRAY, INK, INK2, ORANGE, style
 from src.features import PROC
-from src.train import MODELS, PARAM_GRID, REPORTS, make_X, ontime_data, split
+from src.train import EVAL_DIR, PARAM_GRID, REPORTS, make_X, ontime_data, split
 
 AQUA, YELLOW = "#1baf7a", "#eda100"  # categorical slots 3, 4
 EPS = 1e-6
@@ -66,7 +66,7 @@ def main() -> None:
     feats = pd.read_parquet(PROC / "features.parquet")
     data, _, _ = ontime_data(feats)
     data["month"] = pd.to_datetime(data["open_dt"]).dt.month
-    orig = joblib.load(MODELS / "ontime.joblib")
+    orig = joblib.load(EVAL_DIR / "ontime.joblib")
     fs, lv = orig["features"], orig["levels"]
     val, test = split(data, "val"), split(data, "test")
     yv, yt, types = val["label"].values, test["label"].values, test["type"].values
@@ -104,7 +104,7 @@ def main() -> None:
     (REPORTS / "recalibration.json").write_text(json.dumps(res, indent=1, default=float))
     joblib.dump({"model": clf, "platt": platt_d, "features": fs, "levels": lv,
                  "fit_years": "2022-01..2024-06", "calib": "2024-07..12"},
-                MODELS / "ontime_recal_candidate.joblib")
+                EVAL_DIR / "ontime_recal_candidate.joblib")
 
     fig, ax = plt.subplots(figsize=(5.6, 5.2), dpi=150)
     style(ax)
