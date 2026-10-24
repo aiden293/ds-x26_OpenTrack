@@ -5,7 +5,7 @@
 |---|---|---|
 | `src/` (whole folder) | yes | `predict.py`, `similar.py` and the modules they import |
 | `models/*.joblib`, `models/*.json`, `models/state_snapshot.parquet` | yes | final models (fit on 2022-2025), lookups, `choices.json`, `meta.json` |
-| `data/processed/cases_for_app.parquet` | **no (96 MB)** | closed cases for similar-case lookup; get it from the data teammate or rebuild (below) |
+| `data/processed/cases_for_app.parquet` | **yes (96 MiB)** | 1,099,534 closed cases for similar-case lookup; included in the repository |
 | `reports/metrics.json`, `reports/*.png` | yes | evaluated metrics and charts to quote |
 
 Environment: Python 3.14, `pip install -r requirements.txt`. Run from the repo root.
