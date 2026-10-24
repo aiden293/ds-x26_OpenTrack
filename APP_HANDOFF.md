@@ -31,7 +31,7 @@ similar_cases("Request for Pothole Repair", "Dorchester", datetime(2026, 10, 26)
 - `used_model` / `p80_used_model`: `"baseline"` means the historical per-type percentile.
   Street Light Outages always uses baseline for p80.
 - Extra keys (`p80_used_model`, `baseline_level`, `state_time`) are safe to ignore.
-- First call loads models (~1 s); later calls ~15 ms. `similar_cases` first call ~3 s.
+- First call loads models (~1 s); later calls ~15 ms. `similar_cases` first call ~0.3 s.
 - Dropdowns: use `models/choices.json` (`types` with `demo` flag, `neighborhoods`,
   `sources`, `default_source`). Demo types: Pothole, Street Light, Missed Trash,
   Abandoned Vehicles, Rodent Activity.
