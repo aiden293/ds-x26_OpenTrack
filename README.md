@@ -29,7 +29,8 @@ Select a request type, neighborhood, and Boston-local date/time to retrieve a re
 - `models/` - final models and lookup files used by `predict()`; `models/eval/` holds the train-only models behind the reported metrics.
 - `reports/` - metrics, charts, and phase reports.
 - `requirements.txt` - Python dependencies.
-- `.gitignore` - excludes local data, secrets, and generated files. Raw CSVs and processed parquet files are not committed.
+- `data/processed/cases_for_app.parquet` - 1,099,534 closed cases used by the similar-case lookup, included in Git.
+- `.gitignore` - excludes other local data, secrets, and generated files. Raw CSVs and other processed datasets are not committed.
 
 ## Getting started
 
@@ -55,7 +56,7 @@ Open http://localhost:3000. Next.js proxies `/api/*` to `http://127.0.0.1:8000`;
 
 The API reads dropdown options from `models/choices.json` and invokes the real `src.predict.predict` function. Datetimes entered in the app are Boston local time. No mock predictions are shown; model errors produce an unavailable message.
 
-Get `cases_for_app.parquet` from the data teammate and put it in `data/processed/` to enable similar cases. Without it, predictions still work and the history panel explains that records are not connected. Restart the API after replacing an already loaded dataset or model.
+The repository includes `data/processed/cases_for_app.parquet`, so similar cases work after cloning and installing dependencies. If that file is absent, predictions still work and the history panel explains that records are not connected. Restart the API after replacing an already loaded dataset or model.
 
 Checks:
 
