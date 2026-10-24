@@ -1,3 +1,24 @@
+.estimate-notes {
+  margin-top: 20px;
+  padding: 16px 18px;
+  border: 1px solid #d9e7d2;
+  border-radius: 12px;
+  background: #f0f4ed;
+}
+.estimate-notes h3 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.estimate-notes ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.estimate-notes li + li {
+  margin-top: 8px;
+}
 :root {
   --ink:#173c38;
   --teal:#176b58;

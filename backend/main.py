@@ -53,8 +53,15 @@ def get_choices():
 def estimate(request: Request):
     date = validate_request(request)
     try:
-        from src.predict import predict
-        return predict(request.type, request.neighborhood, date)
+        from src.predict import flag_messages, predict
+        result = predict(request.type, request.neighborhood, date)
+        return {
+            **result,
+            "notes": [
+                {"code": code, "message": message}
+                for code, message in zip(result["flags"], flag_messages(result), strict=True)
+            ],
+        }
     except Exception:
         logger.exception("Prediction failed")
         raise HTTPException(503, "The prediction service is unavailable. Please try again shortly.")

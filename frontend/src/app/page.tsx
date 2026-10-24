@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState, type FormEvent } from "react";
 import { api } from "@/lib/api";
+import { EstimateNotes } from "@/components/estimate-notes";
 import type { Choices, Prediction, SimilarResult, EstimateRequest } from "@/types";
 
 function bostonNow() {
@@ -63,6 +64,7 @@ export default function Home() {
             <div className="metric-grid"><div className="metric main-metric"><p>Typical wait</p><strong>{days(result.p50)}</strong><small>Estimated median resolution time</small></div><div className="metric"><p>Allow a little longer</p><strong>{days(result.p80)}</strong><small>Estimated 80th percentile of resolution time</small></div></div>
             <dl className="details"><div><dt>Estimated city target</dt><dd>{result.target_days === null ? "Not available" : days(result.target_days)}</dd></div><div><dt>Chance of meeting that target</dt><dd>{result.p_ontime === null ? "Not available for this request" : `${Math.round(result.p_ontime * 100)}%`}</dd></div><div><dt>Historical typical wait</dt><dd>{days(result.baseline_p50)}</dd></div><div><dt>Historical cases for this type</dt><dd>{result.n_support.toLocaleString()}</dd></div></dl>
             <p className="field-note">Typical estimate: {result.used_model === "ml" ? "prediction model" : "historical baseline"}. Longer estimate: {result.p80_used_model === "ml" ? "prediction model" : "historical baseline"}.</p>
+            <EstimateNotes notes={result.notes} />
           </> : <div className="empty"><div className="clock" aria-hidden="true">◷</div><h3>{loading ? "Finding your timeline" : "A better idea of what comes next"}</h3><p>{loading ? "Checking historical patterns for your request…" : "Choose your request details to see a typical wait, a longer timeframe, and historical context."}</p><div className="timeline" aria-hidden="true"><i /><span /><i /><span /><i /></div><div className="timeline-labels"><span>Request</span><span>Estimate</span><span>Resolution</span></div></div>}
         </section>
       </div>

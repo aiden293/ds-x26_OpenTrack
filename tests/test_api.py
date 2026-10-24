@@ -24,11 +24,13 @@ class ApiTests(TestCase):
 
     def test_prediction_adapter(self):
         module = types.ModuleType("src.predict")
+        module.flag_messages = lambda result: ["Model-provided note"]
         with patch.dict(sys.modules, {"src.predict": module}):
-            with patch.object(module, "predict", create=True, return_value={"p50": 1.5, "p80": 3, "p_ontime": None}) as predict:
+            with patch.object(module, "predict", create=True, return_value={"p50": 1.5, "p80": 3, "p_ontime": None, "flags": ["low_support"]}) as predict:
                 response = client.post("/api/predict", json=payload)
                 self.assertEqual(response.status_code, 200)
                 self.assertIsNone(response.json()["p_ontime"])
+                self.assertEqual(response.json()["notes"], [{"code": "low_support", "message": "Model-provided note"}])
                 predict.assert_called_once_with(payload["type"], "Dorchester", datetime(2026, 10, 26, 10))
 
     def test_timezone_normalization(self):
@@ -37,6 +39,7 @@ class ApiTests(TestCase):
 
     def test_model_failure_is_unavailable_not_fake_prediction(self):
         module = types.ModuleType("src.predict")
+        module.flag_messages = lambda result: []
         with patch.dict(sys.modules, {"src.predict": module}):
             with patch.object(module, "predict", create=True, side_effect=RuntimeError("private path")):
                 with self.assertLogs("backend.main", level="ERROR"):
