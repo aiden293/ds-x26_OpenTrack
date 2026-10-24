@@ -1,0 +1,222 @@
+
+=== lagan_311_open_data_2021_rvsd3.csv: 269,665 rows, 31 cols
+open_dt range: 2021-01-01 00:06:37.397000 -> 2021-12-31 23:44:48.140000 (unparseable: 0)
+missing %: sla_target_dt=12.6, closed_dt=5.1, closure_reason=5.1, submitted_photo=100.0, closed_photo=71.4, location=0.7, fire_district=1.0, pwd_district=0.8, city_council_district=0.8, police_district=0.8, neighborhood=0.8, neighborhood_services_district=0.8, ward=0.7, precinct=1.1, location_street_name=0.7, location_zipcode=22.0, latitude=0.4, longitude=0.4, geom_4326=0.4
+
+=== lagan_311_open_data_2022_rvsd3.csv: 272,931 rows, 31 cols
+open_dt range: 2022-01-01 00:16:00 -> 2022-12-31 23:30:00 (unparseable: 0)
+missing %: sla_target_dt=11.9, closed_dt=6.0, closure_reason=6.1, submitted_photo=99.9, closed_photo=71.0, location=0.6, fire_district=0.9, pwd_district=0.7, city_council_district=0.6, police_district=0.7, neighborhood=0.7, neighborhood_services_district=0.6, ward=0.6, precinct=1.0, location_street_name=0.6, location_zipcode=23.3, latitude=0.3, longitude=0.3, geom_4326=0.3
+
+=== lagan_311_open_data_2023_rvsd3.csv: 307,791 rows, 31 cols
+open_dt range: 2023-01-01 00:11:22.940000 -> 2023-12-31 23:50:00 (unparseable: 0)
+missing %: sla_target_dt=20.9, closed_dt=6.1, closure_reason=6.3, submitted_photo=99.9, closed_photo=72.9, location=0.7, fire_district=0.9, pwd_district=0.7, city_council_district=0.7, police_district=0.7, neighborhood=0.7, neighborhood_services_district=0.7, ward=0.7, precinct=1.0, location_street_name=0.7, location_zipcode=17.8, latitude=0.4, longitude=0.4, geom_4326=0.4
+
+=== lagan_311_open_data_2024_rvsd3.csv: 306,756 rows, 31 cols
+open_dt range: 2024-01-01 00:20:52.963000 -> 2024-12-31 23:47:03.657000 (unparseable: 0)
+missing %: sla_target_dt=15.9, closed_dt=16.3, closure_reason=16.4, submitted_photo=100.0, closed_photo=71.3, location=0.6, fire_district=0.8, pwd_district=0.6, city_council_district=0.6, police_district=0.6, neighborhood=0.7, neighborhood_services_district=0.6, ward=0.6, precinct=0.9, location_street_name=0.6, location_zipcode=18.4, latitude=0.4, longitude=0.4, geom_4326=0.4
+
+=== lagan_311_open_data_2025_rvsd3.csv: 276,093 rows, 31 cols
+open_dt range: 2025-01-01 00:04:29.143000 -> 2025-12-31 23:58:57.723000 (unparseable: 0)
+missing %: sla_target_dt=8.1, closed_dt=25.4, closure_reason=25.4, submitted_photo=100.0, closed_photo=68.0, location=0.6, fire_district=0.8, pwd_district=0.7, city_council_district=0.6, police_district=0.6, neighborhood=0.7, neighborhood_services_district=0.6, ward=0.6, precinct=1.0, location_street_name=0.6, location_zipcode=20.6, latitude=0.5, longitude=0.5, geom_4326=0.5
+
+=== Schema comparison (vs lagan_311_open_data_2021_rvsd3.csv)
+lagan_311_open_data_2021_rvsd3.csv: added=[] missing=[] same_order=True
+lagan_311_open_data_2022_rvsd3.csv: added=[] missing=[] same_order=True
+lagan_311_open_data_2023_rvsd3.csv: added=[] missing=[] same_order=True
+lagan_311_open_data_2024_rvsd3.csv: added=[] missing=[] same_order=True
+lagan_311_open_data_2025_rvsd3.csv: added=[] missing=[] same_order=True
+
+=== Unified: 1,433,236 rows
+duplicate case_enquiry_id: 0
+dtypes: case_enquiry_id=str, open_dt=datetime64[us], target_dt=datetime64[us], closed_dt=datetime64[us], ontime=str, case_status=str, closure_reason=str, case_title=str, subject=str, reason=str, type=str, queue=str, department=str, location=str, fire_district=str, pwd_district=str, city_council_district=str, police_district=str, neighborhood=str, neighborhood_services_district=str, ward=str, precinct=str, location_street_name=str, location_zipcode=str, latitude=float64, longitude=float64, source=str, source_file=str, year=int32
+open_dt: unparsed/missing=0
+target_dt: unparsed/missing=201,640
+closed_dt: unparsed/missing=169,170
+
+=== Top 30 type
+ 295,450  closed= 79.3%  target=100.0%  Parking Enforcement
+ 104,287  closed= 94.5%  target=100.0%  Requests for Street Cleaning
+  89,521  closed= 99.7%  target=100.0%  Improper Storage of Trash (Barrels)
+  77,164  closed= 99.6%  target=100.0%  CE Collection
+  60,959  closed=100.0%  target=100.0%  Missed Trash/Recycling/Yard Waste/Bulk Item
+  56,346  closed= 68.4%  target=100.0%  Request for Pothole Repair
+  47,311  closed= 73.0%  target=  0.0%  Schedule a Bulk Item Pickup
+  44,550  closed= 99.9%  target=  0.0%  Needle Pickup
+  38,903  closed= 99.4%  target=100.0%  Poor Conditions of Property
+  36,548  closed=100.0%  target=  0.0%  Mattress_Pickup
+  35,724  closed= 94.8%  target=100.0%  Pick up Dead Animal
+  32,393  closed= 95.2%  target=100.0%  Tree Maintenance Requests
+  28,881  closed= 53.9%  target=100.0%  Sidewalk Repair (Make Safe)
+  28,268  closed= 88.2%  target=100.0%  Sign Repair
+  24,219  closed= 98.7%  target=100.0%  Abandoned Vehicles
+  22,597  closed= 63.2%  target=  0.0%  Schedule a Bulk Item Pickup SS
+  22,193  closed= 89.1%  target=100.0%  Street Light Outages
+  22,050  closed= 98.9%  target=100.0%  Rodent Activity
+  21,413  closed=100.0%  target=100.0%  Request for Recycling Cart
+  21,403  closed= 87.6%  target=100.0%  Traffic Signal Inspection
+  19,453  closed= 87.2%  target=100.0%  Ground Maintenance
+  19,208  closed=100.0%  target=100.0%  Recycling Cart Return
+  19,119  closed= 98.9%  target=100.0%  Unshoveled Sidewalk
+  15,340  closed= 99.0%  target=100.0%  Graffiti Removal
+  15,283  closed= 88.3%  target=100.0%  Equipment Repair
+  15,143  closed= 88.8%  target=  0.0%  Animal Generic Request
+  14,136  closed= 96.0%  target=100.0%  Empty Litter Basket
+  13,437  closed= 99.6%  target=100.0%  Illegal Dumping
+  12,218  closed= 79.5%  target=100.0%  Unsatisfactory Living Conditions
+  10,918  closed=100.0%  target=100.0%  Sticker Request
+(distinct types: 183)
+
+=== neighborhood values
+neighborhood
+Dorchester                                      202732
+Roxbury                                         126684
+South Boston / South Boston Waterfront          120241
+Allston / Brighton                              105465
+South End                                        99448
+East Boston                                      97192
+Jamaica Plain                                    83090
+Downtown / Financial District                    77406
+Back Bay                                         71208
+Greater Mattapan                                 58316
+Hyde Park                                        55069
+Boston                                           54390
+Roslindale                                       51026
+West Roxbury                                     46587
+Charlestown                                      45937
+Beacon Hill                                      44315
+Fenway / Kenmore / Audubon Circle / Longwood     26538
+Mission Hill                                     26018
+South Boston                                     13997
+NaN                                              10312
+Brighton                                          9156
+Allston                                           4974
+Mattapan                                          3055
+Chestnut Hill                                       80
+
+=== source values
+source
+Employee Generated      612742
+Citizens Connect App    392978
+Constituent Call        248124
+City Worker App         138099
+Self Service             41278
+Maximo Integration          15
+
+=== case_status values
+case_status
+Closed    1264068
+Open       169168
+
+=== ontime values
+ontime
+ONTIME     1119350
+OVERDUE     313886
+
+=== Top closure_reason prefixes (first 60 chars)
+closure_reason
+Case Closed Case Noted                                          1587
+Case Closed Case Invalid                                        1540
+Case Closed Case Resolved  The tree was pruned by Northern T    1497
+Case Closed Case Resolved  Dear Constituent   If you receive    1219
+Case Closed Case Resolved                                        644
+Case Closed Case Referred to External Agency  This location      374
+Case Closed Case Noted  Thank you very much for submitting t     300
+Case Closed Duplicate of Existing Case                           290
+Case Closed Case Resolved  mattress collected                    200
+Case Closed Case Resolved  Thank you for reporting this to t     176
+Case Closed Case Noted  Contractor has been notified             169
+Case Closed Duplicate of Existing Case  Duplicate of existin     154
+Case Closed Case Noted  scheduled                                134
+Case Closed Case Noted  Contractor notified                      124
+Case Closed Case Noted  The Utility has been notified            123
+Case Closed Case Noted  Contractor & Utility notified            119
+Case Closed Case Noted  BWSC has been notified                   111
+Case Closed Case Noted  Thank you for your interest in incre     111
+Case Closed Case Noted  The contractor has been notified         107
+Case Closed Case Invalid  EFORM BLANK                            103
+Case Closed Case Noted  Dear Constituent  The Public Works C     101
+Case Closed Case Invalid  eform blank                             90
+Case Closed Case Noted  Utility notified                          88
+Case Closed Case Resolved  Pruned by MM and MFD.                  87
+Case Closed Case Resolved  Tree was pruned by Northern Tree       86
+Case Closed Case Noted  Our inspector has spoken with the co      84
+Case Closed Case Resolved  Our inspector has spoken with the      83
+Case Closed Case Resolved  Our records show that this work i      80
+Case Closed Case Noted  The Utility/contractor has been noti      80
+Case Closed Case Resolved  contractor notified                    79
+
+=== Random sample of 30 closure_reason
+  Case Closed. Closed date : Mon Nov 03 15:18:23 EST 2025 Resolved Citation issued for loose trash around overloaded barrels.
+  Case Closed. Closed date : 2025-01-07 08:47:58.66 Case Resolved Vehicle was ticketed.
+  Case Closed. Closed date : Tue Jul 27 12:22:28 EDT 2021 Noted Please leave contact information to further investigate or email catherine.wilson@boston
+  Case Closed. Closed date : Sun Nov 17 12:28:10 EST 2024 Resolved Completed
+  Case Closed. Closed date : 2025-01-13 01:05:00.723 Case Resolved Thank you for contacting Boston 311.  The vehicle is no longer at this location.
+  Case Closed. Closed date : 2024-02-05 17:19:45.263 Case Resolved The unhoused materials have been removed from the site.   K Sherman  BHN
+  Case Closed. Closed date : Mon Jul 24 11:22:47 EDT 2023 Resolved 2 tvs  1 tire and trash removed  separate case made for btd sign
+  Case Closed. Closed date : Tue Mar 01 08:24:04 EST 2022 Noted Was cited for unshoveled sidewalk
+  Case Closed. Closed date : 2024-05-16 08:47:54.023 Case Noted The tree was removed by Pathfinder Tree Service. A new tree request case will automatica
+  Case Closed. Closed date : Thu Apr 07 07:33:32 EDT 2022 Resolved Duplicate case. Serviced by myself.
+  Case Closed. Closed date : 2025-08-12 16:27:34.53 Case Resolved Actively register to resident
+  Case Closed. Closed date : Fri Jul 09 12:13:22 EDT 2021 Resolved Serviced
+  Case Closed. Closed date : Fri Jul 01 14:22:13 EDT 2022 Resolved Violation issued. Placed request with PWD for removal.
+  Case Closed. Closed date : Mon Feb 05 16:53:58 EST 2024 Noted Violation was issued for trash out early
+  Case Closed. Closed date : 2024-02-16 16:15:24.57 Mattress Pickup Automation Mattress Scheduled Pickup Automation
+  Case Closed. Closed date : Mon Feb 12 16:41:28 EST 2024 Resolved Citation issued for improper storage of barrels.
+  Case Closed. Closed date : Sun Mar 21 18:36:59 EDT 2021 Resolved Dead animal picked up
+  Case Closed. Closed date : 2024-07-05 15:33:03.28 Case Noted BTD will investigate. Thank you for contacting 311 and BTD.
+  Case Closed. Closed date : 2022-08-04 22:02:20.113 Case Resolved All clear
+  Case Closed. Closed date : Mon Nov 27 14:26:33 EST 2023 Resolved Serviced today by Capitol waste  thank you.
+  Case Closed. Closed date : 2024-07-11 08:55:40.963 Case Resolved A new tree was planted at this location by MON landscaping in the SPRING of 2024. The
+  Case Closed. Closed date : Wed May 26 19:09:13 EDT 2021 Resolved A ticket was issued for improper storage of trash and unsecured fence.
+  Case Closed. Closed date : 2021-01-03 16:29:03.307 Case Resolved Officer Jones reports  unable to locate described dog. No exact address or call back 
+  Case Closed. Closed date : Mon Jul 14 02:51:54 EDT 2025 Noted Mattress found dumped in alleyway no evidence found unable to issue citation sent to dpw
+  Case Closed. Closed date : 2023-02-06 14:14:49.973 Case Resolved occupent states someone has been coming out checking on the issue.
+  Case Closed. Closed date : 2023-05-25 19:23:25.987 Case Invalid Yard waste was picked up
+  Case Closed. Closed date : Mon May 01 13:55:56 EDT 2023 Resolved Ticket was issued for overloaded barrels and loose trash
+  Case Closed. Closed date : Mon Nov 18 10:28:03 EST 2024 Resolved 93 Fanueil St has been serviced
+  Case Closed. Closed date : Thu Feb 02 14:17:16 EST 2023 Resolved No answer no access. Called multiple times
+  Case Closed. Closed date : 2023-01-13 16:30:25.983 Bulk Item Automation
+
+=== % target_dt filled by year / status
+case_status  Closed  Open
+year                     
+2021           87.8  80.8
+2022           88.8  77.9
+2023           79.9  67.4
+2024           89.1  58.6
+2025           91.1  94.1
+
+=== Is target_dt set at intake? target_days = target_dt - open_dt per top type
+                                       type      n    p10    p50    p90  neg%  within12h_of_median%  n_distinct_days
+                        Parking Enforcement 295450   1.00   1.51   3.43  0.02                 34.71               48
+               Requests for Street Cleaning 104287   1.00   1.43   3.07  0.00                 65.74               27
+        Improper Storage of Trash (Barrels)  89521   2.00   2.94   4.55  0.00                 18.89               37
+                              CE Collection  77164   1.00   1.25   3.05  0.00                 62.58                9
+Missed Trash/Recycling/Yard Waste/Bulk Item  60959   1.00   1.04   3.51  0.00                 56.88                6
+                 Request for Pothole Repair  56346   1.00   1.05   3.02  0.00                 60.13               27
+                Schedule a Bulk Item Pickup      2  11.69  58.47 105.24  0.00                  0.00                2
+                              Needle Pickup      3   0.00   0.00   0.30  0.00                100.00                1
+                Poor Conditions of Property  38903   3.00   5.00   5.61  0.00                 43.99               48
+                            Mattress_Pickup      6   0.19   4.76  18.44  0.00                  0.00                4
+                        Pick up Dead Animal  35724   1.00   1.58   3.05  0.00                 25.05                9
+                  Tree Maintenance Requests  32393 365.00 365.00 365.00  0.00                 99.90               24
+                Sidewalk Repair (Make Safe)  28881   1.00   1.05   3.02  0.00                 57.56               33
+                                Sign Repair  28268  14.00  14.46  16.38  0.00                 64.02               40
+                         Abandoned Vehicles  24219  16.00  17.65  19.00  0.01                 26.10               15
+             Schedule a Bulk Item Pickup SS      1   6.54   6.54   6.54  0.00                100.00                1
+                       Street Light Outages  22193  14.00  14.59  16.69  0.00                 39.96               67
+                            Rodent Activity  22050  30.00  30.00  30.00  0.00                 99.80               25
+                 Request for Recycling Cart  21413  21.00  21.00  23.00  0.00                 55.87                8
+                  Traffic Signal Inspection  21403   1.00   1.00   1.00  0.00                 99.60               46
+                         Ground Maintenance  19453   7.00   7.06   8.94  0.00                 57.75               20
+                      Recycling Cart Return  19208   7.00   7.00   8.00  0.00                 80.49                7
+                        Unshoveled Sidewalk  19119   2.00   2.00   2.00  0.00                 99.99                3
+                           Graffiti Removal  15340  63.00  64.81  67.00  0.00                 19.94               46
+                           Equipment Repair  15283   7.00   7.41   8.93  0.00                 70.05               28
+                     Animal Generic Request      3   0.00   0.00   0.00  0.00                100.00                1
+                        Empty Litter Basket  14136   1.00   1.60   3.07  0.00                 28.93                6
+                            Illegal Dumping  13436   1.00   1.00   3.00  0.00                 58.26                5
+           Unsatisfactory Living Conditions  12218 120.00 120.00 120.00  0.00                 99.91               11
+                            Sticker Request  10918   1.00   1.00   3.00  0.00                 61.30                5
+
+Saved data/processed/all_raw.parquet (142 MB)
