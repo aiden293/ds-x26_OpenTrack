@@ -55,14 +55,14 @@ npm run dev
 
 Open http://localhost:3000. Next.js proxies `/api/*` to `http://127.0.0.1:8000`; set `BACKEND_URL` in `frontend/.env.local` to change that address. API documentation is at http://127.0.0.1:8000/docs.
 
-The API reads dropdown options from `models/choices.json` and invokes the real `src.predict.predict` function. Datetimes entered in the app are Boston local time. No mock predictions are shown; model errors produce an unavailable message.
+The API reads dropdown options from `models/choices.json` and invokes the real `src.predict.predict` function. It returns model-generated explanations as `notes` (code/message pairs), which the app displays under the estimate. The shared queue-snapshot caveat remains in the context section. Datetimes entered in the app are Boston local time. No mock predictions are shown; model errors produce an unavailable message.
 
 The repository includes `data/processed/cases_for_app.parquet`, so similar cases work after cloning and installing dependencies. If that file is absent, predictions still work and the history panel explains that records are not connected. Restart the API after replacing an already loaded dataset or model.
 
 Checks:
 
 ```powershell
-.\.venv\Scripts\python -m unittest tests.test_api
+.\.venv\Scripts\python -m unittest tests.test_api tests.test_prediction_notes
 cd frontend
 npm run build
 ```

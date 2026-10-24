@@ -47,7 +47,7 @@ FLAG_MESSAGES = {
     "p80_baseline": "The upper estimate uses the historical 80th percentile for this type.",
     "wide_range": "Times for this type vary a lot: many finish quickly, some take months.",
     "weekend_or_holiday": "Filed on a weekend or holiday: work usually starts the next business day.",
-    "no_sla": "The city has no published target for this request type.",
+    "no_sla": "A city target for this request type is not available in our historical data.",
     "non_resident_source": "This channel is mostly used by city staff, whose requests close faster.",
 }
 
